@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{407AF370-6837-1062-DB15-E743938033DB}</ProjectGuid>
+    <ProjectGuid>{09B71E89-A706-B44A-816D-97C6979969B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,11 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemySkinSystem.cs" />
     <Compile Include="Assets\Scripts\EnemySpawnManager.cs" />
+    <Compile Include="Assets\Scripts\GUI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\EnemyKillControll.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
-    <Compile Include="Assets\Scripts\GUI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\GUI\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

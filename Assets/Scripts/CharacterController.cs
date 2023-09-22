@@ -41,9 +41,7 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         MoveAndFirstPersonCameraController();
-        BulletSpawn();
-
-        
+        BulletSpawn();       
     }
 
     void MoveAndFirstPersonCameraController()
@@ -83,7 +81,7 @@ public class CharacterController : MonoBehaviour
         }
 
         transform.localEulerAngles = new Vector3(mouseRotationX, mouseRotationY, 0);
-        Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     void HorizontalMouseMove(float limitDown, float limitUp)
