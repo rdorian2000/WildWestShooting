@@ -41,7 +41,8 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         MoveAndFirstPersonCameraController();
-        BulletSpawn();       
+        BulletSpawn();
+        MouseCursorLock();
     }
 
     void MoveAndFirstPersonCameraController()
@@ -86,6 +87,7 @@ public class CharacterController : MonoBehaviour
 
     void HorizontalMouseMove(float limitDown, float limitUp)
     {
+        
         mouseRotationY += Input.GetAxis("Mouse X") * mouseSensitivity;
         if (mouseRotationY < limitDown)
         {
@@ -168,5 +170,9 @@ public class CharacterController : MonoBehaviour
         isReloding = false;
     }
 
+    void MouseCursorLock()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
 }

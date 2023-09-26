@@ -429,6 +429,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3e8f487bc07dd48b25d6f9e29df548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCharacter: {fileID: 1841794622103966267}
+  bloodSpawnPoint: {fileID: 5948985587834851445}
+  bloodDrop: {fileID: 8109407525402143223}
+  isBlooding: 0
 --- !u!1 &1865468375085339313
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +973,8 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2895252549185575616}
   m_Father: {fileID: 1352362879986894977}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2032,3 +2037,75 @@ Transform:
   m_Father: {fileID: 2678231418507179361}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1737090837641847482
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8114402750223011774}
+    m_Modifications:
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374034837854941903, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_Name
+      value: bloodSpawnPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+--- !u!4 &2895252549185575616 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+  m_PrefabInstance: {fileID: 1737090837641847482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5948985587834851445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5374034837854941903, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+  m_PrefabInstance: {fileID: 1737090837641847482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8109407525402143223 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7534809991379880781, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+  m_PrefabInstance: {fileID: 1737090837641847482}
+  m_PrefabAsset: {fileID: 0}

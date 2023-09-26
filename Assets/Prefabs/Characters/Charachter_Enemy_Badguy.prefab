@@ -584,6 +584,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3e8f487bc07dd48b25d6f9e29df548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyCharacter: {fileID: 2896120018811449868}
+  bloodSpawnPoint: {fileID: 7954505071748199749}
+  bloodDrop: {fileID: 5503814108907162823}
 --- !u!1 &2908536155806102150
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +940,8 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1496635654959316976}
   m_Father: {fileID: 2556572877245065398}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2032,3 +2036,75 @@ Transform:
   m_Father: {fileID: 6849383980965770184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2661763726154319754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 192065931435872328}
+    m_Modifications:
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374034837854941903, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+      propertyPath: m_Name
+      value: bloodSpawnPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+--- !u!4 &1496635654959316976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3473790659867605114, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+  m_PrefabInstance: {fileID: 2661763726154319754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5503814108907162823 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7534809991379880781, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+  m_PrefabInstance: {fileID: 2661763726154319754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7954505071748199749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5374034837854941903, guid: c717fd605b904104cbb5bfb4ef002af6, type: 3}
+  m_PrefabInstance: {fileID: 2661763726154319754}
+  m_PrefabAsset: {fileID: 0}
