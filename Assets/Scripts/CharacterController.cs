@@ -9,7 +9,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField]private float mouseRotationX;
     [SerializeField] private float mouseRotationY;
     private float mouseRotationXLimit = 30f;
-    public float mouseSensitivity = 15f;
+    public float mouseSensitivity = 50f;
 
     public GameObject bulletPrefab;
     public GameObject bulletSpawnPoint;
@@ -29,6 +29,7 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gunShotSmoke.Stop();
         forward = false;
         backward = true;
         right = false;
