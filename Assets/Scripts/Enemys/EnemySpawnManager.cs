@@ -15,11 +15,17 @@ public class EnemySpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        EnemySpawn();
+    }
+
+    void EnemySpawn()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(enemyCharachters[Random.Range(0,enemyCharachters.Length)],enemyTest.transform.position+new Vector3(0,0,2),enemyTest.transform.rotation);
+            Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], enemyTest.transform.position + new Vector3(0, 0, 2), enemyTest.transform.rotation);
         }
     }
+
 
 
 }

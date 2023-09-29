@@ -24,7 +24,7 @@ public class EnemyMoveForward : MonoBehaviour
     {
         Death();
         Walking();
-
+        EnemyoutOfMap();
     }
 
     void Walking()
@@ -59,6 +59,15 @@ public class EnemyMoveForward : MonoBehaviour
         if (transform.position.y < -2)
         {
             Destroy(gameObject);
+        }
+    }
+
+    void EnemyoutOfMap()
+    {
+        if (transform.position.z > (-3))
+        {
+            Destroy(gameObject);
+            Debug.Log("Enemy leave the map!!!");
         }
     }
 }
