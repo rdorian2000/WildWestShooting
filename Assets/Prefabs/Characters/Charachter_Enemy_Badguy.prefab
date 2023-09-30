@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 919132148855841233}
   m_Layer: 0
   m_Name: Charachter_Enemy_Badguy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -634,9 +634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35175f7e5fefa4f4680f685bc693c04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eKillContrl: {fileID: 919132148855841227}
   enemyMoveSpeed: 2
   isDeath: 0
+  shootNumberForKill: 1
 --- !u!95 &919132148855841233
 Animator:
   serializedVersion: 5

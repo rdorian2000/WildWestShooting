@@ -6,10 +6,10 @@ public class CharacterController : MonoBehaviour
 {
     private float moveSpeed = 5f;
 
-    [SerializeField]private float mouseRotationX;
-    [SerializeField] private float mouseRotationY;
+    private float mouseRotationX;
+    private float mouseRotationY;
     private float mouseRotationXLimit = 30f;
-    public float mouseSensitivity = 50f;
+    private float mouseSensitivity = 5f;
 
     public GameObject bulletPrefab;
     public GameObject bulletSpawnPoint;
@@ -19,14 +19,14 @@ public class CharacterController : MonoBehaviour
     public bool right;
     public bool left;
 
-    public int maxWeaponAmmo = 6;
-    public int currentWeaponAmmo;
-    public float reloadTime = 5f;
-    public bool isReloding = false;
+    private int maxWeaponAmmo = 6;
+    [SerializeField]private int currentWeaponAmmo;
+    private float reloadTime = 2.5f;
+    private bool isReloding = false;
 
     public ParticleSystem gunShotSmoke;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         gunShotSmoke.Stop();
@@ -38,14 +38,15 @@ public class CharacterController : MonoBehaviour
         currentWeaponAmmo = maxWeaponAmmo;
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveAndFirstPersonCameraController();
         BulletSpawn();
+        PlayerReloadWeapon();
         MouseCursorLock();
+        
     }
-
+    //Mozgás sík megadása event szerint.
     void MoveAndFirstPersonCameraController()
     {
         //Horizontal mouse moving
@@ -86,6 +87,7 @@ public class CharacterController : MonoBehaviour
         
     }
 
+    //Kamera mozgatása egérrel vízszintesen.
     void HorizontalMouseMove(float limitDown, float limitUp)
     {
         
@@ -100,6 +102,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    //Mozgás sík megadása. (Forward,Backward)
     void MoveOnXAxes(float xMoveRange, float yMoveRange, float zMoveRange)
     {
 
@@ -118,7 +121,7 @@ public class CharacterController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * moveSpeed);
     }
-
+    //Mozgás sík megadása. (Right,Left)
     void MoveOnZAxes(float xMoveRange, float yMoveRange, float zMoveRange)
     {
 
@@ -137,7 +140,7 @@ public class CharacterController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * moveSpeed);
     }
-
+    //Lõszer spawn a fegyverbõl.
     void BulletSpawn()
     {
         if (isReloding)
@@ -147,19 +150,21 @@ public class CharacterController : MonoBehaviour
 
         if (currentWeaponAmmo <= 0)
         {
-            StartCoroutine(ReloadWeapon());
+            StartCoroutine(AutomateReloadWeapon());
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && currentWeaponAmmo !=0)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && currentWeaponAmmo != 0)
         {
             Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
             gunShotSmoke.Play();
             currentWeaponAmmo--;
         }
+
     }
 
-    IEnumerator ReloadWeapon()
+    //Ha elfogy a lõszer autómata újratöltés.
+    IEnumerator AutomateReloadWeapon()
     {
         isReloding = true;
         Debug.Log("ReloadTimeBaby");
@@ -171,6 +176,20 @@ public class CharacterController : MonoBehaviour
         isReloding = false;
     }
 
+    //Ha még nem fogyott el minden lõszer, de újra akar tölteni a játékos.
+    void PlayerReloadWeapon()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && currentWeaponAmmo!=maxWeaponAmmo)
+        {
+            StartCoroutine(AutomateReloadWeapon());
+        }
+        else
+        {
+            Debug.Log("Weapon is full");
+        }
+    }
+
+    //Kurzor képernyõ közepére zárolása.
     void MouseCursorLock()
     {
         Cursor.lockState = CursorLockMode.Locked;

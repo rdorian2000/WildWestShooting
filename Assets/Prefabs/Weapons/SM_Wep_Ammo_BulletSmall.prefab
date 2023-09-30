@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1990575177}
   m_Layer: 0
   m_Name: SM_Wep_Ammo_BulletSmall
-  m_TagString: Untagged
+  m_TagString: RevolverBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39256b6f06ce3b04ea55bd83780832da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSpeed: 30
 --- !u!114 &7218786852764882983
 MonoBehaviour:
   m_ObjectHideFlags: 0

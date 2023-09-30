@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class EnemyMoveForward : MonoBehaviour
 {
-    public EnemyKillControll eKillContrl;
+    
+    private EnemyKillControll eKillContrl;
     public float enemyMoveSpeed;
     public bool isDeath;
     private Animator animator;
     private Rigidbody rb;
     private BoxCollider boxColl;
+
+    public int shootNumberForKill;
     // Start is called before the first frame update
     void Start()
     {
+        
+        eKillContrl = GetComponent<EnemyKillControll>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         boxColl = GetComponent<BoxCollider>();
@@ -42,8 +47,9 @@ public class EnemyMoveForward : MonoBehaviour
 
     void Death()
     {
-        if (eKillContrl.shootNumber > 1)
+        if (eKillContrl.shootNumber > shootNumberForKill)
         {
+            
             isDeath = true;
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.constraints = RigidbodyConstraints.FreezeRotation;

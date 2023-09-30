@@ -5,25 +5,16 @@ using UnityEngine;
 public class EnemySpawnManager : MonoBehaviour
 {
     public GameObject[] enemyCharachters;
-    public GameObject enemyTest;
+    public GameObject spawnPoint;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        EnemySpawn();
+        InvokeRepeating("EnemySpawn", 30f, 15f);
     }
 
     void EnemySpawn()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], enemyTest.transform.position + new Vector3(0, 0, 2), enemyTest.transform.rotation);
-        }
+        Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPoint.transform.position + new Vector3(0, 0, 2), spawnPoint.transform.rotation);
     }
 
 
