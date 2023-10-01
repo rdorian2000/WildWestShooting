@@ -60,12 +60,14 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemySpawnManager.cs" />
     <Compile Include="Assets\Scripts\GUI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Events\RideEnemyLeft.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyKillControll.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\GUI\Menu.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyMoveForward.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
+    <Compile Include="Assets\Scripts\Enemys\EnemyDestroy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

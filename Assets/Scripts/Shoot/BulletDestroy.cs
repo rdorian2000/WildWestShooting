@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BulletDestroy : MonoBehaviour
 {
-    private float bulletLimitZ = -50f;
-    private float bulletLimitX = 12f;
-    // Update is called once per frame
+    private CharacterController charachterContrl;
+    private float bulletLimitZ;
+    private float bulletLimitX;
+    
+    void Start()
+    {
+        charachterContrl = GameObject.Find("Player").GetComponent<CharacterController>();
+    }
     void Update()
     {
         BulletDestroyer();
@@ -14,15 +19,82 @@ public class BulletDestroy : MonoBehaviour
 
     void BulletDestroyer()
     {
-        if (transform.position.z < bulletLimitZ)
+        if(charachterContrl.backward)
         {
-            Destroy(gameObject);
-        }else if(transform.position.x < -bulletLimitX)
-        {
-            Destroy(gameObject);
-        }else if(transform.position.x > bulletLimitX)
-        {
-            Destroy(gameObject);
+            bulletLimitZ = -50f;
+            bulletLimitX = 20f;
+
+            if (transform.position.z < bulletLimitZ)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.x < -bulletLimitX)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.x > bulletLimitX)
+            {
+                Destroy(gameObject);
+            }
         }
+
+        if (charachterContrl.forward)
+        {
+            bulletLimitZ = 25f;
+            bulletLimitX = 20f;
+
+            if (transform.position.z > bulletLimitZ)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.x < -bulletLimitX)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.x > bulletLimitX)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if (charachterContrl.right)
+        {
+            bulletLimitX = 40f;
+            bulletLimitZ = 20f;
+
+            if (transform.position.x > bulletLimitX)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.z < -bulletLimitZ)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.z > bulletLimitZ)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if (charachterContrl.left)
+        {
+            
+            bulletLimitX = -35f;
+            bulletLimitZ = 20f;
+
+            if (transform.position.x < bulletLimitX)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.z < -bulletLimitZ)
+            {
+                Destroy(gameObject);
+            }
+            else if (transform.position.z > bulletLimitZ)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 }

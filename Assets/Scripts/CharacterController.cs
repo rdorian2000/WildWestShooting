@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
 
     public GameObject bulletPrefab;
     public GameObject bulletSpawnPoint;
+    public GameObject revolverRevolve;
 
     public bool forward;
     public bool backward;
@@ -157,6 +158,7 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && currentWeaponAmmo != 0)
         {
             Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
+            revolverRevolve.transform.Rotate(Vector3.forward,90);
             gunShotSmoke.Play();
             currentWeaponAmmo--;
         }

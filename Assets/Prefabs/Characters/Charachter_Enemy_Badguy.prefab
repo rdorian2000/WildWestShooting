@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 919132148855841227}
   - component: {fileID: 919132148855841232}
   - component: {fileID: 919132148855841233}
+  - component: {fileID: 4986929271008385715}
   m_Layer: 0
   m_Name: Charachter_Enemy_Badguy
   m_TagString: Enemy
@@ -622,6 +623,7 @@ MonoBehaviour:
   bloodSpawnPoint: {fileID: 7954505071748199749}
   bloodDrop: {fileID: 5503814108907162823}
   shootNumber: 0
+  shootNumberForKill: 2
 --- !u!114 &919132148855841232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +638,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMoveSpeed: 2
   isDeath: 0
-  shootNumberForKill: 1
 --- !u!95 &919132148855841233
 Animator:
   serializedVersion: 5
@@ -658,6 +659,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4986929271008385715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896120018811449868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b8711cf41d36941a4da21d0da5caed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2908536155806102150
 GameObject:
   m_ObjectHideFlags: 0
