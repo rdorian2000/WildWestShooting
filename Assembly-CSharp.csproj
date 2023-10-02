@@ -65,9 +65,9 @@
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\GUI\Menu.cs" />
+    <Compile Include="Assets\Scripts\Enemys\EnemyDestroy.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyMoveForward.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
-    <Compile Include="Assets\Scripts\Enemys\EnemyDestroy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
