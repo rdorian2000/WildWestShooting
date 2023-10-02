@@ -8,12 +8,12 @@ public class EnemyKillControll : MonoBehaviour
     public GameObject enemyCharacter;
     public GameObject bloodSpawnPoint;
     public ParticleSystem bloodDrop;
-    [HideInInspector] public int shootNumber;
+    [SerializeField]private int shootNumber;
 
-    private EnemyMoveForward enemyMoveFor;
+    public EnemyMoveForward enemyMoveFor;
     private Rigidbody rb;
     private BoxCollider boxColl;
-    public int shootNumberForKill;
+    [SerializeField]private int shootNumberForKill;
     
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,7 @@ public class EnemyKillControll : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         bloodDrop.Stop();
         shootNumber = 0;
+        shootNumberForKill = Random.Range(1, 3);
     }
 
     // Update is called once per frame
@@ -48,9 +49,8 @@ public class EnemyKillControll : MonoBehaviour
 
     void Death()
     {
-        if (shootNumber > shootNumberForKill)
+        if (shootNumber >= shootNumberForKill)
         {
-
             enemyMoveFor.isDeath = true;
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.constraints = RigidbodyConstraints.FreezeRotation;

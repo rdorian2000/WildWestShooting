@@ -185,10 +185,7 @@ public class CharacterController : MonoBehaviour
         {
             StartCoroutine(AutomateReloadWeapon());
         }
-        else
-        {
-            Debug.Log("Weapon is full");
-        }
+
     }
 
     //Kurzor képernyõ közepére zárolása.

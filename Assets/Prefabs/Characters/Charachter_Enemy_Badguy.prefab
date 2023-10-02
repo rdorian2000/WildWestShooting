@@ -589,7 +589,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1.7, z: 0.25}
+  m_Size: {x: 0.5, y: 1.7, z: 0.5}
   m_Center: {x: 0, y: 0.86, z: 0}
 --- !u!54 &919132148855841228
 Rigidbody:
@@ -605,7 +605,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 86
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &919132148855841227
 MonoBehaviour:
@@ -623,7 +623,8 @@ MonoBehaviour:
   bloodSpawnPoint: {fileID: 7954505071748199749}
   bloodDrop: {fileID: 5503814108907162823}
   shootNumber: 0
-  shootNumberForKill: 2
+  enemyMoveFor: {fileID: 919132148855841232}
+  shootNumberForKill: 1
 --- !u!114 &919132148855841232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2279,7 +2280,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 82.873
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64019680669939990, guid: 06d5955ec0ad0a647971bfeea7cd9f8a, type: 3}
+    - {fileID: 64169994023093708, guid: 06d5955ec0ad0a647971bfeea7cd9f8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 06d5955ec0ad0a647971bfeea7cd9f8a, type: 3}
 --- !u!4 &5322964679845507462 stripped
 Transform:
