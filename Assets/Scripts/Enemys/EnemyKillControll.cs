@@ -10,7 +10,7 @@ public class EnemyKillControll : MonoBehaviour
     public ParticleSystem bloodDrop;
     [SerializeField]private int shootNumber;
 
-    public EnemyMoveForward enemyMoveFor;
+    private CivilianSpawn civilSpawn;
     private Rigidbody rb;
     private BoxCollider boxColl;
     [SerializeField]private int shootNumberForKill;
@@ -21,11 +21,12 @@ public class EnemyKillControll : MonoBehaviour
        
         rb = GetComponent<Rigidbody>();
         boxColl = GetComponent<BoxCollider>();
-        enemyMoveFor=GetComponent<EnemyMoveForward>();
+        civilSpawn = GetComponent<CivilianSpawn>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         bloodDrop.Stop();
         shootNumber = 0;
         shootNumberForKill = Random.Range(1, 3);
+
     }
 
     // Update is called once per frame
@@ -38,20 +39,22 @@ public class EnemyKillControll : MonoBehaviour
     {
         if (other.CompareTag("RevolverBullet"))
         {
-            gameManager.AddScore(1);
+            if (gameObject.CompareTag("Enemy"))
+            {
+                gameManager.AddScore(1);
+            }               
             shootNumber += 1;
             bloodSpawnPoint.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, bloodSpawnPoint.transform.position.z);
             bloodDrop.Play();
             Destroy(other.gameObject);
-        }
-               
+        }              
     }
 
     void Death()
     {
         if (shootNumber >= shootNumberForKill)
         {
-            enemyMoveFor.isDeath = true;
+            civilSpawn.isDeath = true;
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
             boxColl.enabled = false;

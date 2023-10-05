@@ -335,9 +335,8 @@ GameObject:
   - component: {fileID: 8510856391070113620}
   - component: {fileID: 1550750029}
   - component: {fileID: 1550750028}
-  - component: {fileID: 77272241}
   - component: {fileID: 77272242}
-  - component: {fileID: 2036996649821945885}
+  - component: {fileID: 5659736664689162393}
   m_Layer: 0
   m_Name: Charachter_Enemy_Gunman
   m_TagString: Enemy
@@ -437,22 +436,7 @@ MonoBehaviour:
   bloodSpawnPoint: {fileID: 5948985587834851445}
   bloodDrop: {fileID: 8109407525402143223}
   shootNumber: 0
-  enemyMoveFor: {fileID: 77272241}
   shootNumberForKill: 1
---- !u!114 &77272241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841794622103966267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35175f7e5fefa4f4680f685bc693c04d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMoveSpeed: 2
-  isDeath: 0
 --- !u!95 &77272242
 Animator:
   serializedVersion: 5
@@ -474,7 +458,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2036996649821945885
+--- !u!114 &5659736664689162393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -483,9 +467,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1841794622103966267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b8711cf41d36941a4da21d0da5caed, type: 3}
+  m_Script: {fileID: 11500000, guid: 86f6b1cdc5d0d1a4a97a22e3304c5cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingSpeed: 2
+  rotationSpeed: 100
+  isDeath: 0
 --- !u!1 &1865468375085339313
 GameObject:
   m_ObjectHideFlags: 0
