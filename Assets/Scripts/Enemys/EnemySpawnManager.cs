@@ -5,17 +5,23 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
-    public CivilianSpawn civilSpawn;
     public GameObject[] enemyCharachters;
-    public GameObject[] spawnPoints;  
+    public GameObject[] spawnPoints;
+
+    private int actualSpawnPoint;
     void Start()
     {
+        InvokeRepeating("EnemySpawn", 15f, 15f);        
+    }
 
-        InvokeRepeating("EnemySpawn", 15f, 5f);        
+    private void Update()
+    {
+        actualSpawnPoint = Random.Range(0,spawnPoints.Length);
     }
     void EnemySpawn()
     {
-        Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPoints[civilSpawn.actualSpawnPoint].transform.position, spawnPoints[civilSpawn.actualSpawnPoint].transform.rotation);
+        Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPoints[actualSpawnPoint].transform.position, spawnPoints[actualSpawnPoint].transform.rotation);
+        Debug.Log(spawnPoints[actualSpawnPoint]);
     }
 
 

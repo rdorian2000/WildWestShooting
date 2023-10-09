@@ -1,31 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyKillControll : MonoBehaviour
 {
-    private GameManager gameManager;
+    private CharacterController characterController;
+    private EnemyHealPoints enemyHeal;
     public GameObject enemyCharacter;
-    public GameObject bloodSpawnPoint;
-    public ParticleSystem bloodDrop;
-    [SerializeField]private int shootNumber;
 
-    private CivilianSpawn civilSpawn;
+    private NavMeshPatrolling NMPatrol;
     private Rigidbody rb;
     private BoxCollider boxColl;
-    [SerializeField]private int shootNumberForKill;
+
     
     // Start is called before the first frame update
     void Start()
     {
-       
+        enemyHeal = GetComponent<EnemyHealPoints>();
+        characterController = GameObject.Find("Player").GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
         boxColl = GetComponent<BoxCollider>();
-        civilSpawn = GetComponent<CivilianSpawn>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        bloodDrop.Stop();
-        shootNumber = 0;
-        shootNumberForKill = Random.Range(1, 3);
+        NMPatrol = GetComponent<NavMeshPatrolling>();
 
     }
 
@@ -33,28 +29,16 @@ public class EnemyKillControll : MonoBehaviour
     void Update()
     {
         Death();
+        DestroyWhenLeaveTheMap();
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("RevolverBullet"))
-        {
-            if (gameObject.CompareTag("Enemy"))
-            {
-                gameManager.AddScore(1);
-            }               
-            shootNumber += 1;
-            bloodSpawnPoint.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, bloodSpawnPoint.transform.position.z);
-            bloodDrop.Play();
-            Destroy(other.gameObject);
-        }              
-    }
 
     void Death()
     {
-        if (shootNumber >= shootNumberForKill)
-        {
-            civilSpawn.isDeath = true;
+        if (enemyHeal.actualHP == 0)
+        {   
+            
+            NMPatrol.isDeath = true;
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
             boxColl.enabled = false;
@@ -65,7 +49,9 @@ public class EnemyKillControll : MonoBehaviour
 
     void LeavingTheMap()
     {
+        
         rb.useGravity = true;
+        gameObject.GetComponent<NavMeshAgent>().enabled = false;
 
         if (transform.position.y < -2)
         {
@@ -73,5 +59,15 @@ public class EnemyKillControll : MonoBehaviour
         }
     }
 
+    void DestroyWhenLeaveTheMap()
+    {
+        if (characterController.backward)
+        {
+            if(transform.position.z > (-1)) 
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
 }

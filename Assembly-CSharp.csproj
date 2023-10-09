@@ -61,12 +61,14 @@
     <Compile Include="Assets\Scripts\Enemys\EnemySpawnManager.cs" />
     <Compile Include="Assets\Scripts\GUI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Events\RideEnemyLeft.cs" />
+    <Compile Include="Assets\Scripts\Enemys\NavMeshPatrolling.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyKillControll.cs" />
     <Compile Include="Assets\Scripts\Enemys\CivilianSpawn.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\GUI\Menu.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
+    <Compile Include="Assets\Scripts\Enemys\EnemyHealPoints.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
