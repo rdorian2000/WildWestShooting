@@ -31,7 +31,7 @@ public class NavMeshPatrolling : MonoBehaviour
     {
         if (isDeath == false)
         {
-            navMeshAgent.destination = target.transform.position;                     
+            navMeshAgent.destination = target.transform.position;
         }
         else
         {

@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 5789408589514278500}
   - component: {fileID: 919132148855841228}
   - component: {fileID: 919132148855841233}
+  - component: {fileID: 765914601220779226}
   m_Layer: 0
   m_Name: Charachter_Enemy_Badguy
   m_TagString: Enemy
@@ -593,6 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCharacter: {fileID: 2896120018811449868}
+  enemyHealBar: {fileID: 2661763726707704600}
 --- !u!114 &4114210966674330761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,6 +697,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &765914601220779226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896120018811449868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8d3e1931ebade4f891925335ad69dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2908536155806102150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,6 +2367,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76aea7c62d457fe44a0219c1b2f1994d, type: 3}
+--- !u!1 &2661763726707704600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1178480333099318629, guid: 76aea7c62d457fe44a0219c1b2f1994d, type: 3}
+  m_PrefabInstance: {fileID: 3795040935747124861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2661763726707704601 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1178480333099318628, guid: 76aea7c62d457fe44a0219c1b2f1994d, type: 3}

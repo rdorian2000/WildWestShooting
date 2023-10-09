@@ -8,6 +8,7 @@ public class EnemyKillControll : MonoBehaviour
     private CharacterController characterController;
     private EnemyHealPoints enemyHeal;
     public GameObject enemyCharacter;
+    public GameObject enemyHealBar;
 
     private NavMeshPatrolling NMPatrol;
     private Rigidbody rb;
@@ -17,6 +18,7 @@ public class EnemyKillControll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemyHealBar.SetActive(true);
         enemyHeal = GetComponent<EnemyHealPoints>();
         characterController = GameObject.Find("Player").GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
@@ -35,9 +37,9 @@ public class EnemyKillControll : MonoBehaviour
 
     void Death()
     {
-        if (enemyHeal.actualHP == 0)
-        {   
-            
+        if (enemyHeal.actualHP <= 0)
+        {
+            enemyHealBar.SetActive(false);
             NMPatrol.isDeath = true;
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.constraints = RigidbodyConstraints.FreezeRotation;

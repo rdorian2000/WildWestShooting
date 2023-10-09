@@ -8,7 +8,7 @@ public class EnemySpawnManager : MonoBehaviour
     public GameObject[] enemyCharachters;
     public GameObject[] spawnPoints;
 
-    private int actualSpawnPoint;
+    public int actualSpawnPoint;
     void Start()
     {
         InvokeRepeating("EnemySpawn", 15f, 15f);        
@@ -16,7 +16,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     private void Update()
     {
-        actualSpawnPoint = Random.Range(0,spawnPoints.Length);
+        //actualSpawnPoint = Random.Range(0,spawnPoints.Length);
     }
     void EnemySpawn()
     {
