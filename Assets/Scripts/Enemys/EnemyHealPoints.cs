@@ -15,7 +15,7 @@ public class EnemyHealPoints : MonoBehaviour
     {
         if (gameObject.tag == "Enemy")
         {
-            maxHP = Random.Range(1, 6);
+            maxHP = Random.Range(3, 6);
         }else if(gameObject.tag == "PianoMan")
         {
             maxHP = Random.Range(5, 11);

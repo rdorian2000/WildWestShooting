@@ -69,6 +69,7 @@ public class NavMeshPatrolling : MonoBehaviour
             if (isDeath == false)
             {
                 navMeshAgent.destination = target.transform.position;
+                animator.SetBool("isPlay", true);
             }
             else
             {
@@ -84,3 +85,4 @@ public class NavMeshPatrolling : MonoBehaviour
 
 
 }
+
