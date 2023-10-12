@@ -7,19 +7,19 @@ public class EnemyHealPoints : MonoBehaviour
 {
     public Slider enemyHealPointBar;
 
-    public GameObject bloodSpawnPoint;
-    public ParticleSystem bloodDrop;
-
-    private GameManager gameManager;
-
     public int actualHP;
     public int maxHP;
+
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        bloodDrop.Stop();      
-        maxHP = Random.Range(1, 3);
+        if (gameObject.tag == "Enemy")
+        {
+            maxHP = Random.Range(1, 6);
+        }else if(gameObject.tag == "PianoMan")
+        {
+            maxHP = Random.Range(5, 11);
+        }
         actualHP = maxHP;
         enemyHealPointBar.maxValue = maxHP;
         enemyHealPointBar.value = actualHP;
@@ -31,20 +31,12 @@ public class EnemyHealPoints : MonoBehaviour
     {
         enemyHealPointBar.fillRect.gameObject.SetActive(true);
         enemyHealPointBar.value = actualHP;
+
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void TakeDamage()
     {
-        if (other.CompareTag("RevolverBullet"))
-        {
-            if (gameObject.CompareTag("Enemy"))
-            {
-                gameManager.AddScore(1);
-            }
-            actualHP -= 1;
-            bloodSpawnPoint.transform.position = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, bloodSpawnPoint.transform.position.z);
-            bloodDrop.Play();
-            Destroy(other.gameObject);
-        }
+        actualHP -= 1;
     }
+
 }

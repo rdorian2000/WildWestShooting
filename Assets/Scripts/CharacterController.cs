@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    private float moveSpeed = 5f;
+    private GameManager gameManager;
 
+    private float moveSpeed = 5f;
     private float mouseRotationX;
     private float mouseRotationY;
     private float mouseRotationXLimit = 30f;
@@ -14,6 +15,10 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletSpawnPoint;
     public GameObject revolverRevolve;
+
+    public Camera fpsCam;
+    public float range = 100f;
+    public GameObject bloodDropEffect;
 
     public bool forward;
     public bool backward;
@@ -30,6 +35,7 @@ public class CharacterController : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gunShotSmoke.Stop();
         forward = false;
         backward = true;
@@ -157,12 +163,41 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && currentWeaponAmmo != 0)
         {
-            Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
+            Destroy(bullet, 5f);
             revolverRevolve.transform.Rotate(Vector3.forward,90);
+            Shoot();
             gunShotSmoke.Play();
             currentWeaponAmmo--;
         }
 
+    }
+
+    void Shoot()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range)) 
+        {
+            Debug.Log(hit.transform.name);
+            
+            EnemyHealPoints target = hit.transform.GetComponent<EnemyHealPoints>();
+            if (target != null)
+            {
+                target.TakeDamage();
+            }
+
+            if(hit.rigidbody != null)
+            {
+                GameObject bloodGameObecjt = Instantiate(bloodDropEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(bloodGameObecjt, 2f);
+            }
+
+            if (hit.transform.tag=="Enemy")
+            {
+                gameManager.AddScore(1);
+            }
+
+        }
     }
 
     //Ha elfogy a lõszer autómata újratöltés.

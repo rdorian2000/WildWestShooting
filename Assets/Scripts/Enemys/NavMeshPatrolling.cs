@@ -7,6 +7,8 @@ using UnityEngine.AI;
 
 public class NavMeshPatrolling : MonoBehaviour
 {
+    private PianoManSpawnManager pianoManSpawn;
+    
     public bool isDeath;
     private Animator animator;
     private Rigidbody rb;
@@ -15,30 +17,69 @@ public class NavMeshPatrolling : MonoBehaviour
 
     private NavMeshAgent navMeshAgent;
 
+    bool EnemyGuy = false;
+    bool PianoMan = false;
+
     private void Awake()
     {
-        target = GameObject.Find("EndPoint").transform;
+        if(gameObject.tag == "Enemy")
+        {
+            EnemyGuy = true;
+            target = GameObject.Find("EndPoint").transform;
+        }else if(gameObject.tag == "PianoMan")
+        {
+            PianoMan = true;
+            target = GameObject.Find("PianoManPianoPoint").transform;
+        }
+        
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     private void Start()
-    {       
+    {
+        pianoManSpawn = GameObject.Find("PianoManSpawnManager").GetComponent<PianoManSpawnManager>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         isDeath = false;
     }
     private void Update()
     {
-        if (isDeath == false)
+        EnemyDeath(PianoMan, EnemyGuy);
+
+    }
+
+    void EnemyDeath(bool PianoMan, bool EnemyGuy)
+    {
+        if (EnemyGuy)
         {
-            navMeshAgent.destination = target.transform.position;
+            if (isDeath == false)
+            {
+                navMeshAgent.destination = target.transform.position;
+            }
+            else
+            {
+                rb.freezeRotation = false;
+                navMeshAgent.speed = 0;
+                animator.SetBool("isDeath", true);
+            }
         }
-        else
+
+        if (PianoMan)
         {
-            rb.freezeRotation = false;
-            navMeshAgent.speed= 0;
-            animator.SetBool("isDeath", true);
+            if (isDeath == false)
+            {
+                navMeshAgent.destination = target.transform.position;
+            }
+            else
+            {
+                pianoManSpawn.pianoManisDead = true;
+                gameObject.transform.position = new Vector3(5.25f, transform.position.y, transform.position.z);
+                rb.freezeRotation = false;
+                navMeshAgent.speed = 0;
+                animator.SetBool("isDeath", true);
+            }
         }
+
     }
 
 

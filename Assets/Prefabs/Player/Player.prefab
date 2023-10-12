@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 5449983356362452254}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1292,19 +1292,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a271bd339aaa08d448c40a1acf386128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseRotationX: 0
-  mouseRotationY: 0
-  mouseSensitivity: 15
   bulletPrefab: {fileID: 1691905862156884674, guid: 4c061db43508e25498d91c08e2d4e111, type: 3}
   bulletSpawnPoint: {fileID: 5449983355938149543}
+  revolverRevolve: {fileID: 5451318519826667047}
+  fpsCam: {fileID: 5449983356237554283}
+  range: 100
+  bloodDropEffect: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}
   forward: 0
-  backward: 1
-  right: 0
+  backward: 0
+  right: 1
   left: 0
-  maxWeaponAmmo: 6
   currentWeaponAmmo: 0
-  reloadTime: 5
-  isReloding: 0
   gunShotSmoke: {fileID: 1332276096}
 --- !u!1 &5180002999604494532
 GameObject:
@@ -2273,8 +2271,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 82.873
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 64860775137797984, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 64560954855894062, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+--- !u!1 &5451318519826667047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1341075599876416, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+  m_PrefabInstance: {fileID: 5449983356390979431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5454823178767214313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4879888146567566, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RevolverBullet
   - Enemy
+  - PianoMan
   layers:
   - Default
   - TransparentFX
