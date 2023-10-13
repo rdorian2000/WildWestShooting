@@ -50,13 +50,12 @@ public class EnemyKillControll : MonoBehaviour
     }
 
     void LeavingTheMap()
-    {
-        
-        rb.useGravity = true;
+    {              
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
-
+        rb.useGravity = true;
         if (transform.position.y < -2)
         {
+            
             Destroy(gameObject);
         }
     }

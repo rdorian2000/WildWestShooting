@@ -7,8 +7,7 @@ using UnityEngine.AI;
 
 public class NavMeshPatrolling : MonoBehaviour
 {
-    private PianoManSpawnManager pianoManSpawn;
-    
+
     public bool isDeath;
     private Animator animator;
     private Rigidbody rb;
@@ -22,10 +21,11 @@ public class NavMeshPatrolling : MonoBehaviour
 
     private void Awake()
     {
-        if(gameObject.tag == "Enemy")
+        if (gameObject.tag == "Enemy")
         {
             EnemyGuy = true;
             target = GameObject.Find("EndPoint").transform;
+        
         }else if(gameObject.tag == "PianoMan")
         {
             PianoMan = true;
@@ -37,7 +37,7 @@ public class NavMeshPatrolling : MonoBehaviour
 
     private void Start()
     {
-        pianoManSpawn = GameObject.Find("PianoManSpawnManager").GetComponent<PianoManSpawnManager>();
+        
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         isDeath = false;
@@ -64,7 +64,7 @@ public class NavMeshPatrolling : MonoBehaviour
             }
         }
 
-        if (PianoMan)
+        /*if (PianoMan)
         {
             if (isDeath == false)
             {
@@ -73,13 +73,13 @@ public class NavMeshPatrolling : MonoBehaviour
             }
             else
             {
-                pianoManSpawn.pianoManisDead = true;
+                //StartCoroutine(EnemySpawnManagerObject.GetComponent<EnemySpawnManager>().PianoManSpawn());
                 gameObject.transform.position = new Vector3(5.25f, transform.position.y, transform.position.z);
                 rb.freezeRotation = false;
                 navMeshAgent.speed = 0;
                 animator.SetBool("isDeath", true);
             }
-        }
+        }*/
 
     }
 

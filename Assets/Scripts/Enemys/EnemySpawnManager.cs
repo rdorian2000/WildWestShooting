@@ -8,6 +8,9 @@ public class EnemySpawnManager : MonoBehaviour
     public GameObject[] enemyCharachters;
     public GameObject[] spawnPoints;
 
+    public GameObject pianoManCharachter;
+    public GameObject pianoManSpawnPoint;
+
     private int actualSpawnPoint;
 
     
@@ -24,6 +27,14 @@ public class EnemySpawnManager : MonoBehaviour
     {
         Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPoints[actualSpawnPoint].transform.position, spawnPoints[actualSpawnPoint].transform.rotation);
         Debug.Log(spawnPoints[actualSpawnPoint]);
+    }
+
+    public IEnumerable PianoManSpawn()
+    {
+        yield return new WaitForSeconds(Random.Range(120, 240));
+
+        Instantiate(pianoManCharachter, pianoManSpawnPoint.transform.position, pianoManSpawnPoint.transform.rotation);
+        Debug.Log(pianoManSpawnPoint);
     }
 
 

@@ -331,7 +331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1352362879986894977}
-  - component: {fileID: 3580062985286830697}
+  - component: {fileID: 4904181352921284259}
   - component: {fileID: 1550750028}
   - component: {fileID: 3421713780439662936}
   - component: {fileID: 7370268035921775819}
@@ -365,7 +365,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3580062985286830697
+--- !u!114 &4904181352921284259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,26 +374,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1841794622103966267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8db4c7622349c42b60358522166578, type: 3}
+  m_Script: {fileID: 11500000, guid: cd2f8faf60dd9224eb2d9c8782fca1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaterials:
-  - {fileID: 2100000, guid: be625e807aad8404e9515f0cfbb77e25, type: 2}
-  - {fileID: 2100000, guid: 66a8a6e30880caa48908020cf5388217, type: 2}
-  - {fileID: 2100000, guid: a15da839caab97b4f9cd9586f4ff31e6, type: 2}
-  - {fileID: 2100000, guid: e611177a3c87f9746befe4d104a33201, type: 2}
-  - {fileID: 2100000, guid: acc516ec156796d47bbe901cc03b19d3, type: 2}
-  - {fileID: 2100000, guid: 5146a78f90d41354b9e048f81986a8f3, type: 2}
-  - {fileID: 2100000, guid: 5e3d175f3d5b8914cb1c010383991d6d, type: 2}
-  - {fileID: 2100000, guid: 67cb02df386c44e4b9da736f1a3688f9, type: 2}
-  - {fileID: 2100000, guid: 73a96c76131a3424090657479aadbc03, type: 2}
-  - {fileID: 2100000, guid: 389b1eed39cf63c4fb8efea61e9976c5, type: 2}
-  - {fileID: 2100000, guid: 0363b46d437346a419e1ca86ea14de9e, type: 2}
-  - {fileID: 2100000, guid: dd9a2415c6257cb4ba1738d92c094497, type: 2}
-  - {fileID: 2100000, guid: eff0273ef9a8a754b8ef6e72adca2111, type: 2}
-  - {fileID: 2100000, guid: 3b20901891546e04999f06509086c9bf, type: 2}
-  - {fileID: 2100000, guid: 0e05935a90b6d7849a0fff4320edec77, type: 2}
-  - {fileID: 2100000, guid: e8a12213ace71464e991b09e2e492540, type: 2}
+  skinMat: {fileID: 11400000, guid: dc01cfeb613cb2846a15c2e17240a0db, type: 2}
   enemyCharachter: {fileID: 4528235717793912076}
 --- !u!114 &1550750028
 MonoBehaviour:
