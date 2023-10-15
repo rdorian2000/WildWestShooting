@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e36c20e109b4c4ab8fbd6e0bd1fc7a, type: 3}
+  m_Name: PianoEndPoint
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 6459247945771657679, guid: 771981f05404d0841a7f443b4904af6e, type: 3}

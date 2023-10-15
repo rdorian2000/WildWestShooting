@@ -1,74 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyKillControll : MonoBehaviour
-{
-    private CharacterController characterController;
-    private EnemyHealPoints enemyHeal;
+{    
     public GameObject enemyCharacter;
     public GameObject enemyHealBar;
 
-    private NavMeshPatrolling NMPatrol;
+    private NavMeshAgent navMeshAgent;
     private Rigidbody rb;
     private BoxCollider boxColl;
+    private Animator animator;
 
-    
-    // Start is called before the first frame update
+    public bool playPiano = false;
+
+    private void Awake()
+    {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+    }
     void Start()
     {
         enemyHealBar.SetActive(true);
-        enemyHeal = GetComponent<EnemyHealPoints>();
-        characterController = GameObject.Find("Player").GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
         boxColl = GetComponent<BoxCollider>();
-        NMPatrol = GetComponent<NavMeshPatrolling>();
-
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        Death();
-        DestroyWhenLeaveTheMap();
+        EnemyHealPoints.Death += DeadCharachter;
     }
 
-
-    void Death()
+    void OnDisable()
     {
-        if (enemyHeal.actualHP <= 0)
-        {
+        EnemyHealPoints.Death -= DeadCharachter;
+    }
+
+    void DeadCharachter(string uniqueID)
+    {
+        if (gameObject.tag == "Enemy" && uniqueID == gameObject.GetInstanceID().ToString()){
+            animator.SetBool("isDeath", true);
+            navMeshAgent.speed = 0;
             enemyHealBar.SetActive(false);
-            NMPatrol.isDeath = true;
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
             boxColl.enabled = false;
             Invoke("LeavingTheMap", 10f);
         }
 
+        if (gameObject.tag == "PianoMan" && uniqueID == gameObject.GetInstanceID().ToString())
+        {
+            if (animator.GetBool("isPlay"))
+            {
+                gameObject.transform.position = new Vector3(5.25f, transform.position.y, transform.position.z);
+            }           
+            animator.SetBool("isDeath", true);
+            navMeshAgent.speed = 0;
+            enemyHealBar.SetActive(false);
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+            boxColl.enabled = false;
+            Invoke("LeavingTheMap", 10f);
+        }
     }
-
     void LeavingTheMap()
     {              
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
         rb.useGravity = true;
         if (transform.position.y < -2)
-        {
-            
+        {          
             Destroy(gameObject);
         }
+
+
     }
 
-    void DestroyWhenLeaveTheMap()
-    {
-        if (characterController.backward)
-        {
-            if(transform.position.z > (-1)) 
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
 
 }

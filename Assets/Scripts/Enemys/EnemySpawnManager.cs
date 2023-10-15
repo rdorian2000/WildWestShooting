@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemySpawnManager : MonoBehaviour
 {
     public GameObject[] enemyCharachters;
-    public GameObject[] spawnPoints;
+    [SerializeField] private SpawnPointsList spawnPointList;
 
     public GameObject pianoManCharachter;
     public GameObject pianoManSpawnPoint;
@@ -21,12 +21,12 @@ public class EnemySpawnManager : MonoBehaviour
 
     private void Update()
     {
-        actualSpawnPoint = Random.Range(0,spawnPoints.Length);     
+        actualSpawnPoint = Random.Range(0, spawnPointList.spawnPoints.Length);     
     }
     void EnemySpawn()
     {
-        Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPoints[actualSpawnPoint].transform.position, spawnPoints[actualSpawnPoint].transform.rotation);
-        Debug.Log(spawnPoints[actualSpawnPoint]);
+        Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);
+        Debug.Log(spawnPointList.spawnPoints[actualSpawnPoint]);
     }
 
     public IEnumerable PianoManSpawn()

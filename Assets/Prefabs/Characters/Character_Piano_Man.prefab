@@ -942,9 +942,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3815061668471142186}
   - component: {fileID: 3198916792280916175}
+  - component: {fileID: 7106470522486272904}
   - component: {fileID: 8067742262658310048}
   - component: {fileID: 1023841328}
-  - component: {fileID: 228787287752404129}
   - component: {fileID: 5429849832076637975}
   - component: {fileID: 4466431185707300124}
   - component: {fileID: 8533822435788855821}
@@ -988,6 +988,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinMat: {fileID: 11400000, guid: dc01cfeb613cb2846a15c2e17240a0db, type: 2}
   enemyCharachter: {fileID: 3913155848440057485}
+--- !u!114 &7106470522486272904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4591986013896584592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99bf292aefce9094ab4b25b19c7d455b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPoint: {fileID: 11400000, guid: b43e14cdbf9c5504a9b67cc8f01b6292, type: 2}
+  isPlayPiano: 0
 --- !u!114 &8067742262658310048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,19 +1031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCharacter: {fileID: 4591986013896584592}
   enemyHealBar: {fileID: 8458069878911584944}
---- !u!114 &228787287752404129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4591986013896584592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 614846c2cc34092469a05b583588b89e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDeath: 0
+  playPiano: 0
 --- !u!195 &5429849832076637975
 NavMeshAgent:
   m_ObjectHideFlags: 0

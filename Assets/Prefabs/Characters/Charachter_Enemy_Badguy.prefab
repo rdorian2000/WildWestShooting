@@ -579,6 +579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCharacter: {fileID: 2896120018811449868}
   enemyHealBar: {fileID: 2661763726707704600}
+  playPiano: 0
 --- !u!114 &4114210966674330761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614846c2cc34092469a05b583588b89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDeath: 0
+  endPointList: {fileID: 11400000, guid: 6ba89b0e29d11124eb06d1271b3b6cd7, type: 2}
 --- !u!114 &832795659204092059
 MonoBehaviour:
   m_ObjectHideFlags: 0

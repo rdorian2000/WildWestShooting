@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e36c20e109b4c4ab8fbd6e0bd1fc7a, type: 3}
+  m_Name: EndPointsList
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1004671930924001730, guid: cf8a2e1e004b48341911f3a33ce1e2e9, type: 3}
+  - {fileID: 9175743906921062151, guid: 4a927eef372801841ac8265c95b78bd5, type: 3}
+  - {fileID: 4165710546846032080, guid: 48ab6731378183649aea49c56008d312, type: 3}
+  - {fileID: 7827550359541545932, guid: 951f134095365314e8812982512a759a, type: 3}

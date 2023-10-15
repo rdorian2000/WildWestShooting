@@ -192,7 +192,7 @@ public class CharacterController : MonoBehaviour
                 Destroy(bloodGameObecjt, 2f);
             }
 
-            if (hit.transform.tag=="Enemy")
+            if (hit.transform.tag=="Enemy" || hit.transform.tag=="PianoMan")
             {
                 gameManager.AddScore(1);
             }
