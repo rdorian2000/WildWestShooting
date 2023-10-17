@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class PianomanMoveScript : MonoBehaviour
 {
     private Animator animator;
-    //[SerializeField] private SpawnPointsList endPoint;
-    public GameObject pianoPoint;
+    //[SerializeField] private SpawnPointsList endPoint; 
+    private GameObject pianoPoint;
     private NavMeshAgent navMeshAgent;
     private Transform target;
 
@@ -15,6 +15,7 @@ public class PianomanMoveScript : MonoBehaviour
 
     void Awake()
     {
+        pianoPoint = GameObject.Find("PianomanEndPoint");
         target = pianoPoint.transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();  

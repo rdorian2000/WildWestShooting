@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
 {
+    
+
     public GameObject[] enemyCharachters;
     [SerializeField] private SpawnPointsList spawnPointList;
 
@@ -13,7 +15,16 @@ public class EnemySpawnManager : MonoBehaviour
 
     private int actualSpawnPoint;
 
-    
+    void OnEnable()
+    {
+        EnemyHealPoints.Spawn += PianoManSpawn;
+    }
+
+    void OnDisable()
+    {
+        EnemyHealPoints.Spawn -= PianoManSpawn;
+    }
+
     void Start()
     {
         InvokeRepeating("EnemySpawn", 15f, 15f);
@@ -21,21 +32,34 @@ public class EnemySpawnManager : MonoBehaviour
 
     private void Update()
     {
-        actualSpawnPoint = Random.Range(0, spawnPointList.spawnPoints.Length);     
+        actualSpawnPoint = Random.Range(0, spawnPointList.spawnPoints.Length);  
     }
-    void EnemySpawn()
+    public void EnemySpawn()
     {
+        //yield return new WaitForSeconds(Random.Range(15, 20));
+
         Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);
         Debug.Log(spawnPointList.spawnPoints[actualSpawnPoint]);
     }
 
-    public IEnumerable PianoManSpawn()
+    public IEnumerator PianoManInstantiate()
     {
+        
         yield return new WaitForSeconds(Random.Range(120, 240));
 
         Instantiate(pianoManCharachter, pianoManSpawnPoint.transform.position, pianoManSpawnPoint.transform.rotation);
-        Debug.Log(pianoManSpawnPoint);
+        OnEnable();
     }
+
+    
+
+    public void PianoManSpawn()
+    {
+        StartCoroutine(PianoManInstantiate());
+        OnDisable();
+    }
+
+
 
 
 

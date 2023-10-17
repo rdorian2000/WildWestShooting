@@ -8,6 +8,9 @@ public class EnemyHealPoints : MonoBehaviour
     public delegate void EnemySystem(string uniqueID);
     public static event EnemySystem Death;
 
+    public delegate void EnemySpawnSystem();
+    public static event EnemySpawnSystem Spawn;
+
     public Slider enemyHealPointBar;
     public int actualHP;
     public int maxHP;
@@ -35,6 +38,7 @@ public class EnemyHealPoints : MonoBehaviour
         enemyHealPointBar.fillRect.gameObject.SetActive(true);
         enemyHealPointBar.value = actualHP;
         EnemyDeath();
+        PianoManSpawn();
     }
 
     public void TakeDamage()
@@ -49,6 +53,17 @@ public class EnemyHealPoints : MonoBehaviour
             if(Death != null)
             {
                 Death(gameObject.GetInstanceID().ToString());
+            }
+        }
+    }
+
+    void PianoManSpawn()
+    {
+        if(gameObject.tag == "PianoMan" && actualHP <= 0)
+        {
+            if(Spawn != null)
+            {
+                Spawn();
             }
         }
     }

@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bf292aefce9094ab4b25b19c7d455b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 11400000, guid: b43e14cdbf9c5504a9b67cc8f01b6292, type: 2}
+  pianoPoint: {fileID: 0}
   isPlayPiano: 0
 --- !u!114 &8067742262658310048
 MonoBehaviour:

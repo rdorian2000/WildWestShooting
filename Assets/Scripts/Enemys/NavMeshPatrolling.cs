@@ -15,7 +15,7 @@ public class NavMeshPatrolling : MonoBehaviour
     {
         if (gameObject.tag == "Enemy")
         {                      
-            target = endPointList.spawnPoints[Random.Range(0, endPointList.spawnPoints.Length)].transform;
+            target = endPointList.spawnPoints[Random.Range(0, 3)].transform;
         }
 
         navMeshAgent = GetComponent<NavMeshAgent>();
