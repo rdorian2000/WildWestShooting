@@ -37,8 +37,7 @@ public class PianomanMoveScript : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {      
         if (gameObject.tag == "PianoMan" && col.gameObject == pianoPoint)
-        {
-            Debug.Log("Beért!");
+        {          
             isPlayPiano = true;
             animator.SetBool("isPlay", isPlayPiano);
                                  

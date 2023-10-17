@@ -229,4 +229,12 @@ public class CharacterController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(gameObject.tag == "RevolverBullet")
+        {
+            Debug.Log("Eltaláltak!");
+        }
+    }
+
 }

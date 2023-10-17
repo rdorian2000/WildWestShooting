@@ -42,7 +42,7 @@ public class EnemyKillControll : MonoBehaviour
     {
         if (gameObject.tag == "Enemy" && uniqueID == gameObject.GetInstanceID().ToString()){
             animator.SetBool("isDeath", true);
-            navMeshAgent.speed = 0;
+            navMeshAgent.speed = 0;          
             enemyHealBar.SetActive(false);
             rb.constraints = RigidbodyConstraints.FreezePosition;
             rb.constraints = RigidbodyConstraints.FreezeRotation;
@@ -56,7 +56,7 @@ public class EnemyKillControll : MonoBehaviour
             {
                 gameObject.transform.position = new Vector3(5.25f, transform.position.y, transform.position.z);
             }           
-            animator.SetBool("isDeath", true);
+            animator.SetBool("isDeath", true);           
             navMeshAgent.speed = 0;
             enemyHealBar.SetActive(false);
             rb.constraints = RigidbodyConstraints.FreezePosition;
