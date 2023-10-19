@@ -71,10 +71,9 @@
     <Compile Include="Assets\Scripts\Enemys\EnemyHealPoints.cs" />
     <Compile Include="Assets\Scripts\GUI\Menu.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\SkinMaterials.cs" />
-    <Compile Include="Assets\Scripts\Enemys\EnemyAttach.cs" />
+    <Compile Include="Assets\Scripts\Enemys\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
     <Compile Include="Assets\Scripts\Enemys\IfEnemyBug.cs" />
-    <Compile Include="Assets\Scripts\Enemys\EventManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\RandomSkinOnObject.cs" />
   </ItemGroup>
   <ItemGroup>

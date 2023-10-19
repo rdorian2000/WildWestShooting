@@ -22,6 +22,7 @@ public class EnemyKillControll : MonoBehaviour
     }
     void Start()
     {
+        
         enemyHealBar.SetActive(true);
         rb = GetComponent<Rigidbody>();
         boxColl = GetComponent<BoxCollider>();
@@ -40,7 +41,7 @@ public class EnemyKillControll : MonoBehaviour
 
     void DeadCharachter(string uniqueID)
     {
-        if (gameObject.tag == "Enemy" && uniqueID == gameObject.GetInstanceID().ToString()){
+        if (gameObject.tag == "Enemy" && uniqueID == gameObject.GetInstanceID().ToString()){          
             animator.SetBool("isDeath", true);
             navMeshAgent.speed = 0;          
             enemyHealBar.SetActive(false);
@@ -49,7 +50,7 @@ public class EnemyKillControll : MonoBehaviour
             boxColl.enabled = false;
             Invoke("LeavingTheMap", 10f);
         }
-
+        
         if (gameObject.tag == "PianoMan" && uniqueID == gameObject.GetInstanceID().ToString())
         {
             if (animator.GetBool("isPlay"))
@@ -73,8 +74,6 @@ public class EnemyKillControll : MonoBehaviour
         {          
             Destroy(gameObject);
         }
-
-
     }
 
 

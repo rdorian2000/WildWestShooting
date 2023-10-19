@@ -26,7 +26,6 @@ public class NavMeshPatrolling : MonoBehaviour
     {
         navMeshAgent.destination = target.transform.position;                    
     }
-
-
+  
 }
 

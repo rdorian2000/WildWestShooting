@@ -4,9 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
-{
-    
-
+{  
     public GameObject[] enemyCharachters;
     [SerializeField] private SpawnPointsList spawnPointList;
 

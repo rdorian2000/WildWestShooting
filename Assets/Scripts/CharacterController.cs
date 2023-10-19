@@ -53,6 +53,8 @@ public class CharacterController : MonoBehaviour
         MouseCursorLock();
         
     }
+ 
+
     //Mozgás sík megadása event szerint.
     void MoveAndFirstPersonCameraController()
     {
@@ -195,6 +197,11 @@ public class CharacterController : MonoBehaviour
             if (hit.transform.tag=="Enemy" || hit.transform.tag=="PianoMan")
             {
                 gameManager.AddScore(1);
+            }
+
+            if (hit.transform.tag != "Enemy" || hit.transform.tag != "PianoMan")
+            {
+                gameManager.AddScore(-3);
             }
 
         }

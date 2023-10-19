@@ -9,7 +9,7 @@ public class EnemyHealPoints : MonoBehaviour
     public static event EnemySystem Death;
 
     public delegate void EnemySpawnSystem();
-    public static event EnemySpawnSystem Spawn;
+    public static event EnemySpawnSystem Spawn;   
 
     public Slider enemyHealPointBar;
     public int actualHP;
