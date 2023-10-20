@@ -199,7 +199,7 @@ public class CharacterController : MonoBehaviour
                 gameManager.AddScore(1);
             }
 
-            if (hit.transform.tag != "Enemy" || hit.transform.tag != "PianoMan")
+            if (hit.transform.tag == "Civilian")
             {
                 gameManager.AddScore(-3);
             }

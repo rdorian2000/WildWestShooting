@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - PianoMan
   - ShootZone
+  - Civilian
   layers:
   - Default
   - TransparentFX

@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyHealPoints : MonoBehaviour
 {
-    public delegate void EnemySystem(string uniqueID);
-    public static event EnemySystem Death;
-
-    public delegate void EnemySpawnSystem();
-    public static event EnemySpawnSystem Spawn;   
+    public static event Action<string> Death;
+    public static event Action Spawn;   
 
     public Slider enemyHealPointBar;
     public int actualHP;
@@ -19,11 +15,11 @@ public class EnemyHealPoints : MonoBehaviour
     {
         if (gameObject.tag == "Enemy")
         {
-            maxHP = Random.Range(3, 6);
+            maxHP = UnityEngine.Random.Range(3, 6);
         }
         else if(gameObject.tag == "PianoMan")
         {
-            maxHP = Random.Range(10, 16);
+            maxHP = UnityEngine.Random.Range(10, 16);
         }
         actualHP = maxHP;     
         enemyHealPointBar.maxValue = maxHP;

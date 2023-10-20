@@ -25,26 +25,34 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("EnemySpawn", 15f, 15f);
+        StartCoroutine(EnemySpawn());
+        StartCoroutine(spawnpointRandomizer());
+    }
+  
+    public IEnumerator spawnpointRandomizer()
+    {
+        for(; ; )
+        {
+            actualSpawnPoint = Random.Range(0, spawnPointList.spawnPoints.Length);
+            yield return new WaitForSeconds(1);
+        }
+                 
     }
 
-    private void Update()
-    {
-        actualSpawnPoint = Random.Range(0, spawnPointList.spawnPoints.Length);  
-    }
-    public void EnemySpawn()
-    {
-        //yield return new WaitForSeconds(Random.Range(15, 20));
 
-        Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);
-        Debug.Log(spawnPointList.spawnPoints[actualSpawnPoint]);
+    public IEnumerator EnemySpawn()
+    {      
+        for(; ; )
+        {
+            Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);
+            Debug.Log(spawnPointList.spawnPoints[actualSpawnPoint]);
+            yield return new WaitForSeconds(Random.Range(10, 15));
+        }                   
     }
 
     public IEnumerator PianoManInstantiate()
-    {
-        
+    {   
         yield return new WaitForSeconds(Random.Range(120, 240));
-
         Instantiate(pianoManCharachter, pianoManSpawnPoint.transform.position, pianoManSpawnPoint.transform.rotation);
         OnEnable();
     }
