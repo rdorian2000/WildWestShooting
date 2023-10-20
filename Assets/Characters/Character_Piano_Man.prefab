@@ -1000,7 +1000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bf292aefce9094ab4b25b19c7d455b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pianoPoint: {fileID: 0}
   isPlayPiano: 0
 --- !u!114 &8067742262658310048
 MonoBehaviour:

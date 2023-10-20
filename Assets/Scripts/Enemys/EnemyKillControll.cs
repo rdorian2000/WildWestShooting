@@ -38,7 +38,7 @@ public class EnemyKillControll : MonoBehaviour
 
     void DeadCharachter(string uniqueID)
     {
-        if (gameObject.tag == "Enemy" && uniqueID == gameObject.GetInstanceID().ToString()){          
+        if ((gameObject.tag == "Civilian" || gameObject.tag == "Enemy") && uniqueID == gameObject.GetInstanceID().ToString()){          
             animator.SetBool("isDeath", true);
             navMeshAgent.speed = 0;          
             enemyHealBar.SetActive(false);

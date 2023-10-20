@@ -13,11 +13,17 @@ public class NavMeshPatrolling : MonoBehaviour
 
     private void Awake()
     {
+        navMeshAgent = GetComponent<NavMeshAgent>();
         if (gameObject.tag == "Enemy")
         {                      
             target = endPointList.spawnPoints[Random.Range(0, 3)].transform;
         }
-        navMeshAgent = GetComponent<NavMeshAgent>();
+
+        if (gameObject.tag == "Civilian")
+        {
+            target = endPointList.spawnPoints[Random.Range(0, 3)].transform;
+        }
+
     }
 
    

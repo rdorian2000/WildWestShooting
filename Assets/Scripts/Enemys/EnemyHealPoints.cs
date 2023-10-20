@@ -20,6 +20,9 @@ public class EnemyHealPoints : MonoBehaviour
         else if(gameObject.tag == "PianoMan")
         {
             maxHP = UnityEngine.Random.Range(10, 16);
+        }else if(gameObject.tag == "Civilian")
+        {
+            maxHP = UnityEngine.Random.Range(1, 3);
         }
         actualHP = maxHP;     
         enemyHealPointBar.maxValue = maxHP;

@@ -25,7 +25,8 @@ public class EnemySpawnManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(EnemySpawn());
+        StartCoroutine(EnemySpawn()); 
+        StartCoroutine(CivilianSpawn());
         StartCoroutine(spawnpointRandomizer());
     }
   
@@ -38,16 +39,24 @@ public class EnemySpawnManager : MonoBehaviour
         }
                  
     }
-
-
     public IEnumerator EnemySpawn()
     {      
         for(; ; )
         {
-            Instantiate(enemyCharachters[Random.Range(0, enemyCharachters.Length)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);
+            Instantiate(enemyCharachters[Random.Range(0, 1)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);
             Debug.Log(spawnPointList.spawnPoints[actualSpawnPoint]);
-            yield return new WaitForSeconds(Random.Range(10, 15));
+            yield return new WaitForSeconds(Random.Range(3, 7));
         }                   
+    }
+
+    public IEnumerator CivilianSpawn()
+    {
+        for (; ; )
+        {
+            Instantiate(enemyCharachters[Random.Range(2, enemyCharachters.Length)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);
+            Debug.Log(spawnPointList.spawnPoints[actualSpawnPoint]);
+            yield return new WaitForSeconds(Random.Range(3, 5));
+        }
     }
 
     public IEnumerator PianoManInstantiate()
@@ -57,16 +66,10 @@ public class EnemySpawnManager : MonoBehaviour
         OnEnable();
     }
 
-    
-
     public void PianoManSpawn()
     {
         StartCoroutine(PianoManInstantiate());
         OnDisable();
     }
-
-
-
-
 
 }

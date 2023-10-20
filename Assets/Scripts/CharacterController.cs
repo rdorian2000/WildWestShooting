@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CharacterController : MonoBehaviour
 {
+    public static event Action hudRevolveShoot;
+    public static event Action hudRevolveReload;
+
     private GameManager gameManager;
 
     private float moveSpeed = 5f;
@@ -15,6 +19,7 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletSpawnPoint;
     public GameObject revolverRevolve;
+    public GameObject hudGUIrevolve;
 
     public Camera fpsCam;
     public float range = 100f;
@@ -25,7 +30,7 @@ public class CharacterController : MonoBehaviour
     public bool right;
     public bool left;
 
-    private int maxWeaponAmmo = 6;
+    private int maxWeaponAmmo = 5;
     [SerializeField]private int currentWeaponAmmo;
     private float reloadTime = 2.5f;
     private bool isReloding = false;
@@ -52,8 +57,7 @@ public class CharacterController : MonoBehaviour
         PlayerReloadWeapon();
         MouseCursorLock();
         
-    }
- 
+    }   
 
     //Mozgás sík megadása event szerint.
     void MoveAndFirstPersonCameraController()
@@ -168,6 +172,7 @@ public class CharacterController : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
             Destroy(bullet, 5f);
             revolverRevolve.transform.Rotate(Vector3.forward,90);
+            WhenShoot();
             Shoot();
             gunShotSmoke.Play();
             currentWeaponAmmo--;
@@ -211,6 +216,7 @@ public class CharacterController : MonoBehaviour
     IEnumerator AutomateReloadWeapon()
     {
         isReloding = true;
+        WhenReload();
         Debug.Log("ReloadTimeBaby");
 
         yield return new WaitForSeconds(reloadTime);
@@ -243,5 +249,29 @@ public class CharacterController : MonoBehaviour
             Debug.Log("Eltaláltak!");
         }
     }
+
+    void WhenShoot()
+    {
+        if (currentWeaponAmmo != 0)
+        {
+            if (hudRevolveShoot != null)
+            {
+                hudRevolveShoot();
+            }
+        }
+    }
+
+    void WhenReload()
+    {
+        if (isReloding == true)
+        {
+            if (hudRevolveReload != null)
+            {
+                hudRevolveReload();
+            }
+        }
+    }
+
+    
 
 }

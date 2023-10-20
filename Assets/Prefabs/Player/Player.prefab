@@ -1296,6 +1296,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1691905862156884674, guid: 4c061db43508e25498d91c08e2d4e111, type: 3}
   bulletSpawnPoint: {fileID: 5449983355938149543}
   revolverRevolve: {fileID: 5451318519826667047}
+  hudGUIrevolve: {fileID: 0}
   fpsCam: {fileID: 5449983356237554283}
   range: 100
   bloodDropEffect: {fileID: 166404, guid: 78e1c8c5b281b8b439229473779ac9aa, type: 3}

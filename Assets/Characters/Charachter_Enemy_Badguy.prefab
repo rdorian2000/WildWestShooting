@@ -525,7 +525,6 @@ GameObject:
   - component: {fileID: 5789408589514278500}
   - component: {fileID: 919132148855841228}
   - component: {fileID: 919132148855841233}
-  - component: {fileID: 765914601220779226}
   - component: {fileID: 5266290795581085811}
   m_Layer: 0
   m_Name: Charachter_Enemy_Badguy
@@ -681,18 +680,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &765914601220779226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2896120018811449868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f8d3e1931ebade4f891925335ad69dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5266290795581085811
 MonoBehaviour:
   m_ObjectHideFlags: 0
