@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScriptableObjects\Crosshairs\CrosshairSelect.cs" />
+    <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Shoot.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemySpawnManager.cs" />
     <Compile Include="Assets\Scripts\GUI\MainMenu.cs" />
@@ -69,14 +70,13 @@
     <Compile Include="Assets\Scripts\CharacterController.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyHealPoints.cs" />
     <Compile Include="Assets\Scripts\GUI\Menu.cs" />
+    <Compile Include="Assets\Scripts\CharachterHealth.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\SkinMaterials.cs" />
+    <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Reload.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
     <Compile Include="Assets\Scripts\Enemys\IfEnemyBug.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\RandomSkinOnObject.cs" />
-    <Compile Include="Assets\Scripts\CharachterHealth.cs" />
-    <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Shoot.cs" />
-    <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Reload.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
