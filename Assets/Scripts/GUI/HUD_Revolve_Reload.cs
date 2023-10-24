@@ -7,25 +7,46 @@ public class HUD_Revolve_Reload : MonoBehaviour
     public GameObject hudGUIrevolve;
     public GameObject[] hudGUIbullets;
     private int bulletNumber;
-    
+    private Animator animator; 
+
     private void Start()
     {
-        bulletNumber = 0;
+        animator = GetComponent<Animator>();
+             
     }
     void OnEnable()
     {
-        CharacterController.hudRevolveReload += WhenReloadRotateTheRevolve;
+        CharacterController.hudRevolveReload += Starter;
     }
 
     void OnDisable()
     {
-        CharacterController.hudRevolveReload -= WhenReloadRotateTheRevolve;
+        CharacterController.hudRevolveReload -= Starter;
     }
 
-    void WhenReloadRotateTheRevolve()
+
+    public void Starter()
     {
-        //hudGUIrevolve.transform.position = Vector3(0,0,1).Lerp(new Vector3(0, 0, 1), new Vector3(0, 0, 360), 100f);
-        Debug.Log("Most forog");
+        StartCoroutine(WhenReloadRotateTheRevolve());
     }
-  
+    public IEnumerator WhenReloadRotateTheRevolve()
+    {      
+        bulletNumber = 0;
+        animator.SetBool("isReloading",true);
+        while(bulletNumber < 6)
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            if (bulletNumber != 5)
+            {
+                hudGUIbullets[bulletNumber].gameObject.SetActive(true);
+                bulletNumber += 1;             
+            }                    
+
+            if (bulletNumber == 5)
+            {
+                animator.SetBool("isReloading", false);
+            }
+        }               
+    }
 }

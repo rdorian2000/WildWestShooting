@@ -27,9 +27,7 @@ public class EnemyHealPoints : MonoBehaviour
         actualHP = maxHP;     
         enemyHealPointBar.maxValue = maxHP;
         enemyHealPointBar.value = actualHP;
-        enemyHealPointBar.fillRect.gameObject.SetActive(false);
-
-        Debug.Log(gameObject.GetInstanceID().ToString());
+        enemyHealPointBar.fillRect.gameObject.SetActive(false);     
     }
 
     void Update()

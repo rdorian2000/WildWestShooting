@@ -18,21 +18,26 @@ public class HUD_Revolve_Shoot : MonoBehaviour
     }
 
     void OnDisable()
-    {
+    {     
         CharacterController.hudRevolveShoot -= WhenShootRotateTheRevolve;
+        
     }
 
     void WhenShootRotateTheRevolve()
-    {
+    {        
         if (bulletNumber >= 0)
-        {
+        {           
             if (bulletNumber < hudGUIbullets.Length)
             {
                 hudGUIbullets[bulletNumber].gameObject.SetActive(false);
                 hudGUIrevolve.transform.Rotate(new Vector3(0, 0, -1), 90f);
                 bulletNumber += 1;
             }
-        }                    
+        }
+        if(bulletNumber == 5)
+        {
+            bulletNumber = 0;
+        }
     }
   
 }

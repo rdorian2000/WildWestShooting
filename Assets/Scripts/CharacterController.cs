@@ -32,8 +32,8 @@ public class CharacterController : MonoBehaviour
 
     private int maxWeaponAmmo = 5;
     [SerializeField]private int currentWeaponAmmo;
-    private float reloadTime = 2.5f;
-    private bool isReloding = false;
+    private float reloadTime = 3f;
+    public bool isReloding;
 
     public ParticleSystem gunShotSmoke;
 
@@ -42,6 +42,7 @@ public class CharacterController : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gunShotSmoke.Stop();
+        isReloding = false;
         forward = false;
         backward = true;
         right = false;
@@ -242,14 +243,6 @@ public class CharacterController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(gameObject.tag == "RevolverBullet")
-        {
-            Debug.Log("Eltaláltak!");
-        }
-    }
-
     void WhenShoot()
     {
         if (currentWeaponAmmo != 0)
@@ -262,14 +255,12 @@ public class CharacterController : MonoBehaviour
     }
 
     void WhenReload()
-    {
-        if (isReloding == true)
+    {      
+        if (hudRevolveReload != null)
         {
-            if (hudRevolveReload != null)
-            {
-                hudRevolveReload();
-            }
+            hudRevolveReload();       
         }
+        
     }
 
     
