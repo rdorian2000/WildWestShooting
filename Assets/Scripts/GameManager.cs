@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
 
     public int playerScore= 0;
 
+    public void Start()
+    {
+        //Játék indulása.  
+        //StartCoroutine(Counter());
+    }
     public void Update()
     {
         scoreText.text = playerScore.ToString();
@@ -20,6 +25,22 @@ public class GameManager : MonoBehaviour
         playerScore += score;
         Debug.Log("Your Score:" + playerScore);
     }
+
+    public void GameOver()
+    {
+        Debug.Log("GameOver!!!");
+        Time.timeScale = 0;
+    }
+
+    public void RestartGame()
+    {
+        //Játék újra indítása
+    }
+
+    /*public IEnumerator Counter()
+    {
+
+    }*/
 
 
 

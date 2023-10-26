@@ -44,7 +44,7 @@ public class EnemySpawnManager : MonoBehaviour
         for(; ; )
         {
             Instantiate(enemyCharachters[Random.Range(0, 1)], spawnPointList.spawnPoints[actualSpawnPoint].transform.position, spawnPointList.spawnPoints[actualSpawnPoint].transform.rotation);            
-            yield return new WaitForSeconds(Random.Range(3, 7));
+            yield return new WaitForSeconds(Random.Range(4, 7));
         }                   
     }
 
