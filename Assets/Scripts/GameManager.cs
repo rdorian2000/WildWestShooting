@@ -9,13 +9,19 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 { 
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI endScoreText;
+    public TextMeshProUGUI endTimeText;
     public GameObject gameOverCanvasObject;
     public Camera cameraFPS;
     public Camera cameraMain;
     public GameObject hud;
     private bool gameEnd = false;
-    public int playerScore= 0;
+    public int playerScore= 0; //Kimenteni való pontszám!!!
     public GameObject enemySpawn;
+
+    private float elapsedTime;
+    private string fullEndTime;
+
 
     private void OnEnable()
     {
@@ -31,11 +37,12 @@ public class GameManager : MonoBehaviour
     {      
         gameOverCanvasObject.SetActive(false);
         MouseCursorLock();           
-        StartCoroutine(Counter());
+        StartCoroutine(Counter());   
     }
     public void Update()
     {
         scoreText.text = playerScore.ToString();
+        Timer();
         if (gameEnd)
         {
             cameraMain.transform.Rotate(Vector3.up*0.1f, Space.Self);
@@ -47,22 +54,31 @@ public class GameManager : MonoBehaviour
         Debug.Log("Your Score:" + playerScore);
         if (playerScore < 0)
         {
+            endScoreText.text = playerScore.ToString();
             GameOverCanvas();
         }
     }
 
     void GameOverCanvas()
-    {
+    {           
         Debug.Log("GameOver!!!");
         Time.timeScale = 0;
         hud.SetActive(false);
         cameraFPS.enabled = false;
+        endScoreText.text = playerScore.ToString();
         MouseCursorUnlock();
         gameOverCanvasObject.SetActive(true);
         gameEnd = true;
-
     }
 
+    public void Timer()
+    {
+        elapsedTime += Time.deltaTime;
+        int minutes = Mathf.FloorToInt(elapsedTime / 60);
+        int seconds = Mathf.FloorToInt(elapsedTime % 60);
+        fullEndTime = string.Format("{00:00}:{01:00}", minutes, seconds); //Kimenteni való idõ!!!
+        endTimeText.text = fullEndTime;
+    }
     public void RestartGame()
     {
         //Restart the game.

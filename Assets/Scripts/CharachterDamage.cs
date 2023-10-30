@@ -12,9 +12,11 @@ public class CharachterDamage : MonoBehaviour
     public GameObject[] bonusHealthPoints;
     public GameObject[] GUIbloodDropp;
     private int bloodDroppIndex;
+    private int healPointIndex;
     private void Start()
     {
         playerHP = 3;
+        healPointIndex = 2;
     }
 
     private void OnEnable()
@@ -40,8 +42,10 @@ public class CharachterDamage : MonoBehaviour
             playerHP -= 1;
             bloodDroppIndex = UnityEngine.Random.Range(0, GUIbloodDropp.Length);
             GUIbloodDropp[bloodDroppIndex].SetActive(true);
+            standartHealthPoints[healPointIndex].SetActive(false);
+            healPointIndex -= 1;
             yield return new WaitForSeconds(1f);
-            GUIbloodDropp[bloodDroppIndex].SetActive(false);
+            GUIbloodDropp[bloodDroppIndex].SetActive(false);         
             Debug.Log("Sebzõdtél egy életet!");
             if (playerHP == 0)
             {
