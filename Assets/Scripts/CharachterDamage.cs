@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CharachterDamage : MonoBehaviour
 {
-    //public event Action GameOver;
+    public static event Action theEnd;
 
     public int playerHP;
     public GameObject[] standartHealthPoints;
@@ -15,7 +15,6 @@ public class CharachterDamage : MonoBehaviour
     private void Start()
     {
         playerHP = 3;
-
     }
 
     private void OnEnable()
@@ -46,14 +45,17 @@ public class CharachterDamage : MonoBehaviour
             Debug.Log("Sebzõdtél egy életet!");
             if (playerHP == 0)
             {
-                Debug.Log("GameOver!!!");
-                Time.timeScale = 0;
+                GameOver();                
                 yield return null;
             }
-        }
-        
-        
-    }
+        }                
+    } 
 
-   
+    public void GameOver()
+    {
+        if(theEnd != null)
+        {
+            theEnd();
+        }
+    }
 }

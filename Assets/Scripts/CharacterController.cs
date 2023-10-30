@@ -55,9 +55,7 @@ public class CharacterController : MonoBehaviour
     {
         MoveAndFirstPersonCameraController();
         BulletSpawn();
-        PlayerReloadWeapon();
-        MouseCursorLock();
-        
+        PlayerReloadWeapon();              
     }   
 
     //Mozgás sík megadása event szerint.
@@ -237,11 +235,6 @@ public class CharacterController : MonoBehaviour
 
     }
 
-    //Kurzor képernyõ közepére zárolása.
-    void MouseCursorLock()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
 
     void WhenShoot()
     {

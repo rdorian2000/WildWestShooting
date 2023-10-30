@@ -15,11 +15,11 @@ public class EnemyHealPoints : MonoBehaviour
     {
         if (gameObject.tag == "Enemy")
         {
-            maxHP = UnityEngine.Random.Range(3, 6);
+            maxHP = UnityEngine.Random.Range(5, 10);
         }
         else if(gameObject.tag == "PianoMan")
         {
-            maxHP = UnityEngine.Random.Range(10, 16);
+            maxHP = UnityEngine.Random.Range(10, 15);
         }else if(gameObject.tag == "Civilian")
         {
             maxHP = UnityEngine.Random.Range(1, 3);

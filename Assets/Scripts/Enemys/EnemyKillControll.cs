@@ -18,8 +18,7 @@ public class EnemyKillControll : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
     void Start()
-    {
-        
+    {       
         enemyHealBar.SetActive(true);
         rb = GetComponent<Rigidbody>();
         boxColl = GetComponent<BoxCollider>();
