@@ -216,11 +216,11 @@ public class CharacterController : MonoBehaviour
     {
         isReloding = true;
         WhenReload();
-        Debug.Log("ReloadTimeBaby");
+        FindObjectOfType<AudioManagerScript>().Play("RevolverReloadSound");
 
         yield return new WaitForSeconds(reloadTime);
 
-        Debug.Log("You can shoot!");
+        
         currentWeaponAmmo = maxWeaponAmmo;
         isReloding = false;
     }

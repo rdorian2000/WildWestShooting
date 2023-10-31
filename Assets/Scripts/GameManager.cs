@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     void GameOverCanvas()
     {           
         Debug.Log("GameOver!!!");
+        FindObjectOfType<AudioManagerScript>().Play("GameOverSound");
         Time.timeScale = 0;
         hud.SetActive(false);
         cameraFPS.enabled = false;
