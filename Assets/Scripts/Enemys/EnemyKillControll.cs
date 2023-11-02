@@ -48,10 +48,10 @@ public class EnemyKillControll : MonoBehaviour
         }
         
         if (gameObject.tag == "PianoMan" && uniqueID == gameObject.GetInstanceID().ToString())
-        {
+        {                         
             if (animator.GetBool("isPlay"))
-            {
-                gameObject.transform.position = new Vector3(5.25f, transform.position.y, transform.position.z);
+            {              
+                gameObject.transform.position = new Vector3(5.25f, transform.position.y, transform.position.z);               
             }           
             animator.SetBool("isDeath", true);           
             navMeshAgent.speed = 0;

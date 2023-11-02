@@ -10,6 +10,10 @@ public class PianomanMoveScript : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Transform target;
 
+    private string[] randomPianoMusic = new string[] { "PianoMusic1", "PianoMusic2", "PianoMusic3", "PianoMusic4", "PianoMusic5", "PianoMusic6" };
+    private int actualMusicIndex;
+    private string actualMusic;
+
     public bool isPlayPiano = false;
 
     void Awake()
@@ -24,6 +28,8 @@ public class PianomanMoveScript : MonoBehaviour
     void Start()
     {
         navMeshAgent.destination = target.transform.position;
+        actualMusicIndex = Random.Range(0, randomPianoMusic.Length);
+        actualMusic = randomPianoMusic[actualMusicIndex];
     }
 
     void Update()
@@ -32,6 +38,12 @@ public class PianomanMoveScript : MonoBehaviour
         {
             gameObject.transform.rotation = pianoPoint.transform.rotation;
         }
+
+        if (animator.GetBool("isDeath") == true || Time.timeScale == 0 )
+        {
+            FindObjectOfType<AudioManagerScript>().Stop(actualMusic);           
+        }
+        
     }
     void OnCollisionEnter(Collision col)
     {      
@@ -39,8 +51,8 @@ public class PianomanMoveScript : MonoBehaviour
         {          
             isPlayPiano = true;
             animator.SetBool("isPlay", isPlayPiano);
-                                 
-        }                                         
+            FindObjectOfType<AudioManagerScript>().Play(actualMusic);
+        }      
     }
 
 }

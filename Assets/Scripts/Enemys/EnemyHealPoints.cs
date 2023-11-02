@@ -45,9 +45,10 @@ public class EnemyHealPoints : MonoBehaviour
 
     void EnemyDeath()
     {
-        if(actualHP <= 0)
-        {
-            if(Death != null)
+        
+        if (actualHP <= 0)
+        {           
+            if (Death != null)
             {
                 Death(gameObject.GetInstanceID().ToString());
             }
@@ -57,8 +58,8 @@ public class EnemyHealPoints : MonoBehaviour
     void PianoManSpawn()
     {
         if(gameObject.tag == "PianoMan" && actualHP <= 0)
-        {
-            if(Spawn != null)
+        {                      
+            if (Spawn != null)
             {
                 Spawn();
             }

@@ -58,8 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScriptableObjects\Crosshairs\CrosshairSelect.cs" />
     <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Shoot.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Settings\GameManager.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemySpawnManager.cs" />
     <Compile Include="Assets\Scripts\GUI\MainMenu.cs" />
@@ -69,19 +68,20 @@
     <Compile Include="Assets\Scripts\Enemys\EnemyKillControll.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SpawnPoints\SpawnPointsList.cs" />
-    <Compile Include="Assets\Scripts\CharacterController.cs" />
-    <Compile Include="Assets\Scripts\CharachterDamage.cs" />
+    <Compile Include="Assets\Scripts\Player\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\Player\CharachterDamage.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyHealPoints.cs" />
-    <Compile Include="Assets\Scripts\CharachterHP.cs" />
+    <Compile Include="Assets\Scripts\Player\CharachterHP.cs" />
     <Compile Include="Assets\Scripts\GUI\Menu.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\SkinMaterials.cs" />
     <Compile Include="Assets\Scripts\LoadTheLeaderboard.cs" />
     <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Reload.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManagerScript.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
     <Compile Include="Assets\Scripts\Enemys\IfEnemyBug.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\RandomSkinOnObject.cs" />
-    <Compile Include="Assets\Scripts\Audio\AudioManagerScript.cs" />
+    <Compile Include="Assets\Scripts\Settings\SettingsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

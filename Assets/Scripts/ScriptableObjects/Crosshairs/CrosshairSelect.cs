@@ -37,6 +37,7 @@ public class CrosshairSelect : MonoBehaviour
             actualCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
         }
         else { return; }
-
     }
+
+
 }
