@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SpawnPoints\SpawnPointsList.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\Settings\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\Player\CharachterDamage.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyHealPoints.cs" />
     <Compile Include="Assets\Scripts\Player\CharachterHP.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
     <Compile Include="Assets\Scripts\Enemys\IfEnemyBug.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\RandomSkinOnObject.cs" />
-    <Compile Include="Assets\Scripts\Settings\SettingsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

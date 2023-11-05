@@ -13,6 +13,7 @@ public class CharachterHP : MonoBehaviour
         bulletNumber = 0;
     }
 
+    //Sebzõdés
     void OnCollisionEnter(Collision col)
     {
         

@@ -9,34 +9,52 @@ public class CrosshairSelect : MonoBehaviour
     [SerializeField] private CrosshairImages crosshairImages;
 
     public GameObject actualCrosshairImage;
-    public int actualCrosshairNumber;
+    public int actualCrosshairNumber = 0;
 
     private void Start()
-    {   
-        actualCrosshairNumber = 0;
+    {           
         actualCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
         actualCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);
+        if (!PlayerPrefs.HasKey("crossHair"))
+        {
+            PlayerPrefs.SetFloat("crossHair",0);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
     }
     public void RightButtonClick()
     {
-        if(actualCrosshairNumber < crosshairImages.crosshairImageFiles.Length-1)
+        if (actualCrosshairNumber < crosshairImages.crosshairImageFiles.Length - 1)
         {
             actualCrosshairNumber += 1;
             actualCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+            Save();
         }
-        else {
-            return;
-        }
+        else { Load(); return; }
+            
     }
-
     public void LeftButtonClick()
     {
         if(actualCrosshairNumber > 0)
         {
             actualCrosshairNumber -= 1;
             actualCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+            Save();
         }
-        else { return; }
+        else { Load(); return; }
+    }
+
+    private void Load()
+    {
+        actualCrosshairNumber = PlayerPrefs.GetInt("crossHair");
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("crossHair", actualCrosshairNumber);
     }
 
 
