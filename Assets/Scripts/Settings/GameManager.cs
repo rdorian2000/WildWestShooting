@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI endScoreText;
     public TextMeshProUGUI endTimeText;
+    public Toggle musicToggle;
     public GameObject gameOverCanvasObject;
     public Camera cameraFPS;
     public Camera cameraMain;
@@ -25,17 +26,16 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        CharachterDamage.theEnd += GameOverCanvas;
+        CharachterDamage.theEnd += GameOverCanvas;      
     }
 
     private void OnDisable()
     {
-        CharachterDamage.theEnd -= GameOverCanvas;
+        CharachterDamage.theEnd -= GameOverCanvas;      
     }
 
     public void Start()
-    {
-        
+    {      
         gameOverCanvasObject.SetActive(false);
         MouseCursorLock();           
         StartCoroutine(Counter());   
@@ -62,9 +62,9 @@ public class GameManager : MonoBehaviour
 
     void GameOverCanvas()
     {
-        FindObjectOfType<AudioManagerScript>().Stop("RevolverReloadSound");
+        //AudioManagerScript.Instance.StopSound("RevolverReloadSound");
         Debug.Log("GameOver!!!");
-        FindObjectOfType<AudioManagerScript>().Play("GameOverSound");
+        AudioManagerScript.Instance.PlaySound("GameOverSound");
         Time.timeScale = 0;
         hud.SetActive(false);
         cameraFPS.enabled = false;
@@ -90,13 +90,15 @@ public class GameManager : MonoBehaviour
         
 
     }
-
+   
     public void GoToMenu()
     {
         //Back to the main menu.
         Time.timeScale = 1;
-        FindObjectOfType<AudioManagerScript>().Stop("WorldSound");
-        FindObjectOfType<AudioManagerScript>().Play("ThemeSound");    
+
+        //AudioManagerScript.Instance.StopSound("WorldSound");
+        AudioManagerScript.Instance.PlayMusic("ThemeSound");        
+            
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
 

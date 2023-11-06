@@ -84,7 +84,7 @@ public class EnemyAttack : MonoBehaviour
         {
             gunShotSmoke.Play();
             GameObject bullet = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
-            FindObjectOfType<AudioManagerScript>().Play("ShootSound");
+            AudioManagerScript.Instance.PlaySound("ShootSound");
             Destroy(bullet, 5);
             enemyAmmoNumber -= 1;
             animator.SetBool("isShootIdle", false);

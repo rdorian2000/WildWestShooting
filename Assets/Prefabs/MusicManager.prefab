@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6570916490075697791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6570916490075697785}
+  - component: {fileID: 5364636249698698435}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6570916490075697785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570916490075697791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5364636249698698435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570916490075697791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7304a0f8088bfa4438eb6c2c12494bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicOn: {fileID: 0}
+  musicToggle: {fileID: 0}
+  musicOffBool: 1
+  sounds:
+  - name: ThemeSound
+    clip: {fileID: 8300000, guid: 15832d1fb6567ef4a8e6f163bfcf9963, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PianoMusic1
+    clip: {fileID: 8300000, guid: f3de73832be6739469ee1b1ff66e1839, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PianoMusic2
+    clip: {fileID: 8300000, guid: 480a906498184424daacc7535387ba8d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PianoMusic3
+    clip: {fileID: 8300000, guid: 7fb19e1625cc4d3418263e5c474693f3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PianoMusic4
+    clip: {fileID: 8300000, guid: 1487fe7e7f5a9cd4cba456a4e4608cf1, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PianoMusic5
+    clip: {fileID: 8300000, guid: f4d05e41cb783cc429f3a1faa262e22b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PianoMusic6
+    clip: {fileID: 8300000, guid: 6dda3e15a00635e4aaafc9119d67d6f2, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

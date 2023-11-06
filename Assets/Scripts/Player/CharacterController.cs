@@ -169,7 +169,7 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && currentWeaponAmmo != 0)
         {
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
-            FindObjectOfType<AudioManagerScript>().Play("ShootSound");
+            AudioManagerScript.Instance.PlaySound("ShootSound");
             Destroy(bullet, 5f);
             revolverRevolve.transform.Rotate(Vector3.forward,90);
             WhenShoot();
@@ -217,10 +217,10 @@ public class CharacterController : MonoBehaviour
     {
         isReloding = true;
         WhenReload();
-        FindObjectOfType<AudioManagerScript>().Play("RevolverReloadSound");
+        AudioManagerScript.Instance.PlaySound("RevolverReloadSound");
         yield return new WaitForSeconds(reloadTime);       
         currentWeaponAmmo = maxWeaponAmmo;
-        FindObjectOfType<AudioManagerScript>().Stop("RevolverReloadSound");
+        //AudioManagerScript.Instance.StopSound("RevolverReloadSound");
         isReloding = false;
     }
 

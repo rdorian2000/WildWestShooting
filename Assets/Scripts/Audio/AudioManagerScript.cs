@@ -1,51 +1,54 @@
 using UnityEngine;
 using System;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
 {
-    public Sound[] sounds;
-
-    public static AudioManagerScript instance;
-
+    public Sound[] sounds, musics;
+    public AudioSource soundSource, musicSource;
+    public static AudioManagerScript Instance;  
     void Awake()
     {
-        if(instance == null)
+        if(Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
             Destroy(gameObject);
             return;
         }
-
-        DontDestroyOnLoad(gameObject);
-
-        foreach(Sound s in sounds)
-        {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
-        }
+        DontDestroyOnLoad(gameObject);     
     }
 
-    
-    public void Play(string name)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+    private void Start()
+    {    
+        musicSource.volume = 1.0f;
+        PlayMusic("ThemeSound");
 
-        if(s == null)
+    }
+
+    public void PlayMusic(string name)
+    {
+        Sound s = Array.Find(musics, music => music.name == name);
+
+        if (s == null)
         {
-            Debug.LogWarning("Sound : " + name + "not found!");
+            Debug.LogWarning("Music : " + name + "not found!");
             return;
         }
-        s.source.Play();
+        else
+        {          
+            musicSource.clip = s.clip;
+            musicSource.volume = s.volume;
+            musicSource.pitch = s.pitch;
+            musicSource.loop = s.loop;
+            musicSource.Play();
+        }
     }
 
-    public void Stop(string name)
+    public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
@@ -54,6 +57,43 @@ public class AudioManagerScript : MonoBehaviour
             Debug.LogWarning("Sound : " + name + "not found!");
             return;
         }
-        s.source.Stop();
+        else
+        {
+            soundSource.Play();
+        }
+    }
+
+    /*public void StopSound(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound : " + name + "not found!");
+            return;
+        }
+        s.Stop();
+    }*/
+
+    /*public void StopMusic(string name)
+    {
+        Sound s = Array.Find(musics, music => music.name == name);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound : " + name + "not found!");
+            return;
+        }
+        musicSource.Stop();
+    }*/
+
+    public void ToggleMusic()
+    {
+        musicSource.mute = !musicSource.mute;
+    }
+
+    public void MusicVolume(float musicVolume)
+    {
+        musicSource.volume = musicVolume;
     }
 }

@@ -44,8 +44,7 @@ public class EnemyHealPoints : MonoBehaviour
     }
 
     void EnemyDeath()
-    {
-        
+    {     
         if (actualHP <= 0)
         {           
             if (Death != null)
