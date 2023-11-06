@@ -17,11 +17,14 @@ public class GameManager : MonoBehaviour
     public Camera cameraMain;
     public GameObject hud;
     private bool gameEnd = false;
-    public int playerScore= 0; //Kimenteni való pontszám!!!
+    //public int playerScore= 0; //Kimenteni való pontszám!!!
     public GameObject enemySpawn;
 
     private float elapsedTime;
-    private string fullEndTime;
+    //private string fullEndTime;
+
+
+    public Player playerData;
 
 
     private void OnEnable()
@@ -42,7 +45,7 @@ public class GameManager : MonoBehaviour
     }
     public void Update()
     {
-        scoreText.text = playerScore.ToString();
+        scoreText.text = playerData.playerScore.ToString();
         Timer();
         if (gameEnd)
         {
@@ -51,24 +54,24 @@ public class GameManager : MonoBehaviour
     }
     public void AddScore(int score)
     {
-        playerScore += score;
-        Debug.Log("Your Score:" + playerScore);
-        if (playerScore < 0)
+        playerData.playerScore += score;
+        Debug.Log("Your Score:" + playerData.playerScore);
+        if (playerData.playerScore < 0)
         {
-            endScoreText.text = playerScore.ToString();
+            endScoreText.text = playerData.playerScore.ToString();
             GameOverCanvas();
         }
     }
 
     void GameOverCanvas()
     {
-        //AudioManagerScript.Instance.StopSound("RevolverReloadSound");
+        AudioManagerScript.Instance.StopSound("RevolverReloadSound");
         Debug.Log("GameOver!!!");
         AudioManagerScript.Instance.PlaySound("GameOverSound");
         Time.timeScale = 0;
         hud.SetActive(false);
         cameraFPS.enabled = false;
-        endScoreText.text = playerScore.ToString();
+        endScoreText.text = playerData.playerScore.ToString();
         MouseCursorUnlock();
         gameOverCanvasObject.SetActive(true);
         gameEnd = true;
@@ -79,8 +82,8 @@ public class GameManager : MonoBehaviour
         elapsedTime += Time.deltaTime;
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        fullEndTime = string.Format("{00:00}:{01:00}", minutes, seconds); //Kimenteni való idõ!!!
-        endTimeText.text = fullEndTime;
+        playerData.playerTime = string.Format("{00:00}:{01:00}", minutes, seconds); //Kimenteni való idõ!!!
+        endTimeText.text = playerData.playerTime;
     }
     public void RestartGame()
     {
@@ -96,7 +99,7 @@ public class GameManager : MonoBehaviour
         //Back to the main menu.
         Time.timeScale = 1;
 
-        //AudioManagerScript.Instance.StopSound("WorldSound");
+        AudioManagerScript.Instance.StopMusic("WorldSound");
         AudioManagerScript.Instance.PlayMusic("ThemeSound");        
             
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);

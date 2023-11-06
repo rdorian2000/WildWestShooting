@@ -25,10 +25,10 @@ public class CharacterController : MonoBehaviour
     public float range = 100f;
     public GameObject bloodDropEffect;
 
-    public bool forward;
-    public bool backward;
-    public bool right;
-    public bool left;
+    //public bool forward = false;
+    public bool backward = false;
+    //public bool right = false;
+    //public bool left = false;
 
     private int maxWeaponAmmo = 5;
     [SerializeField]private int currentWeaponAmmo;
@@ -43,11 +43,7 @@ public class CharacterController : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gunShotSmoke.Stop();
         isReloding = false;
-        forward = false;
-        backward = true;
-        right = false;
-        left = false;
-        
+        backward = true;       
         currentWeaponAmmo = maxWeaponAmmo;
     }
 
@@ -62,18 +58,18 @@ public class CharacterController : MonoBehaviour
     void MoveAndFirstPersonCameraController()
     {
         //Horizontal mouse moving
-        if (forward)
+        /*if (forward)
         {
             HorizontalMouseMove(-75f, 75f);   //Forward (City)
             MoveOnXAxes(10f, 0.825f, 6.3f);   //Forward (City)
 
-        }
+        }*/
         if (backward)
         {
             HorizontalMouseMove(105f, 255f);  //Backward (Train)
             MoveOnXAxes(4f, 0f, -4f);         //Backward (Train)
         }
-        if (right)
+        /*if (right)
         {
             HorizontalMouseMove(15f, 165f);   //Right (Road)
             MoveOnZAxes(0f, 0f, 3f);          //Right (Road)
@@ -82,7 +78,7 @@ public class CharacterController : MonoBehaviour
         {
             HorizontalMouseMove(-165f, -15f);   //Left (Road)
             MoveOnZAxes(0f, 0f, 3f);            //Left (Road)
-        }
+        }*/
         
         //Vertical mouse moving
         mouseRotationX += Input.GetAxis("Mouse Y") * (-1) * mouseSensitivity;
@@ -134,7 +130,7 @@ public class CharacterController : MonoBehaviour
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * moveSpeed);
     }
     //Mozgás sík megadása. (Right,Left)
-    void MoveOnZAxes(float xMoveRange, float yMoveRange, float zMoveRange)
+    /*void MoveOnZAxes(float xMoveRange, float yMoveRange, float zMoveRange)
     {
 
         if (transform.position.z < -zMoveRange)
@@ -151,7 +147,8 @@ public class CharacterController : MonoBehaviour
 
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * moveSpeed);
-    }
+    }*/
+    
     //Lõszer spawn a fegyverbõl.
     void BulletSpawn()
     {
@@ -220,7 +217,7 @@ public class CharacterController : MonoBehaviour
         AudioManagerScript.Instance.PlaySound("RevolverReloadSound");
         yield return new WaitForSeconds(reloadTime);       
         currentWeaponAmmo = maxWeaponAmmo;
-        //AudioManagerScript.Instance.StopSound("RevolverReloadSound");
+        AudioManagerScript.Instance.StopSound("RevolverReloadSound");
         isReloding = false;
     }
 
@@ -233,8 +230,6 @@ public class CharacterController : MonoBehaviour
         }
 
     }
-
-
     void WhenShoot()
     {
         if (currentWeaponAmmo != 0)
@@ -245,14 +240,12 @@ public class CharacterController : MonoBehaviour
             }
         }
     }
-
     void WhenReload()
     {      
         if (hudRevolveReload != null)
         {
             hudRevolveReload();       
-        }
-        
+        }       
     }
 
     

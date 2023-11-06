@@ -8,9 +8,9 @@ public class MainMenu : MonoBehaviour
 {
     public Toggle musicToggle;
     public void PlayGame()
-    {       
-        //AudioManagerScript.Instance.StopMusic("ThemeSound");
-        AudioManagerScript.Instance.PlaySound("WorldSound");
+    {
+        AudioManagerScript.Instance.StopMusic("ThemeSound");
+        AudioManagerScript.Instance.PlayMusic("WorldSound");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

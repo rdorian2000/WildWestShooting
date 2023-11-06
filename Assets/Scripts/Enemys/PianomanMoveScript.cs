@@ -41,7 +41,7 @@ public class PianomanMoveScript : MonoBehaviour
 
         if (animator.GetBool("isDeath") == true || Time.timeScale == 0 )
         {
-            //AudioManagerScript.Instance.StopMusic(actualMusic);           
+            AudioManagerScript.Instance.StopMusic(actualMusic);           
         }
         
     }

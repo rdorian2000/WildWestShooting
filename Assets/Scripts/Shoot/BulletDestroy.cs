@@ -38,7 +38,7 @@ public class BulletDestroy : MonoBehaviour
             }
         }
 
-        if (charachterContrl.forward)
+        /*if (charachterContrl.forward)
         {
             bulletLimitZ = 25f;
             bulletLimitX = 20f;
@@ -94,7 +94,7 @@ public class BulletDestroy : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
 
     }
 }

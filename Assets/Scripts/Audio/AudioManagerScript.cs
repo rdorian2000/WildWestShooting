@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class AudioManagerScript : MonoBehaviour
 {
-    public Sound[] sounds, musics;
-    public AudioSource soundSource, musicSource;
+    public Sound[] sounds, musics;  
+    public GameObject soundGameObject, musicGameObject;
     public static AudioManagerScript Instance;  
     void Awake()
     {
@@ -19,33 +19,46 @@ public class AudioManagerScript : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);     
+        DontDestroyOnLoad(gameObject);
+
+        
+
+        foreach (Sound m in musics)
+        {
+            m.musicSource = musicGameObject.AddComponent<AudioSource>();
+            m.musicSource.clip = m.clip;
+            m.musicSource.playOnAwake = false;
+            m.musicSource.volume = m.volume;
+            m.musicSource.pitch = m.pitch;
+            m.musicSource.loop = m.loop;
+            m.musicSource.volume = 1.0f;
+        }
+
+        foreach (Sound s in sounds)
+        {
+            s.soundSource = soundGameObject.AddComponent<AudioSource>();
+            s.soundSource.clip = s.clip;
+            s.soundSource.playOnAwake = false;
+            s.soundSource.volume = s.volume;
+            s.soundSource.pitch = s.pitch;
+            s.soundSource.loop = s.loop;
+        }          
     }
-
     private void Start()
-    {    
-        musicSource.volume = 1.0f;
+    {
         PlayMusic("ThemeSound");
-
     }
 
     public void PlayMusic(string name)
     {
-        Sound s = Array.Find(musics, music => music.name == name);
+        Sound m = Array.Find(musics, music => music.name == name);
 
-        if (s == null)
+        if (m == null)
         {
             Debug.LogWarning("Music : " + name + "not found!");
             return;
-        }
-        else
-        {          
-            musicSource.clip = s.clip;
-            musicSource.volume = s.volume;
-            musicSource.pitch = s.pitch;
-            musicSource.loop = s.loop;
-            musicSource.Play();
-        }
+        }                   
+        m.musicSource.Play();       
     }
 
     public void PlaySound(string name)
@@ -56,14 +69,12 @@ public class AudioManagerScript : MonoBehaviour
         {
             Debug.LogWarning("Sound : " + name + "not found!");
             return;
-        }
-        else
-        {
-            soundSource.Play();
-        }
+        }        
+        s.soundSource.Play();
+        
     }
 
-    /*public void StopSound(string name)
+    public void StopSound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
@@ -72,28 +83,34 @@ public class AudioManagerScript : MonoBehaviour
             Debug.LogWarning("Sound : " + name + "not found!");
             return;
         }
-        s.Stop();
-    }*/
+        s.soundSource.Stop();
+    }
 
-    /*public void StopMusic(string name)
+    public void StopMusic(string name)
     {
-        Sound s = Array.Find(musics, music => music.name == name);
+        Sound m = Array.Find(musics, music => music.name == name);
 
-        if (s == null)
+        if (m == null)
         {
             Debug.LogWarning("Sound : " + name + "not found!");
             return;
         }
-        musicSource.Stop();
-    }*/
+        m.musicSource.Stop();
+    }
 
     public void ToggleMusic()
     {
-        musicSource.mute = !musicSource.mute;
+        foreach (Sound m in musics)
+        {
+            m.musicSource.mute = !m.musicSource.mute;
+        }
     }
 
     public void MusicVolume(float musicVolume)
     {
-        musicSource.volume = musicVolume;
+        foreach (Sound m in musics)
+        {
+            m.musicSource.volume = musicVolume;
+        }
     }
 }
