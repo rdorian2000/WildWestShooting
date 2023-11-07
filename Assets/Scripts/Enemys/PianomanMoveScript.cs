@@ -18,7 +18,14 @@ public class PianomanMoveScript : MonoBehaviour
 
     void Awake()
     {
-        pianoPoint = GameObject.Find("PianomanEndPoint");
+        if (AudioManagerScript.Instance.mute == true)
+        {
+            pianoPoint = GameObject.Find("PianomanEndPointSmoke");
+        }
+        else
+        {
+            pianoPoint = GameObject.Find("PianomanEndPointPiano");
+        }     
         target = pianoPoint.transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();  

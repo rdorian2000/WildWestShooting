@@ -8,54 +8,53 @@ public class CrosshairSelect : MonoBehaviour
 {
     [SerializeField] private CrosshairImages crosshairImages;
 
-    public GameObject actualCrosshairImage;
+    public GameObject menuCrosshairImage;
+    //private GameObject inGameCrosshairImage;
     public int actualCrosshairNumber = 0;
+    public static CrosshairSelect Instance;
 
-    private void Start()
-    {           
-        actualCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
-        actualCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);
-        if (!PlayerPrefs.HasKey("crossHair"))
+    void Awake()
+    {
+        if (Instance == null)
         {
-            PlayerPrefs.SetFloat("crossHair",0);
-            Load();
+            Instance = this;
         }
         else
         {
-            Load();
+            Destroy(gameObject);
+            return;
         }
+        DontDestroyOnLoad(gameObject);
+     
+    }
+
+    private void Start()
+    {
+        menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+        menuCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);      
     }
     public void RightButtonClick()
     {
         if (actualCrosshairNumber < crosshairImages.crosshairImageFiles.Length - 1)
         {
             actualCrosshairNumber += 1;
-            actualCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
-            Save();
+            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];       
         }
-        else { Load(); return; }
-            
+        else {return;}          
     }
     public void LeftButtonClick()
     {
         if(actualCrosshairNumber > 0)
         {
             actualCrosshairNumber -= 1;
-            actualCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
-            Save();
+            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];          
         }
-        else { Load(); return; }
+        else {return;}
     }
 
-    private void Load()
+    /*public void SetCrossHair()
     {
-        actualCrosshairNumber = PlayerPrefs.GetInt("crossHair");
-    }
-
-    private void Save()
-    {
-        PlayerPrefs.SetInt("crossHair", actualCrosshairNumber);
-    }
-
-
+        inGameCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+        inGameCrosshairImage.GetComponent<Image>().color = new Color(1, 1, 1);
+    }*/
 }

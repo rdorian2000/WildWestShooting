@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {      
         gameOverCanvasObject.SetActive(false);
         MouseCursorLock();           
-        StartCoroutine(Counter());   
+        StartCoroutine(Counter());     
     }
     public void Update()
     {

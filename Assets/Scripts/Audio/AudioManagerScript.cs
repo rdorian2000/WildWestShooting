@@ -7,7 +7,8 @@ public class AudioManagerScript : MonoBehaviour
 {
     public Sound[] sounds, musics;  
     public GameObject soundGameObject, musicGameObject;
-    public static AudioManagerScript Instance;  
+    public static AudioManagerScript Instance;
+    public bool mute;
     void Awake()
     {
         if(Instance == null)
@@ -103,7 +104,16 @@ public class AudioManagerScript : MonoBehaviour
         foreach (Sound m in musics)
         {
             m.musicSource.mute = !m.musicSource.mute;
+            if(m.musicSource.mute == true)
+            {
+                mute = true;
+            }
+            else
+            {
+                mute = false;
+            }
         }
+        
     }
 
     public void MusicVolume(float musicVolume)
