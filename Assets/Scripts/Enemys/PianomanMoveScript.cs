@@ -9,6 +9,8 @@ public class PianomanMoveScript : MonoBehaviour
     private GameObject pianoPoint;
     private NavMeshAgent navMeshAgent;
     private Transform target;
+    public GameObject cigar;
+    public ParticleSystem cigarSmoke;
 
     private string[] randomPianoMusic = new string[] { "PianoMusic1", "PianoMusic2", "PianoMusic3", "PianoMusic4", "PianoMusic5", "PianoMusic6" };
     private int actualMusicIndex;
@@ -37,6 +39,8 @@ public class PianomanMoveScript : MonoBehaviour
         navMeshAgent.destination = target.transform.position;
         actualMusicIndex = Random.Range(0, randomPianoMusic.Length);
         actualMusic = randomPianoMusic[actualMusicIndex];
+        cigar.SetActive(false);
+        cigarSmoke.Stop();
     }
 
     void Update()
@@ -54,12 +58,28 @@ public class PianomanMoveScript : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {      
-        if (gameObject.tag == "PianoMan" && col.gameObject == pianoPoint)
+        if (gameObject.tag == "PianoMan" && col.gameObject == pianoPoint && AudioManagerScript.Instance.mute == false)
         {          
             isPlayPiano = true;
             animator.SetBool("isPlay", isPlayPiano);
             AudioManagerScript.Instance.PlayMusic(actualMusic);
-        }      
+        }
+        if (gameObject.tag == "PianoMan" && col.gameObject == pianoPoint && AudioManagerScript.Instance.mute == true)
+        {
+            gameObject.transform.Rotate(transform.rotation.x, transform.rotation.y + 90, transform.rotation.z);
+            animator.SetBool("isSmoke", true);
+            animator.SetBool("isSmoking", true);
+            StartCoroutine(Smoking());
+
+        }
+    }
+
+    public IEnumerator Smoking()
+    {
+        yield return new WaitForSeconds(7);
+        cigar.SetActive(true);
+        yield return new WaitForSeconds(5);
+        cigarSmoke.Play();
     }
 
 }

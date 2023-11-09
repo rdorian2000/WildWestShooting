@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18145977, g: 0.22709113, b: 0.30739337, a: 1}
+  m_IndirectSpecularColor: {r: 0.18145972, g: 0.22709085, b: 0.30739325, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4379,6 +4379,7 @@ MonoBehaviour:
     playerScore: 0
     playerTime: 
     actualDate: 
+    crosshairIndex: 0
 --- !u!4 &143438838
 Transform:
   m_ObjectHideFlags: 0
@@ -51814,6 +51815,7 @@ GameObject:
   - component: {fileID: 1493313313}
   - component: {fileID: 1493313312}
   - component: {fileID: 1493313311}
+  - component: {fileID: 1493313315}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -51907,6 +51909,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1493313315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493313310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38437a85569a364e900035ae533abc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshairImages: {fileID: 11400000, guid: df578a27a609cf940a223bedadcbfba5, type: 2}
+  inGameCrosshairImage: {fileID: 849245258}
+  inGameCrosshairIndex: 0
 --- !u!1001 &1495328122
 PrefabInstance:
   m_ObjectHideFlags: 0

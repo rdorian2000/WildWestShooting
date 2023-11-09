@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour   
 {
     public Toggle musicToggle;
+
+
     public void PlayGame()
     {
         AudioManagerScript.Instance.StopMusic("ThemeSound");
-        AudioManagerScript.Instance.PlayMusic("WorldSound");
+        AudioManagerScript.Instance.PlaySound("WorldSound");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

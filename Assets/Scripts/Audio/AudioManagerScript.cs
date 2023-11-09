@@ -123,4 +123,12 @@ public class AudioManagerScript : MonoBehaviour
             m.musicSource.volume = musicVolume;
         }
     }
+
+    public void SoundVolume(float soundVolume)
+    {
+        foreach (Sound s in sounds)
+        {
+            s.soundSource.volume = soundVolume;
+        }
+    }
 }

@@ -53,7 +53,9 @@ public class EnemyKillControll : MonoBehaviour
             {              
                 gameObject.transform.position = new Vector3(5.25f, transform.position.y, transform.position.z);               
             }           
-            animator.SetBool("isDeath", true);           
+            animator.SetBool("isDeath", true);
+            animator.SetBool("isSmoke", false);
+            animator.SetBool("isSmoking", false);
             navMeshAgent.speed = 0;
             enemyHealBar.SetActive(false);
             rb.constraints = RigidbodyConstraints.FreezePosition;

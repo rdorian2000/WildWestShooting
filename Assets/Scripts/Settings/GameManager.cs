@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 { 
@@ -17,14 +18,11 @@ public class GameManager : MonoBehaviour
     public Camera cameraMain;
     public GameObject hud;
     private bool gameEnd = false;
-    //public int playerScore= 0; //Kimenteni való pontszám!!!
     public GameObject enemySpawn;
-
     private float elapsedTime;
-    //private string fullEndTime;
 
 
-    public Player playerData;
+    public SavePlayerData.Player playerData;
 
 
     private void OnEnable()
@@ -65,7 +63,13 @@ public class GameManager : MonoBehaviour
 
     void GameOverCanvas()
     {
+        
         AudioManagerScript.Instance.StopSound("RevolverReloadSound");
+        Debug.Log(SavePlayerData.Player.playerName);
+        Debug.Log(playerData.playerScore);
+        Debug.Log(playerData.playerTime);
+        Debug.Log(SavePlayerData.Player.actualDate.ToString("yyyy-MM-dd"));
+        Debug.Log(SavePlayerData.Player.crosshairIndex);
         Debug.Log("GameOver!!!");
         AudioManagerScript.Instance.PlaySound("GameOverSound");
         Time.timeScale = 0;
@@ -89,9 +93,7 @@ public class GameManager : MonoBehaviour
     {
         //Restart the game.
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);       
     }
    
     public void GoToMenu()
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
         //Back to the main menu.
         Time.timeScale = 1;
 
-        AudioManagerScript.Instance.StopMusic("WorldSound");
+        AudioManagerScript.Instance.StopSound("WorldSound");
         AudioManagerScript.Instance.PlayMusic("ThemeSound");        
             
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
@@ -134,6 +136,8 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
     }
+
+
 
 
 

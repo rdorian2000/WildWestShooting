@@ -7,29 +7,13 @@ using UnityEngine.UI;
 public class CrosshairSelect : MonoBehaviour
 {
     [SerializeField] private CrosshairImages crosshairImages;
-
-    public GameObject menuCrosshairImage;
-    //private GameObject inGameCrosshairImage;
-    public int actualCrosshairNumber = 0;
-    public static CrosshairSelect Instance;
-
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
-     
-    }
+    public GameObject menuCrosshairImage;    
+    public int actualCrosshairNumber;
+    public CrosshairIGLoad crosshairIGLoad;
 
     private void Start()
     {
+        SavePlayerData.Player.crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
         menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
         menuCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);      
     }
@@ -38,7 +22,8 @@ public class CrosshairSelect : MonoBehaviour
         if (actualCrosshairNumber < crosshairImages.crosshairImageFiles.Length - 1)
         {
             actualCrosshairNumber += 1;
-            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];       
+            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+            SaveCrosshair(actualCrosshairNumber);
         }
         else {return;}          
     }
@@ -47,14 +32,16 @@ public class CrosshairSelect : MonoBehaviour
         if(actualCrosshairNumber > 0)
         {
             actualCrosshairNumber -= 1;
-            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];          
+            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+            SaveCrosshair(actualCrosshairNumber);
         }
         else {return;}
-    }
+    }   
 
-    /*public void SetCrossHair()
+    public void SaveCrosshair(int index)
     {
-        inGameCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
-        inGameCrosshairImage.GetComponent<Image>().color = new Color(1, 1, 1);
-    }*/
+        SavePlayerData.Player.crosshairIndex = index;
+        PlayerPrefs.SetInt("crosshair_index", SavePlayerData.Player.crosshairIndex);
+        PlayerPrefs.Save();
+    }
 }
