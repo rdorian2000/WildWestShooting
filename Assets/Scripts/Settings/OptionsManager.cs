@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using static SavePlayerData;
 
 public class OptionsManager : MonoBehaviour
 {
@@ -12,14 +13,23 @@ public class OptionsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SavePlayerData.Player.playerName = PlayerPrefs.GetString("user_name");
-        ChangeName("", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 10);
+        if (PlayerPrefs.HasKey("user_name"))
+        {
+            Player.playerName = PlayerPrefs.GetString("user_name");
+            inputField.text = PlayerPrefs.GetString("user_name");
+        }
+        else
+        {
+            ChangeName("", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 10);
+        }
+             
+        
 
     }
 
     public void ChangeName(string inputName, string validCharachters, int charachterLimit)
     {
-       inputField.text = inputName;
+        inputField.text = inputName;
         inputField.characterLimit = charachterLimit;
         inputField.onValidateInput = (string text, int charIndex, char addedChar) =>
         {
@@ -47,15 +57,15 @@ public class OptionsManager : MonoBehaviour
         if (inputField.text.Length <= 0)
         {
             inputField.text = "Player";
-            SavePlayerData.Player.playerName = "Player";
+            Player.playerName = "Player";
         }       
     }   
 
     public void SaveName(string name)
     {
         inputField.text = name;
-        SavePlayerData.Player.playerName = inputField.text;
-        PlayerPrefs.SetString("user_name", SavePlayerData.Player.playerName);
+        Player.playerName = inputField.text;
+        PlayerPrefs.SetString("user_name", Player.playerName);
         PlayerPrefs.Save();        
     }
 

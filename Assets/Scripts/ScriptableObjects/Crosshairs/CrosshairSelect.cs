@@ -13,9 +13,19 @@ public class CrosshairSelect : MonoBehaviour
 
     private void Start()
     {
-        SavePlayerData.Player.crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
-        menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
-        menuCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);      
+        if (PlayerPrefs.HasKey("crosshair_index"))
+        {
+            actualCrosshairNumber = PlayerPrefs.GetInt("crosshair_index");
+            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+            menuCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);
+        }
+        else
+        {
+            SavePlayerData.Player.crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
+            menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
+            menuCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);
+        }
+              
     }
     public void RightButtonClick()
     {

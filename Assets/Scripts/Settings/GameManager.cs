@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(playerData.playerScore);
         Debug.Log(playerData.playerTime);
         Debug.Log(SavePlayerData.Player.actualDate.ToString("yyyy-MM-dd"));
-        Debug.Log(SavePlayerData.Player.crosshairIndex);
+        Debug.Log(SavePlayerData.Player.crosshairIndex);   
         Debug.Log("GameOver!!!");
         AudioManagerScript.Instance.PlaySound("GameOverSound");
         Time.timeScale = 0;
