@@ -20,15 +20,12 @@ public class OptionsManager : MonoBehaviour
         }
         else
         {
-            ChangeName("", "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 10);
+            ChangeName(inputField.text, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 10);
         }
-             
-        
-
     }
-
-    public void ChangeName(string inputName, string validCharachters, int charachterLimit)
-    {
+  
+    public void ChangeName(string inputName,string validCharachters, int charachterLimit)
+    {     
         inputField.text = inputName;
         inputField.characterLimit = charachterLimit;
         inputField.onValidateInput = (string text, int charIndex, char addedChar) =>

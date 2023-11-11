@@ -9,6 +9,11 @@ public class AudioUIController : MonoBehaviour
     [SerializeField] Slider _soundSlider;
     [SerializeField] Image musicOff;
 
+    private void Start()
+    {
+        _musicSlider.value = PlayerPrefs.GetFloat("music_volume");
+        _soundSlider.value = PlayerPrefs.GetFloat("sound_volume");
+    }
     public void ToggleMusic()
     {
         AudioManagerScript.Instance.ToggleMusic();
@@ -17,12 +22,13 @@ public class AudioUIController : MonoBehaviour
 
     public void MusicVolume()
     {
-        AudioManagerScript.Instance.MusicVolume(_musicSlider.value);
+        AudioManagerScript.Instance.MusicVolume(_musicSlider.value);       
     }
 
     public void SoundVolume()
     {
-        AudioManagerScript.Instance.SoundVolume(_soundSlider.value);
+        AudioManagerScript.Instance.SoundVolume(_soundSlider.value);       
     }
+   
 
 }

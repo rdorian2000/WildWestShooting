@@ -121,6 +121,8 @@ public class AudioManagerScript : MonoBehaviour
         foreach (Sound m in musics)
         {
             m.musicSource.volume = musicVolume;
+            PlayerPrefs.SetFloat("music_volume", m.musicSource.volume);
+            PlayerPrefs.Save();
         }
     }
 
@@ -129,6 +131,8 @@ public class AudioManagerScript : MonoBehaviour
         foreach (Sound s in sounds)
         {
             s.soundSource.volume = soundVolume;
+            PlayerPrefs.SetFloat("sound_volume", s.soundSource.volume);
+            PlayerPrefs.Save();
         }
     }
 }

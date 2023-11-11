@@ -9,7 +9,6 @@ public class CrosshairSelect : MonoBehaviour
     [SerializeField] private CrosshairImages crosshairImages;
     public GameObject menuCrosshairImage;    
     public int actualCrosshairNumber;
-    public CrosshairIGLoad crosshairIGLoad;
 
     private void Start()
     {

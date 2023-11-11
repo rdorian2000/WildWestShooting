@@ -30,7 +30,7 @@ public class PianomanMoveScript : MonoBehaviour
         }     
         target = pianoPoint.transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();  
+        animator = GetComponent<Animator>();
         animator.SetBool("isPlay", isPlayPiano);
     }
     
@@ -50,7 +50,7 @@ public class PianomanMoveScript : MonoBehaviour
             gameObject.transform.rotation = pianoPoint.transform.rotation;
         }
 
-        if (animator.GetBool("isDeath") == true || Time.timeScale == 0 )
+        if (animator.GetBool("isDeath") == true || GameManager.gameEnd == true )
         {
             AudioManagerScript.Instance.StopMusic(actualMusic);           
         }

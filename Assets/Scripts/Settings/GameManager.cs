@@ -12,12 +12,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI endScoreText;
     public TextMeshProUGUI endTimeText;
-    public Toggle musicToggle;
     public GameObject gameOverCanvasObject;
     public Camera cameraFPS;
     public Camera cameraMain;
     public GameObject hud;
-    private bool gameEnd = false;
+    public GameObject pauseMenu;
+    public static bool gameEnd = false;
     public GameObject enemySpawn;
     private float elapsedTime;
 
@@ -63,7 +63,8 @@ public class GameManager : MonoBehaviour
 
     void GameOverCanvas()
     {
-        
+        gameEnd = true;
+        PauseMenu.GameIsPaused = true;
         AudioManagerScript.Instance.StopSound("RevolverReloadSound");
         Debug.Log(SavePlayerData.Player.playerName);
         Debug.Log(playerData.playerScore);
@@ -74,11 +75,12 @@ public class GameManager : MonoBehaviour
         AudioManagerScript.Instance.PlaySound("GameOverSound");
         Time.timeScale = 0;
         hud.SetActive(false);
+        pauseMenu.SetActive(false);
         cameraFPS.enabled = false;
         endScoreText.text = playerData.playerScore.ToString();
         MouseCursorUnlock();
         gameOverCanvasObject.SetActive(true);
-        gameEnd = true;
+        
     }
 
     public void Timer()
@@ -92,15 +94,16 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         //Restart the game.
+        PauseMenu.GameIsPaused = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);       
     }
    
     public void GoToMenu()
     {
-        //Back to the main menu.
+        //Back to the main menu.       
         Time.timeScale = 1;
-
+        PauseMenu.GameIsPaused = false;
         AudioManagerScript.Instance.StopSound("WorldSound");
         AudioManagerScript.Instance.PlayMusic("ThemeSound");        
             

@@ -4322,18 +4322,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1761294499}
-        m_TargetAssemblyTypeName: CrosshairSelect, Assembly-CSharp
-        m_MethodName: LoadCrosshair
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &1485789767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4748,7 +4736,6 @@ MonoBehaviour:
   crosshairImages: {fileID: 11400000, guid: df578a27a609cf940a223bedadcbfba5, type: 2}
   menuCrosshairImage: {fileID: 1822485314}
   actualCrosshairNumber: 0
-  crosshairIGLoad: {fileID: 0}
 --- !u!1 &1772668015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,7 +5527,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []

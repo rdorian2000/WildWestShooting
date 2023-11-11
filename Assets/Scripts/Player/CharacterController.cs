@@ -25,10 +25,7 @@ public class CharacterController : MonoBehaviour
     public float range = 100f;
     public GameObject bloodDropEffect;
 
-    //public bool forward = false;
     public bool backward = false;
-    //public bool right = false;
-    //public bool left = false;
 
     private int maxWeaponAmmo = 5;
     [SerializeField]private int currentWeaponAmmo;
@@ -49,36 +46,24 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-        MoveAndFirstPersonCameraController();
-        BulletSpawn();
-        PlayerReloadWeapon();              
+        if (PauseMenu.GameIsPaused ==false)
+        {
+            MoveAndFirstPersonCameraController();
+            BulletSpawn();
+            PlayerReloadWeapon();
+        }       
+                     
     }   
 
     //Mozgás sík megadása event szerint.
     void MoveAndFirstPersonCameraController()
     {
-        //Horizontal mouse moving
-        /*if (forward)
-        {
-            HorizontalMouseMove(-75f, 75f);   //Forward (City)
-            MoveOnXAxes(10f, 0.825f, 6.3f);   //Forward (City)
 
-        }*/
         if (backward)
         {
             HorizontalMouseMove(105f, 255f);  //Backward (Train)
             MoveOnXAxes(4f, 0f, -4f);         //Backward (Train)
         }
-        /*if (right)
-        {
-            HorizontalMouseMove(15f, 165f);   //Right (Road)
-            MoveOnZAxes(0f, 0f, 3f);          //Right (Road)
-        }
-        if (left)
-        {
-            HorizontalMouseMove(-165f, -15f);   //Left (Road)
-            MoveOnZAxes(0f, 0f, 3f);            //Left (Road)
-        }*/
         
         //Vertical mouse moving
         mouseRotationX += Input.GetAxis("Mouse Y") * (-1) * mouseSensitivity;
@@ -129,25 +114,6 @@ public class CharacterController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * moveSpeed);
     }
-    //Mozgás sík megadása. (Right,Left)
-    /*void MoveOnZAxes(float xMoveRange, float yMoveRange, float zMoveRange)
-    {
-
-        if (transform.position.z < -zMoveRange)
-        {
-            transform.position = new Vector3(xMoveRange, yMoveRange, -zMoveRange);
-        }
-
-        if (transform.position.z > zMoveRange)
-        {
-            transform.position = new Vector3(xMoveRange, yMoveRange, zMoveRange);
-        }
-
-        transform.position = new Vector3(xMoveRange, yMoveRange, transform.position.z);
-
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * moveSpeed);
-    }*/
     
     //Lõszer spawn a fegyverbõl.
     void BulletSpawn()
@@ -181,9 +147,7 @@ public class CharacterController : MonoBehaviour
     {
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range)) 
-        {
-            Debug.Log(hit.transform.name);
-            
+        {                    
             EnemyHealPoints target = hit.transform.GetComponent<EnemyHealPoints>();
             if (target != null)
             {
