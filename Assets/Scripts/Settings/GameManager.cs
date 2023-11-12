@@ -36,7 +36,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void Start()
-    {      
+    {
+        
         gameOverCanvasObject.SetActive(false);
         MouseCursorLock();           
         StartCoroutine(Counter());     
@@ -94,19 +95,20 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         //Restart the game.
+        PianomanMoveScript.StopAcutalMusic();
         PauseMenu.GameIsPaused = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);       
     }
-   
+
     public void GoToMenu()
     {
-        //Back to the main menu.       
+        //Back to the main menu.
+        PianomanMoveScript.StopAcutalMusic();
         Time.timeScale = 1;
         PauseMenu.GameIsPaused = false;
         AudioManagerScript.Instance.StopSound("WorldSound");
-        AudioManagerScript.Instance.PlayMusic("ThemeSound");        
-            
+        AudioManagerScript.Instance.PlayMusic("ThemeSound");                      
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
 

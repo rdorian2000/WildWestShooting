@@ -188,7 +188,7 @@ public class CharacterController : MonoBehaviour
     //Ha még nem fogyott el minden lõszer, de újra akar tölteni a játékos.
     void PlayerReloadWeapon()
     {
-        if (Input.GetKeyDown(KeyCode.R) && currentWeaponAmmo!=maxWeaponAmmo)
+        if (Input.GetKeyDown(KeyCode.R) && currentWeaponAmmo!=maxWeaponAmmo && isReloding==false)
         {
             StartCoroutine(AutomateReloadWeapon());
         }

@@ -17062,7 +17062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicSlider: {fileID: 3999939240194231978}
   _soundSlider: {fileID: 3999939239284217452}
-  musicOff: {fileID: 3999939240304676562}
+  musicOffImage: {fileID: 3999939240304676562}
+  musicOnOffToggle: {fileID: 3999939238670479084}
 --- !u!114 &509575466
 MonoBehaviour:
   m_ObjectHideFlags: 0

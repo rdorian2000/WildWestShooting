@@ -7,17 +7,27 @@ public class AudioUIController : MonoBehaviour
 {
     [SerializeField] Slider _musicSlider;
     [SerializeField] Slider _soundSlider;
-    [SerializeField] Image musicOff;
+    [SerializeField] Image musicOffImage;
+    [SerializeField] Toggle musicOnOffToggle;
+    
 
     private void Start()
     {
         _musicSlider.value = PlayerPrefs.GetFloat("music_volume");
-        _soundSlider.value = PlayerPrefs.GetFloat("sound_volume");
+        _soundSlider.value = PlayerPrefs.GetFloat("sound_volume");    
+        if(AudioManagerScript.Instance.mute == false)
+        {          
+            musicOffImage.enabled = true;           
+        }
+        else
+        {
+            musicOffImage.enabled =false;          
+        }
     }
     public void ToggleMusic()
     {
         AudioManagerScript.Instance.ToggleMusic();
-        musicOff.enabled = !musicOff.enabled;
+        musicOffImage.enabled = !musicOffImage.enabled;
     }
 
     public void MusicVolume()

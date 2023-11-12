@@ -104,16 +104,15 @@ public class AudioManagerScript : MonoBehaviour
         foreach (Sound m in musics)
         {
             m.musicSource.mute = !m.musicSource.mute;
-            if(m.musicSource.mute == true)
-            {
-                mute = true;
-            }
-            else
+            if (m.musicSource.mute == false)
             {
                 mute = false;
             }
-        }
-        
+            else
+            {
+                mute = true;
+            }
+        }      
     }
 
     public void MusicVolume(float musicVolume)
