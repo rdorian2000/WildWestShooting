@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        
+        gameEnd = false;
         gameOverCanvasObject.SetActive(false);
         MouseCursorLock();           
         StartCoroutine(Counter());     
