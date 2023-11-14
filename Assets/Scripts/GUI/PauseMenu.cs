@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject inGameHUD;
+    public GameObject optionMenu;
 
     public static bool GameIsPaused = false;
 
@@ -13,7 +14,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(GameIsPaused)
+            if(GameIsPaused && optionMenu.activeInHierarchy == false)
             {
                 Resume();
             }

@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public GameObject enemySpawn;
     private float elapsedTime;
 
+    public GameObject gameMenu;
+    public GameObject optionMenu;
+
 
     public SavePlayerData.Player playerData;
 
@@ -37,6 +40,9 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+        gameMenu.SetActive(false);
+        optionMenu.SetActive(false);
+
         gameEnd = false;
         gameOverCanvasObject.SetActive(false);
         MouseCursorLock();           

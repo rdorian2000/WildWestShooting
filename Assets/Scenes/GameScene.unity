@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18145972, g: 0.22709085, b: 0.30739325, a: 1}
+  m_IndirectSpecularColor: {r: 0.18145977, g: 0.22709113, b: 0.30739337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4448,6 +4448,8 @@ MonoBehaviour:
   hud: {fileID: 1493313310}
   pauseMenu: {fileID: 256131711}
   enemySpawn: {fileID: 1053517174}
+  gameMenu: {fileID: 256131711}
+  optionMenu: {fileID: 509575459}
   playerData:
     playerScore: 0
     playerTime: 
@@ -4480,6 +4482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 256131711}
   inGameHUD: {fileID: 1493313310}
+  optionMenu: {fileID: 0}
 --- !u!1001 &144358063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8128,7 +8131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &256131713
 Transform:
   m_ObjectHideFlags: 0
@@ -16938,7 +16941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &509575460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -79503,8 +79506,8 @@ RectTransform:
   m_Father: {fileID: 3999939239086355514}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -2.1000004}
   m_SizeDelta: {x: 20, y: 7.799999}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -79775,7 +79778,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -80171,8 +80174,8 @@ RectTransform:
   m_Father: {fileID: 3999939239618623887}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -2.1000004}
   m_SizeDelta: {x: 20, y: 7.799999}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -81957,7 +81960,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
