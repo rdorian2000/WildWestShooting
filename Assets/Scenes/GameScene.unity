@@ -4451,11 +4451,6 @@ MonoBehaviour:
   enemySpawn: {fileID: 1053517174}
   gameMenu: {fileID: 256131711}
   optionMenu: {fileID: 509575459}
-  playerData:
-    playerName: 
-    playerScore: 0
-    playerTime: 
-    crosshairIndex: 0
   CountdownPanel:
   - {fileID: 403047069}
   - {fileID: 1728477435}
@@ -31078,7 +31073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4051858741192558, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4051858741192558, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_LocalRotation.y
@@ -31102,7 +31097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4461939182136990, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4461939182136990, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_LocalRotation.y
@@ -31126,7 +31121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4557866226021568, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4557866226021568, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61877,7 +61872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4051858741192558, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4051858741192558, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_LocalRotation.y
@@ -61901,7 +61896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4461939182136990, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4461939182136990, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_LocalRotation.y
@@ -61929,7 +61924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4557866226021568, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4557866226021568, guid: e72121a7df4802c4ab486fd94cb370ed, type: 3}
       propertyPath: m_LocalPosition.x

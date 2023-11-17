@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using static SavePlayerData;
 
 public class OptionsManager : MonoBehaviour
 {

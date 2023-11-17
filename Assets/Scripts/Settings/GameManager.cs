@@ -145,7 +145,6 @@ public class GameManager : MonoBehaviour
         CountdownPanel[0].SetActive(true);
         yield return new WaitForSeconds(1.5f);
         CountdownPanel[0].SetActive(false);
-        Debug.Log("Start");
         yield return null;
 
         enemySpawn.SetActive(true);
