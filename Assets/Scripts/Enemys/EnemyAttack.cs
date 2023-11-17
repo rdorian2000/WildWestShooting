@@ -72,8 +72,7 @@ public class EnemyAttack : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {     
         if (gameObject.tag == "Enemy" && col.gameObject == shootZoneCol)
-        {
-            Debug.Log("Beért");
+        {          
             StartCoroutine(ShootStartTimer());
             
         }

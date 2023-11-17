@@ -9,7 +9,7 @@ public class CrosshairSelect : MonoBehaviour
     [SerializeField] private CrosshairImages crosshairImages;
     public GameObject menuCrosshairImage;    
     public int actualCrosshairNumber;
-
+    public int crosshairIndex;
     private void Start()
     {
         if (PlayerPrefs.HasKey("crosshair_index"))
@@ -20,7 +20,7 @@ public class CrosshairSelect : MonoBehaviour
         }
         else
         {
-            SavePlayerData.Player.crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
+            crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
             menuCrosshairImage.GetComponent<Image>().sprite = crosshairImages.crosshairImageFiles[actualCrosshairNumber];
             menuCrosshairImage.GetComponent<Image>().color = new Color(0, 0, 0);
         }
@@ -49,8 +49,8 @@ public class CrosshairSelect : MonoBehaviour
 
     public void SaveCrosshair(int index)
     {
-        SavePlayerData.Player.crosshairIndex = index;
-        PlayerPrefs.SetInt("crosshair_index", SavePlayerData.Player.crosshairIndex);
+        crosshairIndex = index;
+        PlayerPrefs.SetInt("crosshair_index", crosshairIndex);
         PlayerPrefs.Save();
     }
 }

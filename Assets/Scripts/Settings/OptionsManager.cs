@@ -9,14 +9,14 @@ using static SavePlayerData;
 public class OptionsManager : MonoBehaviour
 {
     public TMP_InputField inputField;
-
+    private string playerName;
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("user_name"))
-        {
-            Player.playerName = PlayerPrefs.GetString("user_name");
-            inputField.text = PlayerPrefs.GetString("user_name");
+        if (PlayerPrefs.HasKey("user_name") && PlayerPrefs.GetString("user_name")!="")
+        {       
+            playerName = PlayerPrefs.GetString("user_name");
+            inputField.text = PlayerPrefs.GetString("user_name");              
         }
         else
         {
@@ -54,15 +54,15 @@ public class OptionsManager : MonoBehaviour
         if (inputField.text.Length <= 0)
         {
             inputField.text = "Player";
-            Player.playerName = "Player";
+            playerName = "Player";
         }       
     }   
 
     public void SaveName(string name)
     {
         inputField.text = name;
-        Player.playerName = inputField.text;
-        PlayerPrefs.SetString("user_name", Player.playerName);
+        playerName = inputField.text;
+        PlayerPrefs.SetString("user_name", playerName);
         PlayerPrefs.Save();        
     }
 

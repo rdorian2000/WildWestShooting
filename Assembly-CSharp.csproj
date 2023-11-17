@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Enemys\EnemyKillControll.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Crosshairs\CrosshairIGLoad.cs" />
+    <Compile Include="Assets\Scripts\Settings\TXTreader.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SpawnPoints\SpawnPointsList.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterController.cs" />
     <Compile Include="Assets\Scripts\Settings\SavePlayerData.cs" />
@@ -93,6 +94,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\save.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

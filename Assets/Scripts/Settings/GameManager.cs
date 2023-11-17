@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
+using System.IO;
+using System.Linq;
+using static SavePlayerData;
 
 public class GameManager : MonoBehaviour
 { 
@@ -20,13 +22,17 @@ public class GameManager : MonoBehaviour
     public static bool gameEnd = false;
     public GameObject enemySpawn;
     private float elapsedTime;
+    private int highScore;
+    private string endTime;
 
     public GameObject gameMenu;
     public GameObject optionMenu;
 
+    public Player playerData;
+    public static int playerNumber = 1;
+    private Data gameData;
 
-    public SavePlayerData.Player playerData;
-
+    public GameObject[] CountdownPanel;
 
     private void OnEnable()
     {
@@ -40,9 +46,9 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+        StartCountdownDisable();       
         gameMenu.SetActive(false);
         optionMenu.SetActive(false);
-
         gameEnd = false;
         gameOverCanvasObject.SetActive(false);
         MouseCursorLock();           
@@ -50,20 +56,23 @@ public class GameManager : MonoBehaviour
     }
     public void Update()
     {
-        scoreText.text = playerData.playerScore.ToString();
+        scoreText.text = highScore.ToString();
         Timer();
         if (gameEnd)
         {
             cameraMain.transform.Rotate(Vector3.up*0.1f, Space.Self);
         }
+
     }
     public void AddScore(int score)
     {
-        playerData.playerScore += score;
-        Debug.Log("Your Score:" + playerData.playerScore);
-        if (playerData.playerScore < 0)
-        {
-            endScoreText.text = playerData.playerScore.ToString();
+        highScore += score;
+        Debug.Log("Your Score:" + highScore);
+        endScoreText.text = highScore.ToString();
+        PlayerPrefs.SetInt("high_score", highScore);
+        PlayerPrefs.Save();
+        if (highScore < 0)
+        {         
             GameOverCanvas();
         }
     }
@@ -72,19 +81,16 @@ public class GameManager : MonoBehaviour
     {
         gameEnd = true;
         PauseMenu.GameIsPaused = true;
-        AudioManagerScript.Instance.StopSound("RevolverReloadSound");
-        Debug.Log(SavePlayerData.Player.playerName);
-        Debug.Log(playerData.playerScore);
-        Debug.Log(playerData.playerTime);
-        Debug.Log(SavePlayerData.Player.actualDate.ToString("yyyy-MM-dd"));
-        Debug.Log(SavePlayerData.Player.crosshairIndex);   
-        Debug.Log("GameOver!!!");
+        AudioManagerScript.Instance.StopSound("RevolverReloadSound");         
+        Debug.Log("gameOver");
+        GameEndData();
+        SaveData();
         AudioManagerScript.Instance.PlaySound("GameOverSound");
         Time.timeScale = 0;
         hud.SetActive(false);
         pauseMenu.SetActive(false);
         cameraFPS.enabled = false;
-        endScoreText.text = playerData.playerScore.ToString();
+        endScoreText.text = PlayerPrefs.GetInt("high_score").ToString();
         MouseCursorUnlock();
         gameOverCanvasObject.SetActive(true);
         
@@ -95,8 +101,10 @@ public class GameManager : MonoBehaviour
         elapsedTime += Time.deltaTime;
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        playerData.playerTime = string.Format("{00:00}:{01:00}", minutes, seconds); //Kimenteni való idõ!!!
-        endTimeText.text = playerData.playerTime;
+        endTime = string.Format("{00:00}:{01:00}", minutes, seconds); //Kimenteni való idõ!!!
+        endTimeText.text = endTime;
+        PlayerPrefs.SetString("end_time", endTime);
+        PlayerPrefs.Save();
     }
     public void RestartGame()
     {
@@ -120,23 +128,34 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator Counter()
     {
+        CountdownPanel[4].SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        Debug.Log("5");
+        CountdownPanel[4].SetActive(false);
+        CountdownPanel[3].SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        Debug.Log("4");
+        CountdownPanel[3].SetActive(false);
+        CountdownPanel[2].SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        Debug.Log("3");
+        CountdownPanel[2].SetActive(false);
+        CountdownPanel[1].SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        Debug.Log("2");
+        CountdownPanel[1].SetActive(false);
+        CountdownPanel[0].SetActive(true);
         yield return new WaitForSeconds(1.5f);
-        Debug.Log("1");
-        yield return new WaitForSeconds(1.5f);
+        CountdownPanel[0].SetActive(false);
         Debug.Log("Start");
         yield return null;
 
         enemySpawn.SetActive(true);
     }
 
+    void StartCountdownDisable()
+    {
+        foreach (GameObject i in CountdownPanel)
+        {
+            i.SetActive(false);
+        }
+    }
     //When start the game, this lock the cursor.
     void MouseCursorLock()
     {
@@ -148,12 +167,47 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public void GameEndData()
+    {
+        gameData = new Data(playerNumber);
 
+        for (int i = 0; i < gameData.players.Length; i++)
+        {
+            gameData.players[i] = new Player();
+            gameData.players[i].playerName = PlayerPrefs.GetString("user_name");
+            gameData.players[i].playerScore = PlayerPrefs.GetInt("high_score");
+            gameData.players[i].playerTime = PlayerPrefs.GetString("end_time");
+            gameData.players[i].crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
+            Debug.Log($"Player {i + 1} - Name: {gameData.players[i].playerName}, Score: {gameData.players[i].playerScore}, Time: {gameData.players[i].playerTime}, Crosshair Index: {gameData.players[i].crosshairIndex}");          
+        }
+        playerNumber++;
+    }
 
+    // Creating JSON from Data and saving it to registry
+    public void SaveData()
+    {           
+        string jsonData = JsonUtility.ToJson(gameData);     
+        Debug.Log("JSON Data to be saved:\n" + jsonData);
+        AppendDataToFile(jsonData);
+    }
 
+    private void AppendDataToFile(string newData)
+    {
+        string saveFilePath = Application.dataPath + "/save.txt";
+      
+        if (File.Exists(saveFilePath))
+        {          
+            string existingData = File.ReadAllText(saveFilePath);          
+            string updatedData = existingData + "\n" + newData;           
+            File.WriteAllText(saveFilePath, updatedData);
+        }
+        else
+        {           
+            File.WriteAllText(saveFilePath, newData);
+        }
+    }
 
-
-
+    
 
 
 }

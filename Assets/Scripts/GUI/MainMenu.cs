@@ -7,8 +7,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour   
 {
     public Toggle musicToggle;
-
-
+    public GameObject optionMenu;
+    private void Awake()
+    {
+        optionMenu.SetActive(false);
+    }
     public void PlayGame()
     {
         AudioManagerScript.Instance.StopMusic("ThemeSound");
