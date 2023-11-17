@@ -26,20 +26,4 @@ public class SavePlayerData : MonoBehaviour
             players = new Player[numberOfPlayers];
         }
     }
-
-    //private SavePlayerData.Player playerData;
-
-    
-    // You can start the load process from Start callback
-    /*private void Start()
-    {
-        if (PlayerPrefs.HasKey("crosshair_index"))
-        {
-            playerData.crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
-        }
-        if (PlayerPrefs.HasKey("user_name"))
-        {
-            playerData.playerName = PlayerPrefs.GetString("user_name");
-        }     
-    }*/
 }

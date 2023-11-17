@@ -10,7 +10,6 @@ public class OptionsManager : MonoBehaviour
 {
     public TMP_InputField inputField;
     private string playerName;
-    // Start is called before the first frame update
     void Start()
     {
         if (PlayerPrefs.HasKey("user_name") && PlayerPrefs.GetString("user_name")!="")
@@ -48,7 +47,6 @@ public class OptionsManager : MonoBehaviour
             return '\0';
         }
     }
-
     public void BackButton()
     {
         if (inputField.text.Length <= 0)

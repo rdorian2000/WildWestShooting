@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameMenu;
     public GameObject optionMenu;
 
-    public Player playerData;
+    public TXTPlayer playerData;
     public static int playerNumber = 1;
     private Data gameData;
 
@@ -81,10 +81,12 @@ public class GameManager : MonoBehaviour
     {
         gameEnd = true;
         PauseMenu.GameIsPaused = true;
-        AudioManagerScript.Instance.StopSound("RevolverReloadSound");         
-        Debug.Log("gameOver");
+        AudioManagerScript.Instance.StopSound("RevolverReloadSound");
         GameEndData();
-        SaveData();
+        if(PlayerPrefs.GetInt("high_score") >= 0)
+        {
+            SaveData();
+        }
         AudioManagerScript.Instance.PlaySound("GameOverSound");
         Time.timeScale = 0;
         hud.SetActive(false);
@@ -187,7 +189,6 @@ public class GameManager : MonoBehaviour
     public void SaveData()
     {           
         string jsonData = JsonUtility.ToJson(gameData);     
-        Debug.Log("JSON Data to be saved:\n" + jsonData);
         AppendDataToFile(jsonData);
     }
 
