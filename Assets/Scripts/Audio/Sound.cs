@@ -1,10 +1,12 @@
 using UnityEngine.Audio;
 using UnityEngine;
 
+
+//Sound class with the options values.
 [System.Serializable]
 public class Sound
 {
-    public string name;
+    public string name; //Sound or music name.
 
     public AudioClip clip;
 

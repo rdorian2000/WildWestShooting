@@ -16,7 +16,7 @@ public class BulletDestroy : MonoBehaviour
     {
         BulletDestroyer();
     }
-
+    //Bullet destroy.
     void BulletDestroyer()
     {
         if(charachterContrl.backward)
@@ -37,64 +37,6 @@ public class BulletDestroy : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        /*if (charachterContrl.forward)
-        {
-            bulletLimitZ = 25f;
-            bulletLimitX = 20f;
-
-            if (transform.position.z > bulletLimitZ)
-            {
-                Destroy(gameObject);
-            }
-            else if (transform.position.x < -bulletLimitX)
-            {
-                Destroy(gameObject);
-            }
-            else if (transform.position.x > bulletLimitX)
-            {
-                Destroy(gameObject);
-            }
-        }
-
-        if (charachterContrl.right)
-        {
-            bulletLimitX = 40f;
-            bulletLimitZ = 20f;
-
-            if (transform.position.x > bulletLimitX)
-            {
-                Destroy(gameObject);
-            }
-            else if (transform.position.z < -bulletLimitZ)
-            {
-                Destroy(gameObject);
-            }
-            else if (transform.position.z > bulletLimitZ)
-            {
-                Destroy(gameObject);
-            }
-        }
-
-        if (charachterContrl.left)
-        {
-            
-            bulletLimitX = -35f;
-            bulletLimitZ = 20f;
-
-            if (transform.position.x < bulletLimitX)
-            {
-                Destroy(gameObject);
-            }
-            else if (transform.position.z < -bulletLimitZ)
-            {
-                Destroy(gameObject);
-            }
-            else if (transform.position.z > bulletLimitZ)
-            {
-                Destroy(gameObject);
-            }
-        }*/
 
     }
 }

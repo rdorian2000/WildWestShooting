@@ -79,16 +79,12 @@
     <Compile Include="Assets\Scripts\GUI\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioUIController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\SkinMaterials.cs" />
-    <Compile Include="Assets\Scripts\LoadTheLeaderboard.cs" />
+    <Compile Include="Assets\Scripts\Settings\RecordsManager.cs" />
     <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Reload.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManagerScript.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
-    <Compile Include="Assets\Scripts\Enemys\IfEnemyBug.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\RandomSkinOnObject.cs" />
-    <Compile Include="Assets\Scripts\Settings\RecordsManager.cs" />
-    <Compile Include="Assets\Scripts\Cart\CartMoving.cs" />
-    <Compile Include="Assets\Scripts\Cart\CartCountdown.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

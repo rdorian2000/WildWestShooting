@@ -339,7 +339,6 @@ GameObject:
   - component: {fileID: 8510856391070113620}
   - component: {fileID: 1550750029}
   - component: {fileID: 77272242}
-  - component: {fileID: 7585679466219611040}
   - component: {fileID: 973136910}
   m_Layer: 0
   m_Name: Charachter_Enemy_Gunman
@@ -495,18 +494,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7585679466219611040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841794622103966267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f8d3e1931ebade4f891925335ad69dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &973136910
 MonoBehaviour:
   m_ObjectHideFlags: 0

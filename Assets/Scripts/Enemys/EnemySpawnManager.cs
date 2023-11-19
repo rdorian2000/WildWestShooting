@@ -39,7 +39,7 @@ public class EnemySpawnManager : MonoBehaviour
         }
                  
     }
-
+ 
     public IEnumerator EnemySpawn()
     {      
         for(; ; )

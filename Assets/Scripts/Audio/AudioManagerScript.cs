@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using System.Reflection;
 
 public class AudioManagerScript : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class AudioManagerScript : MonoBehaviour
     public bool mute;
     void Awake()
     {
+        //Don't destroy on load.
         if(Instance == null)
         {
             Instance = this;
@@ -23,7 +25,7 @@ public class AudioManagerScript : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         
-
+        //All music is a new instance with options.
         foreach (Sound m in musics)
         {
             m.musicSource = musicGameObject.AddComponent<AudioSource>();
@@ -34,7 +36,7 @@ public class AudioManagerScript : MonoBehaviour
             m.musicSource.loop = m.loop;
             m.musicSource.volume = 1.0f;
         }
-
+        //All sound is a new instance with options.
         foreach (Sound s in sounds)
         {
             s.soundSource = soundGameObject.AddComponent<AudioSource>();
@@ -50,6 +52,7 @@ public class AudioManagerScript : MonoBehaviour
         PlayMusic("ThemeSound");
     }
 
+    //Play the music.
     public void PlayMusic(string name)
     {
         Sound m = Array.Find(musics, music => music.name == name);
@@ -61,7 +64,7 @@ public class AudioManagerScript : MonoBehaviour
         }                   
         m.musicSource.Play();       
     }
-
+    //Play the sound.
     public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -74,7 +77,7 @@ public class AudioManagerScript : MonoBehaviour
         s.soundSource.Play();
         
     }
-
+    //Stop the sound.
     public void StopSound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -86,7 +89,7 @@ public class AudioManagerScript : MonoBehaviour
         }
         s.soundSource.Stop();
     }
-
+    //Stop the music.
     public void StopMusic(string name)
     {
         Sound m = Array.Find(musics, music => music.name == name);
@@ -98,7 +101,7 @@ public class AudioManagerScript : MonoBehaviour
         }
         m.musicSource.Stop();
     }
-
+    //Music mute.
     public void ToggleMusic()
     {
         foreach (Sound m in musics)
@@ -114,7 +117,7 @@ public class AudioManagerScript : MonoBehaviour
             }
         }      
     }
-
+    //Music volume value save.
     public void MusicVolume(float musicVolume)
     {
         foreach (Sound m in musics)
@@ -124,7 +127,7 @@ public class AudioManagerScript : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
-
+    //Sound volume value save.
     public void SoundVolume(float soundVolume)
     {
         foreach (Sound s in sounds)

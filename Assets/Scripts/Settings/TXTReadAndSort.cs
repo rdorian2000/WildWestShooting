@@ -5,12 +5,12 @@ using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 
-// Osztály a JSON adatok tárolására
+//Class for the JSON datas.
 public class TXTData
 {
     public List<TXTPlayer> players { get; set; }
 }
-
+//Class for one player datas.
 public class TXTPlayer
 {
     public string playerName { get; set; }
@@ -21,11 +21,14 @@ public class TXTPlayer
 
 public class TXTReadAndSort : MonoBehaviour
 {
+    //This reads, sort and write back to txt.
     public void SortAndWriteBackToTXT()
     {
         string fileName = Application.dataPath + "/save.txt";
         string[] lines = File.ReadAllLines(fileName);
         List<TXTData> players = new List<TXTData>();
+
+        //This reads and deserialize the txt.
         foreach (string line in lines)
         {
             if (!string.IsNullOrWhiteSpace(line))
@@ -42,8 +45,11 @@ public class TXTReadAndSort : MonoBehaviour
                 }
             }           
         }
+        //This sorts the lines.
         players = players.OrderByDescending(p => p.players[0].playerScore).ToList();
         File.WriteAllText(fileName, ""); 
+
+        //This writes back in the txt.
         foreach (TXTData player in players)
         {
             string json = JsonConvert.SerializeObject(player);
@@ -52,7 +58,7 @@ public class TXTReadAndSort : MonoBehaviour
         TrimFileLines();
     }
     
-    //Trim File to 8 lines.
+    //This trims the file to 8 lines.
     public void TrimFileLines()
     {     
         string fileName = Application.dataPath + "/save.txt";

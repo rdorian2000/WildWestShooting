@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class PauseMenu : MonoBehaviour
         }
       
     }
+
+    //The resume button.
     public void Resume()
     {
         Time.timeScale = 1f;
@@ -33,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
+    //The pause button.
     public void Pause()
     {
         Time.timeScale = 0f;

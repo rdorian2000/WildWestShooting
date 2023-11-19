@@ -6,11 +6,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Class for the JSON datas.
 public class RecordsData
 {
     public List<RecordsPlayer> players { get; set; }
 }
-
+//Class for one player datas.
 public class RecordsPlayer
 {
     public string playerName { get; set; }
@@ -29,7 +30,7 @@ public class RecordsManager : MonoBehaviour
         positionNumber = 1;
         ReadTheRecords();      
     }
-
+    //This reads the records from the file and displays them on the user interface.
     public void ReadTheRecords()
     {
         string fileName = Application.dataPath + "/save.txt";

@@ -36,19 +36,20 @@ public class PianomanMoveScript : MonoBehaviour
 
     void Update()
     {      
-
+        //The Pianist sits down for the piano.
         if (isPlayPiano && gameObject.transform.rotation != pianoPoint.transform.rotation)
         {
             gameObject.transform.rotation = pianoPoint.transform.rotation;
         }
 
+        //Stop the music.
         if (animator.GetBool("isDeath") == true || GameManager.gameEnd == true )
         {          
             StopAcutalMusic();        
         }
         
     }
-
+    //When the music is not muted, the pianist play on the piano. When the music is muted, the pianist smoke.
     public void FindTarget()
     {
         if (AudioManagerScript.Instance.mute == true)
@@ -62,7 +63,7 @@ public class PianomanMoveScript : MonoBehaviour
         target = pianoPoint.transform;
         navMeshAgent.destination = target.transform.position;
     }
-
+    //The piano position and the smoke position.
     void OnCollisionEnter(Collision col)
     {      
         if (gameObject.tag == "PianoMan" && col.gameObject == pianoPoint && AudioManagerScript.Instance.mute == false && pianoPoint.name == "PianomanEndPointPiano")
@@ -86,7 +87,7 @@ public class PianomanMoveScript : MonoBehaviour
             }          
         }
     }
-
+    //The pianists smoke.
     public IEnumerator Smoking()
     {
         yield return new WaitForSeconds(7);
@@ -94,7 +95,7 @@ public class PianomanMoveScript : MonoBehaviour
         yield return new WaitForSeconds(5);
         cigarSmoke.Play();
     }
-
+    //Stop the piano music.
     public static void StopAcutalMusic()
     {
         AudioManagerScript.Instance.StopMusic(actualMusic);

@@ -1,3 +1,4 @@
+{"players":[{"playerName":"Player","playerScore":59,"playerTime":"01:34","crosshairIndex":11}]}
 {"players":[{"playerName":"Carlos","playerScore":33,"playerTime":"01:04","crosshairIndex":10}]}
 {"players":[{"playerName":"TesztJani","playerScore":10,"playerTime":"01:19","crosshairIndex":10}]}
 {"players":[{"playerName":"TesztJani","playerScore":9,"playerTime":"01:19","crosshairIndex":10}]}
@@ -7,4 +8,6 @@
 {"players":[{"playerName":"Teszt","playerScore":4,"playerTime":"01:11","crosshairIndex":10}]}
 {"players":[{"playerName":"Teszt","playerScore":3,"playerTime":"01:11","crosshairIndex":10}]}
 {"players":[{"playerName":"Teszt","playerScore":2,"playerTime":"01:11","crosshairIndex":10}]}
-{"players":[{"playerName":"Teszt","playerScore":1,"playerTime":"01:11","crosshairIndex":10}]}
+
+{"players":[{"playerName":"Player","playerScore":49,"playerTime":"01:23","crosshairIndex":11}]}
+{"players":[{"playerName":"Player","playerScore":37,"playerTime":"01:09","crosshairIndex":11}]}

@@ -46,7 +46,6 @@ public class CharachterDamage : MonoBehaviour
             healPointIndex -= 1;
             yield return new WaitForSeconds(1f);
             GUIbloodDropp[bloodDroppIndex].SetActive(false);         
-            Debug.Log("Sebzõdtél egy életet!");
             if (playerHP == 0)
             {
                 GameOver();                

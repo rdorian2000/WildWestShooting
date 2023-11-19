@@ -22,7 +22,7 @@ public class HUD_Revolve_Shoot : MonoBehaviour
         CharacterController.hudRevolveShoot -= WhenShootRotateTheRevolve;
         
     }
-
+    //Rotate the revolve on the HUD, when the player shoots.
     void WhenShootRotateTheRevolve()
     {        
         if (bulletNumber >= 0)

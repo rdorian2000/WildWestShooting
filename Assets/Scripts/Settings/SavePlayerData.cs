@@ -8,6 +8,7 @@ using System.IO;
 public class SavePlayerData : MonoBehaviour
 {
     [System.Serializable]
+    //One player datas.
     public class Player
     {     
         public string playerName;
@@ -15,7 +16,7 @@ public class SavePlayerData : MonoBehaviour
         public string playerTime;
         public int crosshairIndex;
     }
-
+    //The players datas.
     [System.Serializable]
     public class Data
     {

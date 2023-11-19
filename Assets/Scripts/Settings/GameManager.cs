@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] CountdownPanel;
 
+    //If the charachter HP is null, the game is over.
     private void OnEnable()
     {
         CharachterDamage.theEnd += GameOverCanvas;      
@@ -56,18 +57,20 @@ public class GameManager : MonoBehaviour
     }
     public void Update()
     {
-        scoreText.text = highScore.ToString();
+        scoreText.text = highScore.ToString(); //This displays the score on the HUD.
         Timer();
+        //Rotate the background camera, when the game is over.
         if (gameEnd)
         {
             cameraMain.transform.Rotate(Vector3.up*0.1f, Space.Self);
         }
 
     }
+    //Add score, and save the high score.
+    //When the highscore is <=0, the game is over.
     public void AddScore(int score)
     {
         highScore += score;
-        Debug.Log("Your Score:" + highScore);
         endScoreText.text = highScore.ToString();
         PlayerPrefs.SetInt("high_score", highScore);
         PlayerPrefs.Save();
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
             GameOverCanvas();
         }
     }
-
+    //Enable the game over canvas with datas.
     void GameOverCanvas()
     {
         gameEnd = true;
@@ -98,16 +101,18 @@ public class GameManager : MonoBehaviour
         
     }
 
+    //This saves the high time value.
     public void Timer()
     {
         elapsedTime += Time.deltaTime;
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        endTime = string.Format("{00:00}:{01:00}", minutes, seconds); //Kimenteni való idõ!!!
+        endTime = string.Format("{00:00}:{01:00}", minutes, seconds);
         endTimeText.text = endTime;
         PlayerPrefs.SetString("end_time", endTime);
         PlayerPrefs.Save();
     }
+    //Restart button.
     public void RestartGame()
     {
         //Restart the game.
@@ -116,7 +121,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);       
     }
-
+    //Exit button.
     public void GoToMenu()
     {
         //Back to the main menu.
@@ -127,7 +132,7 @@ public class GameManager : MonoBehaviour
         AudioManagerScript.Instance.PlayMusic("ThemeSound");                      
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
-
+    //Counter befor the game is started.
     public IEnumerator Counter()
     {
         CountdownPanel[4].SetActive(true);
@@ -157,17 +162,17 @@ public class GameManager : MonoBehaviour
             i.SetActive(false);
         }
     }
-    //When start the game, this lock the cursor.
+    //When start the game, this locks the cursor.
     void MouseCursorLock()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-    //When end the game, this unlock the cursor.
+    //When end/pause the game, this unlocks the cursor.
     void MouseCursorUnlock()
     {
         Cursor.lockState = CursorLockMode.None;
     }
-
+    //Players datas.
     public void GameEndData()
     {
         gameData = new Data(playerNumber);
@@ -190,7 +195,7 @@ public class GameManager : MonoBehaviour
         string jsonData = JsonUtility.ToJson(gameData);     
         AppendDataToFile(jsonData);
     }
-
+    //This adds the new data for the file.
     private void AppendDataToFile(string newData)
     {
         string saveFilePath = Application.dataPath + "/save.txt";

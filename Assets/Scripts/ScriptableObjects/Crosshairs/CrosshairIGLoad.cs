@@ -9,12 +9,12 @@ public class CrosshairIGLoad : MonoBehaviour
     public GameObject inGameCrosshairImage;
     public int inGameCrosshairIndex;
     
-    // Start is called before the first frame update
     void Start()
     {
         CrosshairLoad();
     }
 
+    //Load the crosshair in game.
     public void CrosshairLoad()
     {
         if (PlayerPrefs.HasKey("crosshair_index"))

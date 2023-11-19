@@ -14,7 +14,8 @@ public class AudioUIController : MonoBehaviour
     private void Start()
     {
         _musicSlider.value = PlayerPrefs.GetFloat("music_volume");
-        _soundSlider.value = PlayerPrefs.GetFloat("sound_volume");    
+        _soundSlider.value = PlayerPrefs.GetFloat("sound_volume");   
+        //Button image change.
         if(AudioManagerScript.Instance.mute == false)
         {          
             musicOffImage.enabled = true;           
@@ -24,17 +25,18 @@ public class AudioUIController : MonoBehaviour
             musicOffImage.enabled =false;          
         }
     }
+    //Music toggle button.
     public void ToggleMusic()
     {
         AudioManagerScript.Instance.ToggleMusic();
         musicOffImage.enabled = !musicOffImage.enabled;
     }
-
+    //Music volume slider.
     public void MusicVolume()
     {
         AudioManagerScript.Instance.MusicVolume(_musicSlider.value);       
     }
-
+    //Sound volume slider.
     public void SoundVolume()
     {
         AudioManagerScript.Instance.SoundVolume(_soundSlider.value);       

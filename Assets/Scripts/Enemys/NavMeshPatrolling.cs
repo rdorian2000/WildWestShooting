@@ -14,6 +14,7 @@ public class NavMeshPatrolling : MonoBehaviour
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        //The agent target point.
         if (gameObject.tag == "Enemy")
         {                      
             target = endPointList.spawnPoints[Random.Range(0, 3)].transform;
@@ -25,14 +26,13 @@ public class NavMeshPatrolling : MonoBehaviour
         }
 
     }
-
-   
+ 
     void Start()
     {
         navMeshAgent.destination = target.transform.position;
         StartCoroutine(DestroyCharachters());
     }
-
+    //When the agent is in the target, destroy the agent.
     public IEnumerator DestroyCharachters()
     {       
         for(;;)

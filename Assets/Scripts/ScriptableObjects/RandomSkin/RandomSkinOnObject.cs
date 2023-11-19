@@ -7,7 +7,7 @@ public class RandomSkinOnObject : MonoBehaviour
     [SerializeField] private SkinMaterials skinMat;
 
     public GameObject enemyCharachter;
-    // Start is called before the first frame update
+    //Add random skin on the npc-s.
     void Start()
     {
         enemyCharachter.GetComponent<SkinnedMeshRenderer>().material = skinMat.skinMaterials[Random.Range(0, skinMat.skinMaterials.Length)];

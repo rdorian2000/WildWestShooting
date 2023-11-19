@@ -18,7 +18,7 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         enemyHeal = GetComponent<EnemyHealPoints>();
-        shootZoneCol = GameObject.Find("ShootZoneBackward");
+        shootZoneCol = GameObject.Find("ShootZoneBackward"); //The enemy can only in the shootzone shoot.
         playerObject = GameObject.Find("Player");
         player = playerObject.transform;
         animator = GetComponent<Animator>();
@@ -40,13 +40,13 @@ public class EnemyAttack : MonoBehaviour
             StartCoroutine(Shooting());
         }                              
     }
-
+    //The enemy can in the shootzone random position stop.
     private IEnumerator ShootStartTimer()
     {
         yield return new WaitForSeconds(Random.Range(1, 5));
         EnemyAttackPlayer();
     }
-
+    //The enemy looking for the player and shoot him.
     public IEnumerator Shooting()
     {    
         
@@ -68,7 +68,7 @@ public class EnemyAttack : MonoBehaviour
         navMeshAgent.speed = 2;
 
     }
-
+    //In the shootzone.
     void OnCollisionEnter(Collision col)
     {     
         if (gameObject.tag == "Enemy" && col.gameObject == shootZoneCol)
@@ -77,6 +77,7 @@ public class EnemyAttack : MonoBehaviour
             
         }
     }
+    //When the enemy is in the shootzone, he cans shoot.
     void Shoot()
     {
         if (enemyHeal.actualHP != 0)

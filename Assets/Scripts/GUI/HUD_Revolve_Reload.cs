@@ -29,6 +29,8 @@ public class HUD_Revolve_Reload : MonoBehaviour
     {
         StartCoroutine(WhenReloadRotateTheRevolve());
     }
+
+    //Rotate the revolve on the HUD, when the player reloads.
     public IEnumerator WhenReloadRotateTheRevolve()
     {      
         bulletNumber = 0;

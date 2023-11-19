@@ -12,13 +12,14 @@ public class MainMenu : MonoBehaviour
     {
         optionMenu.SetActive(false);
     }
+    //Play button
     public void PlayGame()
     {
         AudioManagerScript.Instance.StopMusic("ThemeSound");
         AudioManagerScript.Instance.PlaySound("WorldSound");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    //Quit button.
     public void QuitGame()
     {
         Application.Quit();

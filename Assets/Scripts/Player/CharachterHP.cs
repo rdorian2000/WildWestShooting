@@ -13,14 +13,13 @@ public class CharachterHP : MonoBehaviour
         bulletNumber = 0;
     }
 
-    //Sebzõdés
+    //Player damage.
     void OnCollisionEnter(Collision col)
     {
         
         if (col.gameObject.CompareTag("RevolverBullet"))
         {
-            bulletNumber += 1;
-            Debug.Log("A pisztolygolyó eltalálta a karaktert!" + bulletNumber);
+            bulletNumber += 1;           
             WhenShootMe();
         }
     }

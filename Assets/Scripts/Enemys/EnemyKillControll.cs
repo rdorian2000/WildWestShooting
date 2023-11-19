@@ -37,6 +37,7 @@ public class EnemyKillControll : MonoBehaviour
 
     void DeadCharachter(string uniqueID)
     {
+        //Civilian and Enemys dead.
         if ((gameObject.tag == "Civilian" || gameObject.tag == "Enemy") && uniqueID == gameObject.GetInstanceID().ToString()){          
             animator.SetBool("isDeath", true);
             navMeshAgent.speed = 0;          
@@ -47,6 +48,7 @@ public class EnemyKillControll : MonoBehaviour
             Invoke("LeavingTheMap", 10f);
         }
         
+        //Pianist dead.
         if (gameObject.tag == "PianoMan" && uniqueID == gameObject.GetInstanceID().ToString())
         {                         
             if (animator.GetBool("isPlay"))
@@ -64,6 +66,8 @@ public class EnemyKillControll : MonoBehaviour
             Invoke("LeavingTheMap", 10f);
         }
     }
+
+    //When the charachter is dead, this use gravity and sink under the ground.
     void LeavingTheMap()
     {              
         gameObject.GetComponent<NavMeshAgent>().enabled = false;

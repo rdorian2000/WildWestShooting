@@ -12,6 +12,7 @@ public class CrosshairSelect : MonoBehaviour
     public int crosshairIndex;
     private void Start()
     {
+        //Select the crosshair or load the crosshair.
         if (PlayerPrefs.HasKey("crosshair_index"))
         {
             actualCrosshairNumber = PlayerPrefs.GetInt("crosshair_index");
@@ -26,6 +27,7 @@ public class CrosshairSelect : MonoBehaviour
         }
               
     }
+    //The player can in the options menu select the crosshair.
     public void RightButtonClick()
     {
         if (actualCrosshairNumber < crosshairImages.crosshairImageFiles.Length - 1)
@@ -36,6 +38,7 @@ public class CrosshairSelect : MonoBehaviour
         }
         else {return;}          
     }
+    //The player can in the options menu select the crosshair. 
     public void LeftButtonClick()
     {
         if(actualCrosshairNumber > 0)
@@ -47,6 +50,7 @@ public class CrosshairSelect : MonoBehaviour
         else {return;}
     }   
 
+    //Save the crosshair.
     public void SaveCrosshair(int index)
     {
         crosshairIndex = index;

@@ -142,7 +142,7 @@ public class CharacterController : MonoBehaviour
         }
 
     }
-
+    //Ha rigidbody-val rendelkezõ objectet talál el akkor kap pontot.
     void Shoot()
     {
         RaycastHit hit;
@@ -194,6 +194,7 @@ public class CharacterController : MonoBehaviour
         }
 
     }
+    //Rotate the revolve on the HUD, when the player shoots.
     void WhenShoot()
     {
         if (currentWeaponAmmo != 0)
@@ -204,6 +205,7 @@ public class CharacterController : MonoBehaviour
             }
         }
     }
+    //Rotate the revolve on the HUD, when the player reloads.
     void WhenReload()
     {      
         if (hudRevolveReload != null)

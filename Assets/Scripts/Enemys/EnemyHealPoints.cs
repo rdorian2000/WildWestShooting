@@ -13,6 +13,7 @@ public class EnemyHealPoints : MonoBehaviour
 
     void Start()
     {
+        //HP randomizer.
         if (gameObject.tag == "Enemy")
         {
             maxHP = UnityEngine.Random.Range(5, 10);
@@ -24,6 +25,7 @@ public class EnemyHealPoints : MonoBehaviour
         {
             maxHP = UnityEngine.Random.Range(1, 3);
         }
+        //Healpoint bar.
         actualHP = maxHP;     
         enemyHealPointBar.maxValue = maxHP;
         enemyHealPointBar.value = actualHP;
@@ -42,7 +44,7 @@ public class EnemyHealPoints : MonoBehaviour
     {
         actualHP -= 1;
     }
-
+    //Enemy dead.
     void EnemyDeath()
     {     
         if (actualHP <= 0)
@@ -53,7 +55,7 @@ public class EnemyHealPoints : MonoBehaviour
             }
         }
     }
-
+    //When the pianist is dead, start the spawn timer.
     void PianoManSpawn()
     {
         if(gameObject.tag == "PianoMan" && actualHP <= 0)

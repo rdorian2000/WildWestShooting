@@ -21,7 +21,7 @@ public class OptionsManager : MonoBehaviour
             ChangeName(inputField.text, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 10);
         }
     }
-  
+  //Change the name in the options menu.
     public void ChangeName(string inputName,string validCharachters, int charachterLimit)
     {     
         inputField.text = inputName;
@@ -32,7 +32,7 @@ public class OptionsManager : MonoBehaviour
         };   
         SaveName(inputName);       
     }
-
+    //Name validator.
     private char ValidateChar(string validCharachters, char addedChar)
     {
         if (validCharachters.IndexOf(addedChar) != -1)
@@ -46,6 +46,7 @@ public class OptionsManager : MonoBehaviour
             return '\0';
         }
     }
+
     public void BackButton()
     {
         if (inputField.text.Length <= 0)
