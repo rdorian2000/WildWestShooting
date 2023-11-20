@@ -13,17 +13,16 @@ public class CharachterHP : MonoBehaviour
         bulletNumber = 0;
     }
 
-    //Player damage.
+    
     void OnCollisionEnter(Collision col)
-    {
-        
+    {       
         if (col.gameObject.CompareTag("RevolverBullet"))
         {
             bulletNumber += 1;           
             WhenShootMe();
         }
     }
-
+    //When the enemy shoots the player, he becomes damage.
     public void WhenShootMe()
     {
         if(playerDamage != null)

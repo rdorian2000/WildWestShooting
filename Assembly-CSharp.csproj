@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\GUI\HUD_Revolve_Shoot.cs" />
     <Compile Include="Assets\Scripts\Settings\GameManager.cs" />
     <Compile Include="Assets\Scripts\Audio\Sound.cs" />
+    <Compile Include="Assets\Scripts\Player\RotateTheHearts.cs" />
     <Compile Include="Assets\Scripts\Settings\OptionsManager.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemySpawnManager.cs" />
     <Compile Include="Assets\Scripts\GUI\MainMenu.cs" />

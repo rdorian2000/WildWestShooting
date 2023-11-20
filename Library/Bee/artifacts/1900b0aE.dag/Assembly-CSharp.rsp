@@ -362,6 +362,7 @@
 "Assets/Scripts/Player/CharachterDamage.cs"
 "Assets/Scripts/Player/CharachterHP.cs"
 "Assets/Scripts/Player/CharacterController.cs"
+"Assets/Scripts/Player/RotateTheHearts.cs"
 "Assets/Scripts/ScriptableObjects/Crosshairs/CrosshairIGLoad.cs"
 "Assets/Scripts/ScriptableObjects/Crosshairs/CrosshairImages.cs"
 "Assets/Scripts/ScriptableObjects/Crosshairs/CrosshairSelect.cs"

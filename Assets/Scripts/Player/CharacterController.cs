@@ -65,7 +65,7 @@ public class CharacterController : MonoBehaviour
             MoveOnXAxes(4f, 0f, -4f);         //Backward (Train)
         }
         
-        //Vertical mouse moving
+        //Vertical mouse move.
         mouseRotationX += Input.GetAxis("Mouse Y") * (-1) * mouseSensitivity;
         if (mouseRotationX < -mouseRotationXLimit)
         {
@@ -80,7 +80,7 @@ public class CharacterController : MonoBehaviour
         
     }
 
-    //Kamera mozgatása egérrel vízszintesen.
+    //Camera moves with the mouse.
     void HorizontalMouseMove(float limitDown, float limitUp)
     {
         
@@ -95,7 +95,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    //Mozgás sík megadása. (Forward,Backward)
+    //The player moves on the x axes.
     void MoveOnXAxes(float xMoveRange, float yMoveRange, float zMoveRange)
     {
 
@@ -115,7 +115,7 @@ public class CharacterController : MonoBehaviour
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * moveSpeed);
     }
     
-    //Lõszer spawn a fegyverbõl.
+    //Bullet spawn.
     void BulletSpawn()
     {
         if (isReloding)
@@ -128,7 +128,7 @@ public class CharacterController : MonoBehaviour
             StartCoroutine(AutomateReloadWeapon());
             return;
         }
-
+        //Player shoots the enemy.
         if (Input.GetKeyDown(KeyCode.Mouse0) && currentWeaponAmmo != 0)
         {
             GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, transform.rotation);
@@ -142,7 +142,7 @@ public class CharacterController : MonoBehaviour
         }
 
     }
-    //Ha rigidbody-val rendelkezõ objectet talál el akkor kap pontot.
+    //When the player shoots the enemy, and the enemy has rigidbody, he becomes damage.
     void Shoot()
     {
         RaycastHit hit;
@@ -173,7 +173,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    //Ha elfogy a lõszer autómata újratöltés.
+    //When the ammo runs out, the gun automatically reloads.
     IEnumerator AutomateReloadWeapon()
     {
         isReloding = true;
@@ -185,7 +185,7 @@ public class CharacterController : MonoBehaviour
         isReloding = false;
     }
 
-    //Ha még nem fogyott el minden lõszer, de újra akar tölteni a játékos.
+    //When the player has not full ammo, he can reload with "R".
     void PlayerReloadWeapon()
     {
         if (Input.GetKeyDown(KeyCode.R) && currentWeaponAmmo!=maxWeaponAmmo && isReloding==false)

@@ -34,7 +34,7 @@ public class CharachterDamage : MonoBehaviour
         StartCoroutine(PlayerDamage());
         
     }
-
+    //When the enemy shoots the player, he becomes damage.
     public IEnumerator PlayerDamage()
     {
         if (playerHP != 0)
