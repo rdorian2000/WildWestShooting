@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharachterDamage : MonoBehaviour
@@ -9,14 +10,18 @@ public class CharachterDamage : MonoBehaviour
 
     public int playerHP;
     public GameObject[] standartHealthPoints;
-    public GameObject[] bonusHealthPoints;
     public GameObject[] GUIbloodDropp;
     private int bloodDroppIndex;
     private int healPointIndex;
+
+    private int actualHeartID;
+    public GameObject[] heartObjects;
     private void Start()
     {
         playerHP = 3;
         healPointIndex = 2;
+        actualHeartID = 0;
+        StartCoroutine(RandomHeartOnTheMap());
     }
 
     private void OnEnable()
@@ -53,6 +58,36 @@ public class CharachterDamage : MonoBehaviour
             }
         }                
     } 
+    //When the player shoots the heart object on the map, he becomes HP.
+    public void AddPlayerHP()
+    {
+        if(playerHP != 0 && playerHP != 3)
+        {        
+            if (playerHP == 2 || playerHP == 1)
+            {
+                playerHP++;
+                healPointIndex++;
+                standartHealthPoints[healPointIndex].SetActive(true);                          
+                heartObjects[actualHeartID].gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            heartObjects[actualHeartID].gameObject.SetActive(false);
+        }
+    }
+    //Random heart object on the map.
+    public IEnumerator RandomHeartOnTheMap()
+    {   
+        for(; ; )
+        {
+            yield return new WaitForSeconds(UnityEngine.Random.Range(90f,150f));
+            actualHeartID = UnityEngine.Random.Range(0, heartObjects.Length);
+            heartObjects[actualHeartID].gameObject.SetActive(true);
+            yield return new WaitForSeconds(15f);
+            heartObjects[actualHeartID].gameObject.SetActive(false);
+        }       
+    }
 
     public void GameOver()
     {

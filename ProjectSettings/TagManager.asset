@@ -9,6 +9,7 @@ TagManager:
   - PianoMan
   - ShootZone
   - Civilian
+  - BonusHP
   layers:
   - Default
   - TransparentFX

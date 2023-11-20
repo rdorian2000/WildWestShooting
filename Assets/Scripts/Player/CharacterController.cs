@@ -34,6 +34,9 @@ public class CharacterController : MonoBehaviour
 
     public ParticleSystem gunShotSmoke;
 
+    public CharachterDamage charachterDamage;
+
+
 
     void Start()
     {
@@ -55,7 +58,7 @@ public class CharacterController : MonoBehaviour
                      
     }   
 
-    //Mozgás sík megadása event szerint.
+    //Backward move.
     void MoveAndFirstPersonCameraController()
     {
 
@@ -168,6 +171,11 @@ public class CharacterController : MonoBehaviour
             if (hit.transform.tag == "Civilian")
             {
                 gameManager.AddScore(-3);
+            }
+
+            if(hit.transform.tag == "BonusHP")
+            {
+                charachterDamage.AddPlayerHP();
             }
 
         }
