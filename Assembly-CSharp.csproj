@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Enemys\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\RandomSkinOnObject.cs" />
+    <Compile Include="Assets\Scripts\Settings\StartGameCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -81,7 +81,7 @@ public class CharachterDamage : MonoBehaviour
     {   
         for(; ; )
         {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(90f,150f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(20f,40f));
             actualHeartID = UnityEngine.Random.Range(0, heartObjects.Length);
             heartObjects[actualHeartID].gameObject.SetActive(true);
             yield return new WaitForSeconds(15f);

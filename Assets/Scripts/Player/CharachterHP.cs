@@ -13,10 +13,9 @@ public class CharachterHP : MonoBehaviour
         bulletNumber = 0;
     }
 
-    
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {       
-        if (col.gameObject.CompareTag("RevolverBullet"))
+        if (col.gameObject.tag =="RevolverBullet")
         {
             bulletNumber += 1;           
             WhenShootMe();

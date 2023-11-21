@@ -63,9 +63,9 @@ public class TXTReadAndSort : MonoBehaviour
     {     
         string fileName = Application.dataPath + "/save.txt";
         string[] lines = File.ReadAllLines(fileName);
-        if (lines.Length > 10)
+        if (lines.Length > 8)
         {
-            List<string> trimmedLines = lines.Take(10).ToList();
+            List<string> trimmedLines = lines.Take(8).ToList();
             File.WriteAllLines(fileName, trimmedLines);
         }
     }

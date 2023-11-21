@@ -14,14 +14,15 @@ public class OptionsManager : MonoBehaviour
         if (PlayerPrefs.HasKey("user_name") && PlayerPrefs.GetString("user_name")!="")
         {       
             playerName = PlayerPrefs.GetString("user_name");
-            inputField.text = PlayerPrefs.GetString("user_name");              
+            inputField.text = PlayerPrefs.GetString("user_name");
+            ChangeName(inputField.text, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 10);
         }
         else
         {
             ChangeName(inputField.text, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", 10);
         }
     }
-  //Change the name in the options menu.
+    //Change the name in the options menu.
     public void ChangeName(string inputName,string validCharachters, int charachterLimit)
     {     
         inputField.text = inputName;
@@ -46,7 +47,7 @@ public class OptionsManager : MonoBehaviour
             return '\0';
         }
     }
-
+    //When the player inptfield is empty, the player name is "Player".
     public void BackButton()
     {
         if (inputField.text.Length <= 0)

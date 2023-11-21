@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public Camera cameraMain;
     public GameObject hud;
     public GameObject pauseMenu;
+
     public static bool gameEnd = false;
-    public GameObject enemySpawn;
     private float elapsedTime;
     private int highScore;
     private string endTime;
@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
     public TXTPlayer playerData;
     public static int playerNumber = 1;
     private Data gameData;
-
-    public GameObject[] CountdownPanel;
 
     //If the charachter HP is null, the game is over.
     private void OnEnable()
@@ -46,14 +44,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void Start()
-    {
-        StartCountdownDisable();       
+    {     
         gameMenu.SetActive(false);
         optionMenu.SetActive(false);
         gameEnd = false;
         gameOverCanvasObject.SetActive(false);
-        MouseCursorLock();           
-        StartCoroutine(Counter());     
+        MouseCursorLock();             
     }
     public void Update()
     {
@@ -132,36 +128,8 @@ public class GameManager : MonoBehaviour
         AudioManagerScript.Instance.PlayMusic("ThemeSound");                      
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
     }
-    //Counter befor the game is started.
-    public IEnumerator Counter()
-    {
-        CountdownPanel[4].SetActive(true);
-        yield return new WaitForSeconds(1.5f);
-        CountdownPanel[4].SetActive(false);
-        CountdownPanel[3].SetActive(true);
-        yield return new WaitForSeconds(1.5f);
-        CountdownPanel[3].SetActive(false);
-        CountdownPanel[2].SetActive(true);
-        yield return new WaitForSeconds(1.5f);
-        CountdownPanel[2].SetActive(false);
-        CountdownPanel[1].SetActive(true);
-        yield return new WaitForSeconds(1.5f);
-        CountdownPanel[1].SetActive(false);
-        CountdownPanel[0].SetActive(true);
-        yield return new WaitForSeconds(1.5f);
-        CountdownPanel[0].SetActive(false);
-        yield return null;
+    
 
-        enemySpawn.SetActive(true);
-    }
-
-    void StartCountdownDisable()
-    {
-        foreach (GameObject i in CountdownPanel)
-        {
-            i.SetActive(false);
-        }
-    }
     //When start the game, this locks the cursor.
     void MouseCursorLock()
     {
@@ -186,7 +154,6 @@ public class GameManager : MonoBehaviour
             gameData.players[i].crosshairIndex = PlayerPrefs.GetInt("crosshair_index");
             Debug.Log($"Player {i + 1} - Name: {gameData.players[i].playerName}, Score: {gameData.players[i].playerScore}, Time: {gameData.players[i].playerTime}, Crosshair Index: {gameData.players[i].crosshairIndex}");          
         }
-        playerNumber++;
     }
 
     // Creating JSON from Data and saving it to registry

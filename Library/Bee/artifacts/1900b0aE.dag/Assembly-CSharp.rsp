@@ -373,6 +373,7 @@
 "Assets/Scripts/Settings/OptionsManager.cs"
 "Assets/Scripts/Settings/RecordsManager.cs"
 "Assets/Scripts/Settings/SavePlayerData.cs"
+"Assets/Scripts/Settings/StartGameCounter.cs"
 "Assets/Scripts/Settings/TXTReadAndSort.cs"
 "Assets/Scripts/Shoot/BulletDestroy.cs"
 "Assets/Scripts/Shoot/BulletMoveForward.cs"
