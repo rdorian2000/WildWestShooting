@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Enemys\PianomanMoveScript.cs" />
     <Compile Include="Assets\Scripts\Enemys\NavMeshPatrolling.cs" />
     <Compile Include="Assets\Scripts\Enemys\EnemyKillControll.cs" />
+    <Compile Include="Assets\Scripts\Settings\StartGameCounter.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Crosshairs\CrosshairIGLoad.cs" />
     <Compile Include="Assets\Scripts\Settings\TXTReadAndSort.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Assets\Scripts\Enemys\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Shoot\BulletMoveForward.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RandomSkin\RandomSkinOnObject.cs" />
-    <Compile Include="Assets\Scripts\Settings\StartGameCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
