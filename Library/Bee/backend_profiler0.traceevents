@@ -1,0 +1,657 @@
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1701773138190298, "dur":1362, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773138191673, "dur":1028, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1701773138192755, "dur":27, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1701773138192782, "dur":517, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1701773138193332, "dur":974, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773138194306, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139481800, "dur":168, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139481968, "dur":122, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482090, "dur":15, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482105, "dur":119, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482224, "dur":7, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482231, "dur":34, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482266, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482269, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482281, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482285, "dur":14, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482299, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482302, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482313, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482316, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482328, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482331, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482342, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482345, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482356, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482359, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482369, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482373, "dur":15, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482388, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482393, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482405, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482443, "dur":3, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139482488, "dur":1774, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1701773138193488, "dur":827, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138194318, "dur":3769, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138198098, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1701773138198102, "dur":254, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138198361, "dur":4, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1701773138198365, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138198441, "dur":112076, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138310518, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138310607, "dur":33781, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138344388, "dur":333, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138344724, "dur":185492, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138530217, "dur":333, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138530555, "dur":37678, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138568234, "dur":311, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138568550, "dur":36749, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138605300, "dur":792, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138606097, "dur":61376, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138667474, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138667508, "dur":80988, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138748497, "dur":309, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138748810, "dur":98441, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773138847251, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773138847291, "dur":176794, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1701773139024087, "dur":424, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139024517, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139024573, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139024587, "dur":1512, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139026118, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139026138, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139026148, "dur":1395, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139027562, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139027615, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139027625, "dur":1197, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139028838, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139028861, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139028870, "dur":1456, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139030345, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139030454, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139030461, "dur":1100, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139031578, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139031604, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139031663, "dur":2227, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139033903, "dur":11, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139033919, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139033924, "dur":1374, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139035308, "dur":11, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139035325, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139035331, "dur":1361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139036711, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139036766, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139036775, "dur":1306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139038099, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139038125, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139038198, "dur":1775, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139039993, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139040017, "dur":11, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139040038, "dur":1365, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139041418, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139041437, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139041893, "dur":1639, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139043544, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139043562, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139043568, "dur":1406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139044985, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139045014, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139045088, "dur":1777, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139046879, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139046897, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139046902, "dur":1220, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139048141, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139048160, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139049023, "dur":2147, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139051186, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139051232, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139051242, "dur":1032, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139052289, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139052309, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139052317, "dur":925, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139053264, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.ecm" }}
+,{ "pid":12345, "tid":1, "ts":1701773139053312, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139053321, "dur":1241, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.ecm" }}
+,{ "pid":12345, "tid":1, "ts":1701773139054581, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139054603, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139054648, "dur":2534, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139057198, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139057248, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139057257, "dur":1144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139058416, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139058436, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139058484, "dur":2012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139060511, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139060535, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139060545, "dur":1142, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139061702, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139061723, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139061766, "dur":1915, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139063700, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139063722, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139063732, "dur":1433, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.iws.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139065182, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139065204, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139065215, "dur":2029, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.rsc.sse" }}
+,{ "pid":12345, "tid":1, "ts":1701773139067261, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139067283, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139067290, "dur":1273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.caw" }}
+,{ "pid":12345, "tid":1, "ts":1701773139068586, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139068614, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139068696, "dur":1762, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.vis" }}
+,{ "pid":12345, "tid":1, "ts":1701773139070479, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.ecm" }}
+,{ "pid":12345, "tid":1, "ts":1701773139070502, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139070513, "dur":1494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.ecm" }}
+,{ "pid":12345, "tid":1, "ts":1701773139072022, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139072043, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139072054, "dur":1572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.rgb" }}
+,{ "pid":12345, "tid":1, "ts":1701773139073649, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1701773139073671, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1701773139073675, "dur":98352, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1701773139172039, "dur":309735, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138193532, "dur":798, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138194330, "dur":3944, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138198274, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1701773138198302, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138198334, "dur":30461, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1701773138228797, "dur":1836, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138230638, "dur":103178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138333817, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138333861, "dur":36315, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138370177, "dur":273, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138370453, "dur":30613, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138401067, "dur":345, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138401417, "dur":62025, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138463443, "dur":411, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138463858, "dur":51927, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138515786, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138515823, "dur":59067, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138574891, "dur":373, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138575269, "dur":34383, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138609653, "dur":322, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138609981, "dur":49433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138659415, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138659509, "dur":118438, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138777948, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138778035, "dur":133640, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773138911677, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773138911759, "dur":187370, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":2, "ts":1701773139099130, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773139099193, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1701773139099213, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773139099218, "dur":3713, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1701773139102962, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1701773139102990, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1701773139103407, "dur":1974, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1701773139105402, "dur":376363, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138193577, "dur":767, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138194344, "dur":3914, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138198258, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1701773138198284, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138198343, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1701773138198384, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138198440, "dur":69625, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138268066, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138268161, "dur":62984, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138331146, "dur":360, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138331511, "dur":30820, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138362332, "dur":167, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138362503, "dur":189233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138551737, "dur":130, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138551871, "dur":46922, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138598794, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138598874, "dur":53280, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138652155, "dur":288, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138652446, "dur":74090, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138726537, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138726588, "dur":209410, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773138936000, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773138936083, "dur":68653, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773139004738, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773139004829, "dur":176977, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":3, "ts":1701773139181807, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1701773139181904, "dur":299872, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701773138193523, "dur":800, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701773138194323, "dur":3821, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701773138198144, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1701773138198195, "dur":159, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701773138198355, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":4, "ts":1701773138198395, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701773138198427, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":4, "ts":1701773138198456, "dur":16, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701773138198473, "dur":1283187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":4, "ts":1701773139481661, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1701773139481728, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":4, "ts":1701773139481729, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138193568, "dur":769, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138194337, "dur":3754, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138198099, "dur":32821, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1701773138230921, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138230953, "dur":101354, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773138332308, "dur":1184, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138333497, "dur":111010, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773138444508, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138444585, "dur":34631, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773138479217, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138479311, "dur":53481, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773138532794, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138532886, "dur":37600, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773138570487, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138570548, "dur":155271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773138725820, "dur":385, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138726210, "dur":211044, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773138937255, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773138937346, "dur":476951, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1701773139414298, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1701773139414371, "dur":67413, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138193610, "dur":740, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138194351, "dur":3879, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138198231, "dur":29732, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1701773138227964, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138228034, "dur":93996, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701773138322031, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138322111, "dur":57402, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701773138379514, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138379597, "dur":84073, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701773138463671, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138463720, "dur":32740, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701773138496461, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138496545, "dur":31217, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701773138527763, "dur":437, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138528205, "dur":138906, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701773138667112, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773138667195, "dur":361314, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":6, "ts":1701773139028510, "dur":1746, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139030261, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139030310, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139030322, "dur":1271, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139031606, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.rgb" }}
+,{ "pid":12345, "tid":6, "ts":1701773139031639, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139031688, "dur":2000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.rgb" }}
+,{ "pid":12345, "tid":6, "ts":1701773139033705, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.ecm" }}
+,{ "pid":12345, "tid":6, "ts":1701773139033765, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139033772, "dur":1300, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.ecm" }}
+,{ "pid":12345, "tid":6, "ts":1701773139035095, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139035114, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139035122, "dur":1790, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139036925, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139036941, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139036947, "dur":1130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139038106, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139038124, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139038187, "dur":1891, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139040095, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139040113, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139040118, "dur":1280, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139041415, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139041436, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139041554, "dur":1717, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139043292, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139043319, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139043329, "dur":1621, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139044967, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139045017, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139045076, "dur":1751, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139046844, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139046867, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139046876, "dur":1251, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139048147, "dur":11, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.rgb" }}
+,{ "pid":12345, "tid":6, "ts":1701773139048165, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139048228, "dur":2055, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.rgb" }}
+,{ "pid":12345, "tid":6, "ts":1701773139050304, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139050329, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139050342, "dur":1477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139051838, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139051862, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139051870, "dur":1442, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139053328, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139053347, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139053352, "dur":1196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139054563, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139054585, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139055784, "dur":1848, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139057646, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.ecm" }}
+,{ "pid":12345, "tid":6, "ts":1701773139057668, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139057677, "dur":954, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.ecm" }}
+,{ "pid":12345, "tid":6, "ts":1701773139058643, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139058661, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139058666, "dur":2070, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139060750, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.ecm" }}
+,{ "pid":12345, "tid":6, "ts":1701773139060769, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139060969, "dur":992, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.ecm" }}
+,{ "pid":12345, "tid":6, "ts":1701773139061975, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139061996, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139062041, "dur":1779, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139063833, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139063851, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139063857, "dur":1204, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.caw" }}
+,{ "pid":12345, "tid":6, "ts":1701773139065080, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139065115, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139065185, "dur":1917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139067124, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139067154, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139067165, "dur":1404, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139068587, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139068611, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139069360, "dur":1365, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.rsc.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139070737, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139070756, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139070762, "dur":1240, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.vis" }}
+,{ "pid":12345, "tid":6, "ts":1701773139072022, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139072043, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139072054, "dur":1567, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.iws.sse" }}
+,{ "pid":12345, "tid":6, "ts":1701773139073651, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":6, "ts":1701773139073670, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139073675, "dur":8316, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":6, "ts":1701773139082020, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1701773139082052, "dur":17, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139082079, "dur":10757, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1701773139092853, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":6, "ts":1701773139092955, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139093014, "dur":10347, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":6, "ts":1701773139103362, "dur":517, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139103884, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":6, "ts":1701773139103924, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1701773139103934, "dur":1432, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":6, "ts":1701773139105381, "dur":376406, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138193645, "dur":711, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138194356, "dur":3805, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138198162, "dur":58840, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1701773138257003, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138257067, "dur":49788, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138306856, "dur":1184, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138308042, "dur":35860, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138343904, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138343998, "dur":58183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138402182, "dur":5022, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138407208, "dur":30310, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138437519, "dur":398, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138437919, "dur":34942, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138472863, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138472945, "dur":30854, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138503801, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138503904, "dur":83844, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138587750, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138587834, "dur":65127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138652962, "dur":470, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138653437, "dur":96393, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138749831, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138749903, "dur":97036, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138846940, "dur":344, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138847289, "dur":63496, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773138910787, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773138910888, "dur":223850, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":7, "ts":1701773139134740, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1701773139134896, "dur":346883, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138193691, "dur":672, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138194363, "dur":3774, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138198137, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1701773138198166, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138198221, "dur":775, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1701773138198997, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138199054, "dur":174167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":8, "ts":1701773138373222, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138373286, "dur":49552, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138422839, "dur":554, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138423397, "dur":50367, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138473765, "dur":332, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138474102, "dur":32469, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138506573, "dur":336, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138506913, "dur":63178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138570092, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138570189, "dur":34931, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138605121, "dur":234, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138605359, "dur":32642, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138638003, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138638095, "dur":121842, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138759938, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138760014, "dur":42140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773138802155, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773138802226, "dur":267597, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":8, "ts":1701773139069824, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773139069902, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.iws.sse" }}
+,{ "pid":12345, "tid":8, "ts":1701773139069931, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773139069941, "dur":1437, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.iws.sse" }}
+,{ "pid":12345, "tid":8, "ts":1701773139071396, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.rsc.sse" }}
+,{ "pid":12345, "tid":8, "ts":1701773139071418, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773139071427, "dur":2151, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.rsc.sse" }}
+,{ "pid":12345, "tid":8, "ts":1701773139073601, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.caw" }}
+,{ "pid":12345, "tid":8, "ts":1701773139073625, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773139073635, "dur":23763, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.caw" }}
+,{ "pid":12345, "tid":8, "ts":1701773139097412, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/level1.resS" }}
+,{ "pid":12345, "tid":8, "ts":1701773139097430, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1701773139097436, "dur":16676, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/level1.resS" }}
+,{ "pid":12345, "tid":8, "ts":1701773139114130, "dur":367639, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138193729, "dur":640, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138194369, "dur":3724, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138198098, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":9, "ts":1701773138198196, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138198234, "dur":784, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1701773138199018, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138199169, "dur":5298, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project.exe" }}
+,{ "pid":12345, "tid":9, "ts":1701773138204469, "dur":239, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138204712, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1701773138204766, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138204841, "dur":97198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138302040, "dur":6048, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138308091, "dur":36499, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138344591, "dur":105, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138344700, "dur":63068, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138407769, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138407843, "dur":66223, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138474067, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138474135, "dur":35566, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138509702, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138509790, "dur":32333, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138542124, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138542213, "dur":39124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138581338, "dur":627, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138581972, "dur":42792, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138624765, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138624841, "dur":78764, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138703606, "dur":290, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138703900, "dur":121870, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773138825772, "dur":400, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773138826177, "dur":272791, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":9, "ts":1701773139098970, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773139099062, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/level0.resS" }}
+,{ "pid":12345, "tid":9, "ts":1701773139099103, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773139099110, "dur":4975, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/level0.resS" }}
+,{ "pid":12345, "tid":9, "ts":1701773139104102, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/boot.config" }}
+,{ "pid":12345, "tid":9, "ts":1701773139104209, "dur":237, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1701773139104451, "dur":377316, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138193785, "dur":590, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138194375, "dur":3715, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138198098, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":10, "ts":1701773138198163, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138198266, "dur":26430, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":10, "ts":1701773138224697, "dur":401, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138225102, "dur":62043, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138287146, "dur":14458, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138301609, "dur":34287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138335898, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138335995, "dur":101572, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138437568, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138437625, "dur":42262, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138479889, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138479970, "dur":67573, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138547544, "dur":326, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138547871, "dur":81346, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138629218, "dur":737, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138629960, "dur":163232, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138793194, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138793282, "dur":61949, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773138855233, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773138855308, "dur":153275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":10, "ts":1701773139008585, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139008681, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":10, "ts":1701773139009052, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139009823, "dur":3577, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":10, "ts":1701773139013607, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139013645, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139014115, "dur":2232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139016367, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.rsc.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139016388, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139016397, "dur":1487, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.rsc.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139017902, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139017923, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139017932, "dur":1625, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139019573, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.iws.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139019594, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139019603, "dur":1162, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.iws.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139020781, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139020801, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139020809, "dur":1079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139021903, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139021922, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139021931, "dur":1348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/f4/f4507c3edc81f36800c88025853af645.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139023296, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139023317, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139023371, "dur":1550, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139024936, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139024957, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139024964, "dur":1142, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139026122, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139026142, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139026148, "dur":1403, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/dedf092cb434f1ef90556bb506bbda3d.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139027571, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139027615, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139027625, "dur":1318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139028959, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139028978, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139028985, "dur":1330, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139030329, "dur":11, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139030346, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139030352, "dur":1218, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/de/de9b3c19d83177b26e0395121cd7d0c5.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139031588, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.rsc.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139031637, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139031677, "dur":1982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.rsc.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139033677, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.iws.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139033701, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139033713, "dur":1365, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7cfe620b9274077f575139b8a1cad46.iws.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139035094, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139035113, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139035122, "dur":1659, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139036805, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139036827, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139036835, "dur":1282, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/c7/c7a56ba272bd01b8a26ef85878099298.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139038131, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139038153, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139038194, "dur":1841, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139040054, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139040075, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139040084, "dur":1358, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/a8/a88c58d81d2c075c72cf947fa2383732.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139041458, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139041478, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139041533, "dur":1748, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139043301, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139043319, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139043329, "dur":1698, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/98/98a24ec0b920553bdfdcae532503d1a5.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139045046, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139045064, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139045098, "dur":1751, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139046866, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139046888, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139046896, "dur":1221, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/84/84f29a538dec51a0638aee5f5a869777.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139048133, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139048156, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139048209, "dur":2118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139050344, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139050364, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139050370, "dur":884, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/79/79369b6f738389a353104ed84c0fd0b9.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139051265, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139051282, "dur":9, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139051324, "dur":1870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139053211, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.iws.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139053236, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139053247, "dur":1285, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/73/73e762af42dcd2635bf278d7b56ac5c6.iws.sse" }}
+,{ "pid":12345, "tid":10, "ts":1701773139054552, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139054585, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139055746, "dur":1927, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.vis" }}
+,{ "pid":12345, "tid":10, "ts":1701773139057689, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139057708, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139057716, "dur":1004, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/6a/6aff570bb12967c8db49ae4cfcb1a862.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139058735, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139058757, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139058797, "dur":2103, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139060914, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139060935, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139060944, "dur":1098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/47/47232c3a5a6fe3896f6995e0ca809da9.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139062058, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139062077, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139062086, "dur":1647, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139063750, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139063768, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139063775, "dur":1399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/45/45282ab6811a15ec154c844fbcca7e70.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139065198, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139065220, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139065228, "dur":1931, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139067175, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139067194, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139067201, "dur":1376, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/3e/3e5f16b3a369741de176e34b997f9df3.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139068592, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139068612, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139068676, "dur":1822, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.rgb" }}
+,{ "pid":12345, "tid":10, "ts":1701773139070516, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139070537, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139070574, "dur":1463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/3676f43ec682f57de47c8405d4834288.caw" }}
+,{ "pid":12345, "tid":10, "ts":1701773139072057, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139072078, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139072087, "dur":1579, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/GI/level1/36/365f1dd9b77406338666ebed9ed68c24.ecm" }}
+,{ "pid":12345, "tid":10, "ts":1701773139073680, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":10, "ts":1701773139073700, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139073704, "dur":18490, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":10, "ts":1701773139092219, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":10, "ts":1701773139092248, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139092394, "dur":3474, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":10, "ts":1701773139095883, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1701773139095904, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139095911, "dur":1063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":10, "ts":1701773139096988, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/resources.assets" }}
+,{ "pid":12345, "tid":10, "ts":1701773139097007, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139097013, "dur":1069, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/resources.assets" }}
+,{ "pid":12345, "tid":10, "ts":1701773139098096, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/level1" }}
+,{ "pid":12345, "tid":10, "ts":1701773139098129, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1701773139098135, "dur":7119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"BuildGame/Wild West Project_Data/level1" }}
+,{ "pid":12345, "tid":10, "ts":1701773139105296, "dur":376471, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138193819, "dur":562, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138194381, "dur":3708, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138198099, "dur":109358, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":11, "ts":1701773138307459, "dur":382, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138307846, "dur":207613, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701773138515460, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138515560, "dur":31927, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701773138547489, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138547586, "dur":32167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701773138579754, "dur":105, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138579865, "dur":30262, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701773138610133, "dur":701, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138610839, "dur":44990, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701773138655830, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138655915, "dur":296828, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701773138952744, "dur":197, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773138952946, "dur":340076, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":11, "ts":1701773139293023, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1701773139293114, "dur":188678, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138193853, "dur":534, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138194387, "dur":3708, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138198100, "dur":58184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1701773138256285, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138256349, "dur":85261, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701773138341612, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138341700, "dur":38328, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701773138380029, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138380099, "dur":130168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701773138510269, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138510346, "dur":52413, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701773138562760, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138562855, "dur":45900, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701773138608756, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138608846, "dur":215285, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701773138824132, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773138824211, "dur":372690, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles BuildGame/Wild West Project_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":12, "ts":1701773139196902, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1701773139196999, "dur":284802, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1701773139485721, "dur":2638, "ph":"X", "name": "ProfilerWriteOutput" }
+,
